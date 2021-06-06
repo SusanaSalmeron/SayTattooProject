@@ -3,21 +3,49 @@
     962px portatiles
     1200px* grandes ordenadores*/
 
-    *{  /* reseteo de eric meyer */
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;    
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex:1;
+}
+
+
+header nav{
+        height: 100px;
     }
 
+header nav .navbar-brand {
+    margin-left: 1em;
+}
 
+.account {
+    width: 50px
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    display: block;
+  
+}
 
 footer {
+    padding-left: 2em;
     margin-top: 500px;
     background-color: lightblue;
     height: 100px;
     width: 100%;
     
 }
+
+
+
 
 
 
