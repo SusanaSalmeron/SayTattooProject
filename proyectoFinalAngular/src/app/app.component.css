@@ -77,7 +77,6 @@ main{
 footer {
     border-top: 1px solid #145A8D;
     padding-left: 1em;
-    margin-top: 500px;
     background: linear-gradient(0.25turn, #b0c4de, #4682b4, #00008b);
     height: 100px;
     width: 100%;
@@ -91,7 +90,6 @@ box-shadow: 0 -5px 10px -2px #145A8D;
 .warnings div{
     color: #315075;
 }
-
 
 
 
@@ -120,10 +118,13 @@ box-shadow: 0 -5px 10px -2px #145A8D;
 
  @media (min-width: 962px) { 
 
+   
+ 
+    
+}
 
 
 
 
 
 
-  }
