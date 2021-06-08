@@ -15,16 +15,36 @@
 }
 
 
-header nav{
-        height: 100px;
-    }
-
-header nav .navbar-brand {
-    margin-left: 1em;
+header nav ul li{
+    margin-bottom: 0;
+    
 }
 
-.account {
-    width: 50px
+header nav ul li a{
+    color: black;
+    line-height:50% ;
+
+}
+
+header nav ul li a:hover{
+    color: #4682b4;
+}
+
+header nav .navbar-brand {
+    margin-left: 0.2em;
+}
+
+.navbar{
+    background: linear-gradient(0.25turn, #b0c4de, #4682b4, #00008b);
+    border-bottom: 2px solid #145A8D;
+    box-shadow: 5px 5px 5px #145A8D;
+} 
+
+
+.account  {
+    list-style-type: none;
+    text-decoration: none;
+    margin:0;
 }
 
 main{
@@ -36,13 +56,20 @@ main{
 }
 
 footer {
-    padding-left: 2em;
+    border-top: 1px solid #145A8D;
+    padding-left: 1em;
     margin-top: 500px;
-    background-color: lightblue;
+     background: linear-gradient(0.25turn, #b0c4de, #4682b4, #00008b);
     height: 100px;
     width: 100%;
     
 }
+
+footer.top {
+box-shadow: 0 -5px 10px -2px #145A8D;
+}
+
+
 
 
 
