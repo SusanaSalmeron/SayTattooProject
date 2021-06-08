@@ -21,21 +21,38 @@ header nav ul li{
 }
 
 header nav ul li a{
-    color: black;
-    line-height:50% ;
+    color: #315075;
+    line-height:50%;
+    font-weight: 700;
 
 }
 
 header nav ul li a:hover{
-    color: #4682b4;
+    color: #f192ad;
+    transition: color 1s linear;
+    font-size: 2em;
 }
 
 header nav .navbar-brand {
     margin-left: 0.2em;
+    
+}
+
+header nav .navbar-brand:hover{
+    transform: rotate(-14deg);
+    
+}
+
+header nav a img{
+    width: 40px;
+}
+
+header nav a .logo{
+    width: 60px;
 }
 
 .navbar{
-    background: linear-gradient(0.25turn, #b0c4de, #4682b4, #00008b);
+    background: linear-gradient(0.25turn, #C1D8F5, #4682b4, #00008b);
     border-bottom: 2px solid #145A8D;
     box-shadow: 5px 5px 5px #145A8D;
 } 
@@ -46,6 +63,8 @@ header nav .navbar-brand {
     text-decoration: none;
     margin:0;
 }
+
+
 
 main{
     display: flex;
@@ -59,7 +78,7 @@ footer {
     border-top: 1px solid #145A8D;
     padding-left: 1em;
     margin-top: 500px;
-     background: linear-gradient(0.25turn, #b0c4de, #4682b4, #00008b);
+    background: linear-gradient(0.25turn, #b0c4de, #4682b4, #00008b);
     height: 100px;
     width: 100%;
     
@@ -67,6 +86,10 @@ footer {
 
 footer.top {
 box-shadow: 0 -5px 10px -2px #145A8D;
+}
+
+.warnings div{
+    color: #315075;
 }
 
 
@@ -83,6 +106,7 @@ box-shadow: 0 -5px 10px -2px #145A8D;
 
 
 @media (min-width: 768px) {
+
 
 
 
