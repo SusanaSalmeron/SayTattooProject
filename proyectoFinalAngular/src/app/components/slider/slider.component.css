@@ -19,3 +19,10 @@ content: '>';
   color: #145A8D;
 }
 
+
+
+@media (orientation: landscape) {
+  /* Esto para bloquear la orientación -  sólo se puede ver en Vertical */
+
+}
+
