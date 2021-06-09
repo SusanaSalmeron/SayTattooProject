@@ -1,0 +1,21 @@
+
+.carousel-inner {
+   display: flex; 
+    width: 100%;
+    height: 100%px;
+    align-items: center;
+}
+
+.carousel-control-prev::after{
+
+content: '<';
+  font-size: 55px;
+  color: #145A8D;
+}
+
+.carousel-control-next::after{
+content: '>';
+  font-size: 55px;
+  color: #145A8D;
+}
+
