@@ -1,0 +1,84 @@
+/* 576px movíl 
+    768px tab
+    962px portatiles
+    1200px* grandes ordenadores*/
+
+
+.wrap{
+    
+    background-image: url(../../../assets/images/Logos_Say_Tatoo!-04.png);
+    background-size:50vh;
+    background-repeat:no-repeat;
+    background-position:center; 
+}
+
+.container {
+    width: 90%;
+}
+
+
+form{
+    margin-top: 2em;
+    
+}
+label{
+    font-size: 1.2em;
+    font-family: 'Karla', sans-serif;
+}
+input{
+    background-color: transparent;
+}
+
+select{
+    font-size: 1.2em;
+    margin-top: 2em;
+    background-color: transparent;
+    font-family: 'Karla', sans-serif;
+}
+
+.button{   
+    margin-top: 2em; 
+    margin-bottom: 10em;
+}
+
+button:last-child{
+    float: right;
+}
+
+
+@media (min-width: 768px){
+    .container {
+    width: 70%;
+
+}
+
+
+
+}
+
+@media (min-width: 962px){
+    .container {
+    width: 60%;
+}
+
+.wrap{
+    background-image: url(../../../assets/images/Logos_Say_Tatoo!-04.png);
+    background-size: 90vh;
+    background-repeat: no-repeat;
+}
+
+
+
+}
+
+
+@media (min-width: 1200px){
+    
+
+}
+
+
+
+
+
+

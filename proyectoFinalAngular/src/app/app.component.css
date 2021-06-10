@@ -3,16 +3,21 @@
     962px portatiles
     1200px* grandes ordenadores*/
 
+/*     font-family: 'Karla', sans-serif;
+font-family: 'Montserrat', sans-serif; */
 
-/* .wrap{
+
+
+ .wrap{
     display: flex;
+    position: relative;
     flex-direction: column;
     min-height: 100vh;
-}
+ }
 
-.content {
+/* .content {
     flex:1;
-} */
+}  */
 
 header nav ul li{
     margin-left: 1em;
@@ -23,6 +28,10 @@ header nav ul li a{
     color: #315075;
     line-height:50%;
     font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    
+    
+
 }
 
 header nav ul li:nth-child(5)a, header nav ul li:last-child a{
