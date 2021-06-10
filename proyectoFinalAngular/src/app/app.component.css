@@ -4,7 +4,7 @@
     1200px* grandes ordenadores*/
 
 
-.wrap{
+/* .wrap{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -12,11 +12,10 @@
 
 .content {
     flex:1;
-}
-
+} */
 
 header nav ul li{
-    margin-bottom: 0;
+    margin-left: 1em;
     
 }
 
@@ -24,13 +23,10 @@ header nav ul li a{
     color: #315075;
     line-height:50%;
     font-weight: 700;
-
 }
 
-header nav ul li a:hover{
-    color: #f192ad;
-    transition: color 1s linear;
-    font-size: 2em;
+header nav ul li:nth-child(5)a, header nav ul li:last-child a{
+    color: #315075;
 }
 
 header nav .navbar-brand {
@@ -75,9 +71,10 @@ main{
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
     border-top: 1px solid #145A8D;
     padding-left: 1em;
-    margin-top: 500px;
     background: linear-gradient(0.25turn, #b0c4de, #4682b4, #00008b);
     height: 100px;
     width: 100%;
@@ -104,7 +101,6 @@ box-shadow: 0 -5px 10px -2px #145A8D;
 
 
 
-
 @media (min-width: 768px) {
 
 
@@ -116,14 +112,71 @@ box-shadow: 0 -5px 10px -2px #145A8D;
 
 
 
+@media (min-width: 962px) { 
+    header nav ul li{
+    margin-left: 2em;
+    
+}
+    header nav ul li a:hover{
+    color: #f192ad;
+    font-size: 1.3em;
+    transition: color 1s linear;
+    transition: font-size 0.5s linear;
+}
 
+    header nav ul li a i :hover{
+    color: #f192ad;
+    transition: color 1s linear;
+    font-size: 1.3em;
+}
 
- @media (min-width: 962px) { 
+    header nav ul li:first-child a:hover, header nav ul li:nth-child(2) a:hover{
+        color: #c6617d
+}
+    header nav ul li:last-child a, header nav ul li:nth-child(5) a{
+        color: #698eba;
+}
 
+    header nav ul li:last-child i{
+         margin-top: -0.7em;
+         font-size: 25px;
+}
+    header nav ul li:last-child a:hover, header nav ul li:nth-child(5) a:hover{
+        color: #f192ad
+}
 
+   
+}
 
+@media (min-width: 1300px){
+    header nav ul li{
+    margin-left: 2em;
+}
 
+    header nav ul li a:hover{
+    color: #f192ad;
+    font-size: 1.3em;
+    transition: color 1s linear;
+    transition: font-size 0.5s linear;
+}
 
+    header nav ul li a i :hover{
+    color: #f192ad;
+    font-size: 1.3em;
+    transition: color 1s linear;
+    
 
+}
+    header nav ul li:first-child a:hover, header nav ul li:nth-child(2) a:hover{
+        color: #c6617d
+}
 
-  }
+    header nav ul li:last-child a, header nav ul li:nth-child(5) a{
+        color: #0a1d35;
+}
+
+    header nav ul li:last-child a:hover, header nav ul li:nth-child(5) a:hover{
+        color: #f192ad
+}
+
+}
