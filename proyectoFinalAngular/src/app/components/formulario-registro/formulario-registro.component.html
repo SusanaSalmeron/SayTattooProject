@@ -1,71 +1,61 @@
-<div class="wrap">
-
-    <div class="container">
+<div class="container-fluid">
+    <form action="">
         <div class="row">
-            <div class="col 8">
-                <form action="">
-                    <div>
-                        <label class="form-label">Nombre</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div>
-                        <label class="form-label">Apellidos</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div>
-                        <label class="form-label">Dirección</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div>
-                        <label class="form-label">Ciudad</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div>
-                        <label class="form-label">CP</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div>
-                        <label class="form-label">Nombre</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div>
-                        <label class="form-label">Teléfono</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div>
-                        <label class="form-label">Fecha de Nacimiento</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div>
-                        <label class="form-label">Nombre Usuario</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div>
-                        <label class="form-label">Email</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div>
-                        <label class="form-label">Password</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div>
-                        <label class="form-label">Repite Password</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div>
-                        <select name="" id="" class="form-control">
-                            <option value="" selected>¿Eres tatuador?</option>
-                            <option value="">Sí</option>
-                            <option value="">No</option>
-                        </select>
-                    </div>
-                    <div class="button">
-                        <button class="btn btn-info">Enviar</button>
-                        <button class="btn btn-info" float-right>Cancelar</button>
-                    </div>
-
-                </form>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Apellidos">
             </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Dirección">
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="Ciudad">
+            </div>
+            <div class="col-2">
+                <input type="text" class="form-control" placeholder="CP">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Teléfono">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Fecha Nacimiento">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Nombre Usuario">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <input type="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="col-6">
+                <input type="password" class="form-control" placeholder="Repite Password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <select class="form-control">
+                    <option value="" selected>¿Eres tatuador?</option>
+                    <option value="">Sí</option>
+                    <option value="">No</option>
+                </select>
+            </div>
+        </div>
+        <div class="button">
+            <button [disabled]=!formulario.valid>Enviar</button>
+            <button [disabled]=!formulario.valid>Cancelar</button>
+        </div>
+
+    </form>
 </div>

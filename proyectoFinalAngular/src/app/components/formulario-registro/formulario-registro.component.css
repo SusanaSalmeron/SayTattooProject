@@ -4,67 +4,112 @@
     1200px* grandes ordenadores*/
 
 
-.wrap{
-    
+ .container-fluid {
+    width: 93%;
     background-image: url(../../../assets/images/Logos_Say_Tatoo!-04.png);
     background-size:50vh;
     background-repeat:no-repeat;
-    background-position:center; 
+    background-position:center;
+    background-attachment: fixed;
 }
 
-.container {
-    width: 90%;
+
+form div input::placeholder{
+    font-family: 'Karla', sans-serif;
+    font-size: 0.8em;
 }
 
 
 form{
-    margin-top: 2em;
-    
+    margin: 2em 0;
+
 }
-label{
-    font-size: 1.2em;
-    font-family: 'Karla', sans-serif;
-}
+
 input{
     background-color: transparent;
+    margin-bottom: 2em;
+    
 }
 
-select{
-    font-size: 1.2em;
-    margin-top: 2em;
+input:focus, select:focus {
+  opacity: 1;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, .15);
+}
+
+select{ 
     background-color: transparent;
     font-family: 'Karla', sans-serif;
 }
 
-.button{   
-    margin-top: 2em; 
-    margin-bottom: 10em;
+select option {
+    font-size: 1.2em;
+    background-color: transparent;
+    font-family: 'Karla', sans-serif;
 }
+
+button{   
+    margin-top: 1em; 
+    margin-bottom: 4em;
+    border-radius: 20px;
+}
+
+button:first-child {
+ padding: 4px 20px;
+ background-color: #4682b4
+}
+
 
 button:last-child{
     float: right;
+    padding: 4px 10px;
+    background-color: #f192ad;
 }
+
+
+
+
+
 
 
 @media (min-width: 768px){
-    .container {
-    width: 70%;
+    .container-fluid {
+    padding-top: 5em;
 
 }
+
+
+button{
+    margin-top:3em;
+    margin-bottom: 0;
+}
+
 
 
 
 }
 
 @media (min-width: 962px){
-    .container {
-    width: 60%;
+    .container-fluid {
+    width: 80%;
+    background-image: url(../../../assets/images/Logos_Say_Tatoo!-04.png);
+    background-size: 60vh;
+    background-repeat: no-repeat;
 }
 
-.wrap{
-    background-image: url(../../../assets/images/Logos_Say_Tatoo!-04.png);
-    background-size: 90vh;
-    background-repeat: no-repeat;
+
+button{ 
+    margin-top:3em;
+   
+
+}
+
+
+button:last-child:hover{
+    background-color:#4682b4;
+}
+
+button:first-child:hover{
+    background-color:#f192ad ;
 }
 
 
