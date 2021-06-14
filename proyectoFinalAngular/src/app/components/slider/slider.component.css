@@ -11,7 +11,8 @@ body {
 }
 
 /* 
-*Hoja de style del Slider 
+*Hoja de style del Slider.
+*Lo he tenido que dejar a la medida de 79vh, porque de está manera se ve el footer.
 */
 .home .carousel-item {
 min-height: 79vh;
@@ -89,7 +90,9 @@ z-index: -1;
 }
 
 
-/* Para hacer los stylos de los botones de las flechas */
+/* 
+*Para hacer los styles de los botones de las flechas.
+*/
 
 .home .carousel-controls{
   position: absolute;
@@ -191,4 +194,49 @@ z-index: -1;
 }
   
 }
+
+/*
+*Botones de LOGIN & REGÍSTRATE
+*/
+
+.content {
+  position: relative;
+  display: inline-block;
+  grid-template-columns: repeat (3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.login{
+position: absolute /* o absolute*/;
+top: 480px;
+right:1200px;
+width:120px;
+z-index:99;
+border-radius: 5px;
+background-color: #145A8D;
+color: #F2EFE8;
+grid-column: 1;
+grid-row: 1;
+}
+
+.login:hover {
+  background-color: #F192AD;
+  color: #145A8D;
+}
+
+.registrate {
+  position: absolute;
+  top: 480px;
+  right: 200px;
+  width: 120px;
+  z-index:99;
+  border-radius: 5px;
+  background-color: #145A8D;
+  color: #F2EFE8;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+
 
