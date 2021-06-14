@@ -6,28 +6,37 @@
 
  .container-fluid {
     width: 93%;
-    background-image: url(../../../assets/images/Logos_Say_Tatoo!-04.png);
+    background-image: url(../../../assets/images/Say_Tattoo!_VERTICAL-50_Opacidad-04.png);
     background-size:50vh;
     background-repeat:no-repeat;
     background-position:center;
     background-attachment: fixed;
+    height: 80vh;
+}
+
+h5{
+    margin-top: 1em;
+    font-size: 1em;
+    font-family: 'Karla', sans-serif;
 }
 
 
 form div input::placeholder{
     font-family: 'Karla', sans-serif;
-    font-size: 0.8em;
+    font-size: 1em;
+    color: black;
 }
 
 
 form{
-    margin: 2em 0;
+    margin: 1em 0;
 
 }
 
 input{
     background-color: transparent;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+    
     
 }
 
@@ -47,8 +56,13 @@ select option {
     font-family: 'Karla', sans-serif;
 }
 
+.privacidad, .privacidad h5{
+    font-family: 'Karla', sans-serif;
+    margin-top: 1em;
+    font-size:small;
+}
+
 button{   
-    margin-top: 1em; 
     margin-bottom: 4em;
     border-radius: 20px;
 }
@@ -72,16 +86,34 @@ button:last-child{
 
 
 @media (min-width: 768px){
-    .container-fluid {
-    padding-top: 5em;
+.container-fluid {
+    padding-top: 2em;
+ 
+}
+input, select, label{
+    margin-bottom: 2em;
+}
 
+h5{
+    margin-bottom: 2em;
+    font-size: 1.7em;
 }
 
 
-button{
-    margin-top:3em;
+.privacidad{
+   font-size: 1em;
+   margin-top: -1em;
+
+}
+
+.privacidad h5{
+    font-size: 2em;
+    margin-top: 2em;
     margin-bottom: 0;
 }
+
+
+
 
 
 
@@ -91,9 +123,13 @@ button{
 @media (min-width: 962px){
     .container-fluid {
     width: 80%;
-    background-image: url(../../../assets/images/Logos_Say_Tatoo!-04.png);
     background-size: 60vh;
-    background-repeat: no-repeat;
+ 
+  
+}
+
+input, select, label{
+    margin-bottom: 4em;
 }
 
 
@@ -118,10 +154,20 @@ button:first-child:hover{
 
 
 @media (min-width: 1200px){
+    input, select, label{
+    margin-bottom: 1em;
+}
+
+ .container-fluid {
+    width: 80%;
+    background-size: 70vh;
+
+   
     
 
 }
 
+}
 
 
 
