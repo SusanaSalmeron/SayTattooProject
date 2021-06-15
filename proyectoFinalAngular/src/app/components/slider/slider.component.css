@@ -6,9 +6,7 @@
   font-family: 'Iconic-Stencil-Bold-trial';
   src: url('../../../assets/Iconic/Iconic-Stencil-Bold-trial.ttf') format('truetype')
 }
-body {
-  font-size: 60px;
-}
+
 
 /* 
 *Hoja de style del Slider.
@@ -171,7 +169,7 @@ grid-row: 1;
 position: relative;
 width: 120px;
 left: 380px;
-top: 520px;
+top: 60px;
 
 }
 
@@ -190,7 +188,7 @@ top: 520px;
   grid-row: 3;
   position: relative;
   width: 120px;
-  top: 520px;
+  top: 60px;
   right: -780px;
 }
 
@@ -201,14 +199,84 @@ top: 520px;
 
 
 /* 
-*RESPONSIVE - 7678px
+*RESPONSIVE - 768px
  */
 @media (orientation: landscape) {
   /* Esto para bloquear la orientación -  sólo se puede ver en Vertical */
 }
 
-@media(max-width:768px){
+@media(max-width:576px){
+
+.home .carousel-item h2{
+  font-size: 20px;
 }
-  
+
+.home .carousel-item p{
+  font-size:11px;
+}
+
+.home .carousel-indicators li {
+  height: 40px;
+  width: 40px;
+}
+
+.login :first-child{
+left:140px;
+top: 10px;
+}
+.registrate {
+left:140px;
+top: 40px;
+
+}
+
+}
+
+@media(max-width:768px){
 
 
+.home .carousel-item h2{
+  font-size: 100px;
+}
+
+.home .carousel-item p{
+  font-size:15px;
+}
+
+.home .carousel-indicators li {
+  height: 50px;
+  width: 50px;
+}
+
+
+.registrate:last-child {
+  left: 380px;
+}
+
+}
+
+@media(max-width:962px){
+
+.home .carousel-item h2{
+  font-size: 130px;
+}
+
+.home .carousel-item p{
+  font-size:30px;
+}
+
+.home .carousel-indicators li {
+  height: 50px;
+  width: 50px;
+}
+
+.login{
+left:140px;
+
+}
+.registrate {
+  right: -580px;
+}
+
+
+}
