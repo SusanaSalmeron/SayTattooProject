@@ -71,8 +71,6 @@ main{
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
     border-top: 1px solid #145A8D;
     padding-left: 1em;
     background: linear-gradient(0.25turn, #b0c4de, #4682b4, #00008b);
