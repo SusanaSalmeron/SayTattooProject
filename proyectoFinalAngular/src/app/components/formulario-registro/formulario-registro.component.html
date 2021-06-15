@@ -1,0 +1,83 @@
+<!-- <div>
+    <p>{{formulario.status| json}}</p>
+    <p>formulario.value: {{formulario.value| json}}</p>
+</div> -->
+<div class="container-fluid">
+    <h5>Rellena el formulario para registrarte en Say Tattoo!</h5>
+    <form [formGroup]="formulario">
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre">
+            </div>
+            <div class="col-6">
+                <select class="form-control" formControlName="sexo">
+                    <option value="" selected>Sexo</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Direccion" formControlName="direccion">
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="Ciudad" formControlName="ciudad">
+            </div>
+            <div class="col-2">
+                <input type="text" class="form-control" placeholder="CP" formControlName="cp">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <input type="tel" class="form-control" placeholder="Teléfono" formControlName="telefono">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Fecha Nacimiento"
+                    formControlName="fechaNacimiento">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Nombre Usuario" formControlName="nombreUsuario">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Email" formControlName="email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <input type="password" class="form-control" placeholder="Password" formControlName="password">
+            </div>
+            <div class="col-6">
+                <input type="password" class="form-control" placeholder="Repite Password"
+                    formControlName="repetirPassword">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <select class="form-control" formControlName="tatuador">
+                    <option value="" selected>¿Eres tatuador?</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+        <div class="privacidad">
+            <h5>Política de privacidad</h5>
+            <input class="form-check-input" type="checkbox" formControlName="proteccionDatos" ngModel required>
+            <label class="form-check-label">Sí, acepto la política de privacidad de Say Tattoo! </label>
+        </div>
+        <p class="error" *ngIf="formulario.hasError('required') && formulario.touched">Ningún campo del formulario puede
+            estar vacio</p>
+
+        <div class="button">
+            <button [disabled]="!formulario.valid">Enviar</button>
+            <button>Cancelar</button>
+        </div>
+
+    </form>
+
+
+</div>

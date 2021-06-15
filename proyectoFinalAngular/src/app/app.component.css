@@ -3,16 +3,21 @@
     962px portatiles
     1200px* grandes ordenadores*/
 
+/*     font-family: 'Karla', sans-serif;
+font-family: 'Montserrat', sans-serif; */
 
-/* .wrap{
-    display: flex;
+
+.wrap{
+    position: relative;
     flex-direction: column;
     min-height: 100vh;
-}
+ }
+ 
 
-.content {
-    flex:1;
-} */
+ .container-fluid{
+       position: relative;
+ }
+
 
 header nav ul li{
     margin-left: 1em;
@@ -20,9 +25,11 @@ header nav ul li{
 }
 
 header nav ul li a{
-    color: #315075;
+    color: #103e60;
     line-height:50%;
     font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0.3em
 }
 
 header nav ul li:nth-child(5)a, header nav ul li:last-child a{
@@ -48,10 +55,24 @@ header nav a .logo{
 }
 
 .navbar{
-    background: linear-gradient(0.25turn, #C1D8F5, #4682b4, #00008b);
+    background: linear-gradient(0.25turn, #C1D8F5, #4682b4, #145A8D);
     border-bottom: 2px solid #145A8D;
     box-shadow: 5px 5px 5px #145A8D;
 } 
+
+
+
+#navbarSupportedContent{
+    position: absolute;
+    top: 4em;
+    right: 0;
+    z-index:2;
+    background: linear-gradient(0.25turn, #C1D8F5, #4682b4, #145A8D);
+    border: 1px solid #145A8D;
+    
+}
+
+
 
 
 .account  {
@@ -62,23 +83,14 @@ header nav a .logo{
 
 
 
-main{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    display: block;
-  
-}
-
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     border-top: 1px solid #145A8D;
     padding-left: 1em;
-    background: linear-gradient(0.25turn, #b0c4de, #4682b4, #00008b);
-    height: 100px;
+    background: linear-gradient(0.25turn, #C1D8F5, #4682b4, #145A8D);
+    height: 11%;
     width: 100%;
-    
 }
 
 footer.top {
@@ -87,7 +99,10 @@ box-shadow: 0 -5px 10px -2px #145A8D;
 
 .warnings div{
     color: #315075;
+    font-size: 0.7em;
 }
+
+
 
 
 
@@ -102,9 +117,14 @@ box-shadow: 0 -5px 10px -2px #145A8D;
 
 
 @media (min-width: 768px) {
+#navbarSupportedContent{
+   width: 25%;
+    
+}
 
-
-
+footer{
+    height: 8%;
+}
 
 
 
@@ -113,6 +133,17 @@ box-shadow: 0 -5px 10px -2px #145A8D;
 
 
 @media (min-width: 962px) { 
+    .container-fluid{
+        position: initial;
+    }
+
+    #navbarSupportedContent{
+    position: inherit;
+    background: none;
+    border: none
+    
+}
+
     header nav ul li{
     margin-left: 2em;
     
@@ -131,10 +162,13 @@ box-shadow: 0 -5px 10px -2px #145A8D;
 }
 
     header nav ul li:first-child a:hover, header nav ul li:nth-child(2) a:hover{
-        color: #c6617d
+        color: #c6617d;
 }
-    header nav ul li:last-child a, header nav ul li:nth-child(5) a{
-        color: #698eba;
+
+footer{
+    height: 6%;
+}
+
 }
 
     header nav ul li:last-child i{
@@ -142,12 +176,10 @@ box-shadow: 0 -5px 10px -2px #145A8D;
          font-size: 25px;
 }
     header nav ul li:last-child a:hover, header nav ul li:nth-child(5) a:hover{
-        color: #f192ad
+        color: #f192ad;
 }
 
    
-}
-
 @media (min-width: 1300px){
     header nav ul li{
     margin-left: 2em;
@@ -177,6 +209,10 @@ box-shadow: 0 -5px 10px -2px #145A8D;
 
     header nav ul li:last-child a:hover, header nav ul li:nth-child(5) a:hover{
         color: #f192ad
+}
+
+footer{
+    height: 10%;
 }
 
 }
