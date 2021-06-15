@@ -45,6 +45,9 @@ background-color: rgb(0,0, 0, 0.5);
 z-index: -1;
 }
 
+/* 
+* Esto es para el h2 y p de Say Tattoo!  + Descubriendo trabajos & tatuadores.
+ */
 .home .carousel-item .container {
   position: absolute;
   left: 50%;
@@ -99,4 +102,33 @@ z-index: -1;
     opacity: 1;
     transform: translateX(0px);
   }
+}
+
+/* 
+*Para hacer los styles de los botones de las flechas.
+*/
+
+.home .carousel-controls{
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  z-index: 10;
+  transform: translateX(-50%);
+
+}
+
+.home .carousel-indicators{
+  position: relative;
+  margin: 0;
+}
+
+.home .carousel-indicators li {
+  height: 70px;
+  width: 70px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
 }
