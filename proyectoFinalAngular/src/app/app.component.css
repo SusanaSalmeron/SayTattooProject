@@ -10,9 +10,8 @@ font-family: 'Montserrat', sans-serif; */
 .wrap{
     position: relative;
     flex-direction: column;
-    min-height: 100vh;
- }
- 
+    min-height: 100%;
+}
 
  .container-fluid{
        position: relative;
@@ -84,8 +83,6 @@ header nav a .logo{
 
 
 footer {
-    position: fixed;
-    bottom: 0;
     border-top: 1px solid #145A8D;
     padding-left: 1em;
     background: linear-gradient(0.25turn, #C1D8F5, #4682b4, #145A8D);
