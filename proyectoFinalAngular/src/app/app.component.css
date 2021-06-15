@@ -84,7 +84,7 @@ header nav a .logo{
 
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     border-top: 1px solid #145A8D;
     padding-left: 1em;
