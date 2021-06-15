@@ -1,0 +1,36 @@
+aside{
+    padding-top: 2em;
+    border-right: 0.5px solid #103e60;
+    height: 78vh;
+}
+
+aside ul {
+    padding: 0;
+    margin: 0;
+
+}
+
+aside ul li{
+    list-style-type: none;
+
+}
+
+aside ul li a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #103e60;
+    
+   
+}
+
+aside ul hr{
+    width: 95%;
+    color:#103e60;
+}
+
+@media(max-width: 768px){
+    .card{
+        padding-top: 3em;
+    }
+    
+}

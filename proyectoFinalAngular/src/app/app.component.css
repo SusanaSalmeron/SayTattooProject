@@ -73,8 +73,6 @@ header nav a .logo{
 }
 
 
-
-
 .account  {
     list-style-type: none;
     text-decoration: none;
@@ -89,7 +87,7 @@ footer {
     border-top: 1px solid #145A8D;
     padding-left: 1em;
     background: linear-gradient(0.25turn, #C1D8F5, #4682b4, #145A8D);
-    height: 11%;
+    height: 9%;
     width: 100%;
 }
 
@@ -97,9 +95,9 @@ footer.top {
 box-shadow: 0 -5px 10px -2px #145A8D;
 }
 
-.warnings div{
+footer div{
     color: #315075;
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
 
 

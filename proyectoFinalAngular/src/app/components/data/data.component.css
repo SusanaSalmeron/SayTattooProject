@@ -1,0 +1,19 @@
+h5{
+    margin-top: 1em;
+}
+
+.button{
+    margin: 1em 0;
+}
+
+button:last-child{
+    float: right;
+}
+
+.col-8{
+    height: 60vh;
+}
+
+input{
+    height: 2em;
+}
