@@ -136,5 +136,79 @@ z-index: -1;
 .home .carousel-indicators li.active{
   border-color: #F192AD;
   transform: scale(1.2);
+}
+
+.home .carousel-control-next, 
+.home .carousel-control-prev {
+  height: 120px;
+  width: 120px;
+  opacity: 1;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/*
+*Botones de LOGIN & REGÍSTRATE
+*/
+
+.content {
+  
+  display: inline-block;
+  grid-template-columns: repeat (3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(200px, auto);
+}
+
+.login{
+z-index:99;
+border-radius: 5px;
+background-color: #145A8D;
+color: #F2EFE8;
+grid-column: 1;
+grid-row: 1;
+position: relative;
+width: 120px;
+left: 380px;
+top: 520px;
 
 }
+
+.login:hover {
+  background-color: #F192AD;
+  color: #145A8D;
+}
+
+.registrate {
+ 
+  z-index:99;
+  border-radius: 5px;
+  background-color: #145A8D;
+  color: #F2EFE8;
+  grid-column: 1;
+  grid-row: 3;
+  position: relative;
+  width: 120px;
+  top: 520px;
+  right: -780px;
+}
+
+.registrate:hover {
+  background-color: #F192AD;
+  color: #145A8D;
+}
+
+
+/* 
+*RESPONSIVE - 7678px
+ */
+@media (orientation: landscape) {
+  /* Esto para bloquear la orientación -  sólo se puede ver en Vertical */
+}
+
+@media(max-width:768px){
+}
+  
+
+
