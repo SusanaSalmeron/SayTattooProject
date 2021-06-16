@@ -7,6 +7,7 @@ import { FormularioRegistroComponent } from './components/formulario-registro/fo
 import { modifyDataComponent } from './components/modifyData/modifyData.component';
 import { MoreDataComponent } from './components/moreData/moreData.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { TattoosComponent } from './components/tattoos/tattoos.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'moreData', component: MoreDataComponent },
   { path: 'aboutMe', component: AboutMeComponent },
   { path: 'ratings', component: modifyDataComponent },
+  { path: 'tattoos', component: TattoosComponent }
 
 
 

@@ -1,0 +1,53 @@
+.row .col img{
+    width: 90px; 
+} 
+
+.col-8{
+    margin-top: 1em;
+   
+}
+
+.col-8 input{
+    margin-bottom: 2em;
+}
+
+h6{
+    font-family: 'Karla', sans-serif;
+}
+button{
+    font-family: 'Karla', sans-serif;
+
+}
+
+button{
+    margin-top: 1em;
+}
+
+
+@media(min-width:768px){
+    .row .col img{
+        width: 170px;
+    }
+
+
+
+}
+
+
+@media(min-width:962px){
+    .row .col img{
+        width: 250px;
+    }
+
+}
+
+@media(min-width:1200px){
+    .row .col img{
+        width: 280px;
+    }
+
+
+
+}
+
+

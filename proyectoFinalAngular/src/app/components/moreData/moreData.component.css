@@ -1,10 +1,14 @@
 .col-8{
     margin-top: 1em;
-      margin-left: 0;
+    margin-left: 0;
 }
 hr{
     margin-top: 0.5em;
     
+}
+
+label{
+    font-family: 'Karla', sans-serif;
 }
 textarea{
     width: 250px;
@@ -12,6 +16,53 @@ textarea{
 
 button{
     margin-top: 1em;
+    font-family: 'Karla', sans-serif;
 }
 
- 
+
+
+
+
+@media(min-width: 768px){
+    .col-8{
+        margin-top: 2em;
+    }
+
+    hr{
+        margin-top: 2em;
+    }
+
+    textarea{
+        width: 490px;
+    
+    }
+
+    button{
+        margin-top: 2em
+    }   
+
+}
+
+
+
+ @media(min-width: 962px){
+    textarea{
+        width: 600px;
+    
+    }
+    button{
+        margin-top: 2em
+    }
+    
+}
+
+
+
+
+@media(min-width: 1200px){
+    textarea{
+        width: 800px;
+    }
+    
+}
+

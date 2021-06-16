@@ -4,6 +4,7 @@ h5{
 
 .button{
     margin: 1em 0;
+    font-family: 'Karla', sans-serif;
 }
 
 button:last-child{
@@ -13,7 +14,21 @@ button:last-child{
 .col-8{
     height: 60vh;
 }
+label{
+    font-family: 'Karla', sans-serif;
+}
 
 input{
     height: 2em;
+}
+
+
+@media(min-width: 768px){
+    h5{
+        margin: 2em 0;
+    }
+
+    button{
+        margin-top: 3em;
+    }
 }

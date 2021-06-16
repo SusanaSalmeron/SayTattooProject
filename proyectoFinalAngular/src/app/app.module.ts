@@ -12,6 +12,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MoreDataComponent } from './components/moreData/moreData.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { modifyDataComponent } from './components/modifyData/modifyData.component';
+import { TattoosComponent } from './components/tattoos/tattoos.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { modifyDataComponent } from './components/modifyData/modifyData.componen
     MoreDataComponent,
     AboutMeComponent,
     modifyDataComponent,
+    TattoosComponent,
 
 
 
