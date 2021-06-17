@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-all-tatuadores',
+  selector: 'all-tatuadores',
   templateUrl: './all-tatuadores.component.html',
   styleUrls: ['./all-tatuadores.component.css']
 })
