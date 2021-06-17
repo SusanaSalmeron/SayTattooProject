@@ -17,17 +17,18 @@ header .profile-banner {
     width: 100%;
     display: flex;
     justify-content: center;
+    height: 353px;
 }
 
 header .logo{
     text-align: center;
     margin-bottom: 40px;
     z-index: 1;
+    height: auto;
 }
 
 header .logo img {
     width: 300px;
-    height: 300px;
     z-index: 2;
     position: relative;
     bottom: 250px;
@@ -35,6 +36,7 @@ header .logo img {
 
 header .logo h1 {
     color: #145A8D;
+    bottom: 200px;
 }
 
 /* 
