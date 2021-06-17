@@ -1,0 +1,146 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+* HEADER DEL PERFIL
+*/
+
+header {
+    padding: 20px 0;
+}
+
+header .profile-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header .logo{
+    text-align: center;
+    margin-bottom: 40px;
+    z-index: 1;
+}
+
+header .logo img {
+    width: 300px;
+    height: 300px;
+    z-index: 2;
+    position: relative;
+    bottom: 250px;
+}
+
+header .logo h1 {
+    color: #145A8D;
+}
+
+/* 
+* Container de PERFIL
+*/
+.container-perfile{
+    padding: 20px 0;
+    background-color: #F2EFE8;
+    font-family: Montserrat;
+    font-size: 14px;
+    padding: 40px;
+}
+
+.container-perfile h2{
+    font-family: Montserratbold;
+    font-size: 51px;
+}
+
+.col-md-4 {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-md-4 ul li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+} 
+
+
+
+
+
+/*
+* GALERIA - BOX
+*/
+
+#portfolio {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+#portfolio .portfolio-nav {
+  display: table;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+#portfolio ul{
+  list-style: none;
+  float: right;
+}
+
+#portfolio ul li {
+  float: left;
+}
+
+#portfolio ul li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+.box {
+  float: left;
+  width: 33.3%;
+  padding:10px;
+}
+
+.box img {
+  width: 100%;
+}
+
+.box a:hover img{
+  transform: scale(1.1); 
+}
+
+/*
+* GALERÍA MASONRY
+/* 
+*body {
+  margin: 0;
+  padding: 1rem;
+}
+
+.masonry-with-columns {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 1000px;
+}
+
+.masonry-with-columns div {
+    flex: 1 0 auto;
+    background: #145A8D;
+    color: white;
+    margin: 0 1rem 1rem 0;
+    text-align: center;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+*/
+
