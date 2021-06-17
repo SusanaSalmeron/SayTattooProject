@@ -1,3 +1,5 @@
+
+
 /* 
 *Nuestros Tatuadores
  */
@@ -55,7 +57,32 @@ opacity: 70%;
 border-radius: 10px;
 width: 80%;
  }
+ /*
+ *BARRA DE BUSQUEDA
+ */
+ .contenedor {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+ }
 
+ .barra-busqueda {
+	 width: 70%;
+	 height: 40px;
+	 line-height: 48px;
+	 background-color: #f3f3f3;
+	 padding: 0 20px;
+	 border-radius: 100px;
+	 border: none;
+	 text-align: center;
+	 font-size: 16px;
+ }
+
+ /* ------------------------------------------------------------------ */
+ /*
+ *Bloques de los tatuadores
+ */
 /* @import "compass/css3"; */
 
 @import url(https://fonts.google.com/specimen/Karla:400,600,800);
