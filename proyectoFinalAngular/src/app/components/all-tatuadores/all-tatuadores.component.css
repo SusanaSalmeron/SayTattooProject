@@ -2,16 +2,16 @@
 *Nuestros Tatuadores
  */
 .bloque.parallax {
-	height: 250px;
+	height: 350px;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	opacity: 50%;
+	
 }
 
 .parallax.image-1{
-	background-image: url("../../../assets/images/Slider_B_N_6.jpg");
+	background-image: url("../../../assets/images/Parallax_say_tattoo!.jpg");
 }
  .ourteams {
      text-align: center;
