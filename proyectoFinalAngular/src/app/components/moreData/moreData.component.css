@@ -16,7 +16,15 @@ textarea{
 
 button{
     margin-top: 1em;
+    padding: 5px 15px;
     font-family: 'Karla', sans-serif;
+    background-color: #145A8D;
+    border-radius: 20px;
+}
+
+button:hover{
+    background-color:#4682b4;
+    
 }
 
 

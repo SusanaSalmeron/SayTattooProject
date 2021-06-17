@@ -65,18 +65,20 @@ select option {
 button{   
     margin-bottom: 4em;
     border-radius: 20px;
+    background-color: #145A8D;
+    color: #fff;
+    padding: 4px 20px;
 }
 
-button:first-child {
- padding: 4px 20px;
- background-color: #4682b4
+button:hover{
+    background-color:#4682b4;
 }
 
 
 button:last-child{
     float: right;
     padding: 4px 10px;
-    background-color: #f192ad;
+    
 }
 
 
@@ -135,17 +137,6 @@ input, select, label{
 
 button{ 
     margin-top:3em;
-   
-
-}
-
-
-button:last-child:hover{
-    background-color:#4682b4;
-}
-
-button:first-child:hover{
-    background-color:#f192ad ;
 }
 
 

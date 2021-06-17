@@ -15,13 +15,19 @@ h6{
     font-family: 'Karla', sans-serif;
 }
 button{
-    font-family: 'Karla', sans-serif;
-
-}
-
-button{
     margin-top: 1em;
+    font-family: 'Karla', sans-serif;
+    background-color: #145A8D;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
 }
+
+button:hover{
+    background-color: #4682b4;
+}
+
+
 
 
 @media(min-width:768px){
