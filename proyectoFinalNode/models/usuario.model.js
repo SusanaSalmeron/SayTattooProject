@@ -1,15 +1,8 @@
-const getAll = () => {
-    return new Promise((resolve, reject) => {
-        db.query('SELECT * FROM usuarios where tatuador = "Sí"', (err, rows) => {
-            if (err) reject(err);
-            resolve(rows);
-        });
-    });
-};
+
 
 const getById = (id) => {
     return new Promise((resolve, reject) => {
-        db.query('select * from usuarios where id = ?', [id], (err, rows) => {
+        db.query('select * from usuarios where id = ? and tatuador ="No"', [id], (err, rows) => {
             if (err) reject(err);
             if (rows.length !== 1) resolve(null);
             resolve(rows[0]);
@@ -37,6 +30,15 @@ const deleteById = (id) => {
     })
 }
 
+const modifyById = (id, { nombre, direccion, ciudad, cp, telefono, email, password, repetirPassword }) => {
+    console.log(12)
+    return new Promise((resolve, reject) => {
+        db.query('update usuarios set nombre = ?, direccion = ?, ciudad = ?, cp = ?, telefono = ?, email =?, password = ?, repetirPassword = ? where id = ?', [nombre, direccion, ciudad, cp, telefono, email, password, repetirPassword, id], (err, result) => {
+            if (err) reject(err);
+            resolve(result);
+        });
+    });
+}
 
 
 
@@ -44,4 +46,5 @@ const deleteById = (id) => {
 
 
 
-module.exports = { getAll, create, getById, deleteById };
+
+module.exports = { create, getById, deleteById, modifyById };
