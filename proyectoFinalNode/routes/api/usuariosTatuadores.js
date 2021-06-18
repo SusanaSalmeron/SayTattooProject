@@ -65,7 +65,7 @@ router.delete('/:userId/pics/:picId', async (req, res) => {
             res.status(400);
             res.json({ error: validationMessage })
         } else {
-            await deleteImageById(req.params.picId, req.params.userId);
+            await deleteImageById(req.params.userId, req.params.picId);
             res.status(200)
             res.send('')
         }
