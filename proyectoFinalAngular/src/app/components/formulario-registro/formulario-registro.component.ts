@@ -11,7 +11,6 @@ export class FormularioRegistroComponent implements OnInit {
   formulario: FormGroup;
 
 
-  //TODO validaciones del formulario -fecha nacimiento = mayor edad
   constructor() {
     this.formulario = new FormGroup({
       nombre: new FormControl('', [
@@ -21,9 +20,7 @@ export class FormularioRegistroComponent implements OnInit {
       sexo: new FormControl('', [
         Validators.required
       ]),
-      direccion: new FormControl('', [
-        Validators.required
-      ]),
+      direccion: new FormControl(''),
       ciudad: new FormControl('', [
         Validators.required
       ]),
@@ -50,11 +47,11 @@ export class FormularioRegistroComponent implements OnInit {
       ]),
       password: new FormControl('', [
         Validators.required,
-        /* Validators.pattern(/"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"/) //Minimum eight characters, at least one uppercase letter, one lowercase letter and one number: */
+        Validators.pattern(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$/) //at least one upper case, one lower case, one special character, min 8 in length: */
       ]),
       repetirPassword: new FormControl('', [
         Validators.required,
-        Validators.pattern(/"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"/)
+        Validators.pattern(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$/)
       ]),
       tatuador: new FormControl('', [
         Validators.required
@@ -70,18 +67,6 @@ export class FormularioRegistroComponent implements OnInit {
   }
 
 
-  /*    adultValidator(form) {
-     const dateOfBirth = parseInt(form.get('fechaNacimiento').value);
-     const actualDate = (new Date());
-     const age = (actualDate - dateOfBirth) / 365 / 24 / 60 / 60 / 1000;
-     if (age < 18) {
-       return false
-     } else null;
- 
-   } */
-
-
-
   repeatPasswordValidator(form) {
     const passwordValue = form.get('password').value;
     const passwordRepeatValue = form.get('repetirPassword').value;
@@ -91,6 +76,17 @@ export class FormularioRegistroComponent implements OnInit {
       return { repeatPasswordValidator: true }
     }
   }
+
+  checkControl(control, validator) {
+    return this.formulario.get(control).hasError(validator) && this.formulario.get(control).touched
+  }
+
+  onSubmit() {
+    console.log(this.formulario.value);
+    this.formulario.reset()
+  }
+
+
 
 
 

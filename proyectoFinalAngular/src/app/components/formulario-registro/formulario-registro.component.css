@@ -86,6 +86,10 @@ button:last-child{
     
 }
 
+.error{
+    color: red;
+}
+
 
 
 
