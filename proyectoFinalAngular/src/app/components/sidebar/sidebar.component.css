@@ -1,7 +1,8 @@
 aside{
-    padding-top: 2em;
-    border-right: 0.5px solid #103e60;
-    height: 78vh;
+    padding-top: 10em;
+    border-right: 0.5px solid #145A8D;
+    margin-left:0;
+    height: 100vh;
 }
 
 aside ul {
@@ -12,20 +13,28 @@ aside ul {
 
 aside ul li{
     list-style-type: none;
+    
+    
 
 }
 
 aside ul li a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    color: #103e60;
+    color: #145A8D;
+    font-size: 1.4em;
     
-   
 }
 
+aside ul li a.active-link{
+    color: indigo;
+    height: 70px;
+}
+
+
 aside ul hr{
-    width: 95%;
-    color:#103e60;
+    width: 100%;
+    color:#145A8D;
 }
 
 @media(max-width: 768px){

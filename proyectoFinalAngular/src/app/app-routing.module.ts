@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutMeComponent } from './components/about-me/about-me.component';
+import { FavouritesComponent } from './components/favourites/favourites.component';
 import { AccountComponent } from './components/account/account.component';
 import { DataComponent } from './components/data/data.component';
 import { FormularioRegistroComponent } from './components/formulario-registro/formulario-registro.component';
-import { modifyDataComponent } from './components/modifyData/modifyData.component';
 import { MoreDataComponent } from './components/moreData/moreData.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { TattoosComponent } from './components/tattoos/tattoos.component';
@@ -17,8 +16,7 @@ const routes: Routes = [
   { path: 'account', component: AccountComponent },
   { path: 'data', component: DataComponent },
   { path: 'moreData', component: MoreDataComponent },
-  { path: 'aboutMe', component: AboutMeComponent },
-  { path: 'ratings', component: modifyDataComponent },
+  { path: 'favourites', component: FavouritesComponent },
   { path: 'tattoos', component: TattoosComponent }
 
 

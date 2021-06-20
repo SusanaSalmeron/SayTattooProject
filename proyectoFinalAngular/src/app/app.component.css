@@ -17,6 +17,7 @@ font-family: 'Montserrat', sans-serif; */
  .container-fluid{
        position: relative;
  }
+ 
 
 
 header nav ul li{
@@ -55,9 +56,13 @@ header nav a .logo{
 }
 
 .navbar{
+    width: 100%;
     background: linear-gradient(0.25turn, #C1D8F5, #4682b4, #145A8D);
     border-bottom: 2px solid #145A8D;
     box-shadow: 5px 5px 5px #145A8D;
+    position:fixed;
+    z-index:2;
+    top:0;
 } 
 
 
@@ -85,9 +90,8 @@ footer {
     position: fixed;
     bottom: 0;
     border-top: 1px solid #145A8D;
-    padding-left: 1em;
     background: linear-gradient(0.25turn, #C1D8F5, #4682b4, #145A8D);
-    height: 9%;
+    height: 4%;
     width: 100%;
 }
 
@@ -95,9 +99,11 @@ footer.top {
 box-shadow: 0 -5px 10px -2px #145A8D;
 }
 
-footer div{
-    color: #315075;
+footer .warnings div{
+  
     font-size: 0.8em;
+    margin:0.5em;
+    float: left;
 }
 
 
@@ -120,13 +126,12 @@ footer div{
     
 }
 
-footer{
-    height: 8%;
+footer .warnings div{
+    font-size: 1em;
+    margin-left: 2em; 
+    
+    }
 }
-
-
-
- }
 
 
 
@@ -140,55 +145,58 @@ footer{
     background: none;
     border: none
     
-}
+    }
 
     header nav ul li{
     margin-left: 2em;
     
-}
+    }
+    header nav ul li a{
+        font-size: 1.3em;
+    }
     header nav ul li a:hover{
     color: #f192ad;
     font-size: 1.3em;
     transition: color 1s linear;
     transition: font-size 0.5s linear;
-}
+    }
 
     header nav ul li a i :hover{
     color: #f192ad;
     transition: color 1s linear;
     font-size: 1.3em;
-}
+    }
 
     header nav ul li:first-child a:hover, header nav ul li:nth-child(2) a:hover{
         color: #c6617d;
-}
+    }
 
-footer{
-    height: 6%;
-}
-
-}
+    footer .warnings div{
+        font-size: 1.3em;
+        margin-left: 2em;  
+    }
 
     header nav ul li:last-child i{
          margin-top: -0.7em;
          font-size: 25px;
-}
+    }
     header nav ul li:last-child a:hover, header nav ul li:nth-child(5) a:hover{
         color: #f192ad;
+    }
 }
 
    
-@media (min-width: 1300px){
+@media (min-width: 1200px){
     header nav ul li{
     margin-left: 2em;
-}
+    }
 
     header nav ul li a:hover{
     color: #f192ad;
     font-size: 1.3em;
     transition: color 1s linear;
     transition: font-size 0.5s linear;
-}
+    }
 
     header nav ul li a i :hover{
     color: #f192ad;
@@ -196,21 +204,18 @@ footer{
     transition: color 1s linear;
     
 
-}
+    }
     header nav ul li:first-child a:hover, header nav ul li:nth-child(2) a:hover{
         color: #c6617d
-}
+    }
 
     header nav ul li:last-child a, header nav ul li:nth-child(5) a{
         color: #0a1d35;
-}
+    }
 
     header nav ul li:last-child a:hover, header nav ul li:nth-child(5) a:hover{
         color: #f192ad
-}
+    }
 
-footer{
-    height: 10%;
-}
 
 }

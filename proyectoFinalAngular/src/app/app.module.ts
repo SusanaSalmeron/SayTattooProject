@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SliderComponent } from './components/slider/slider.component';
@@ -10,9 +11,11 @@ import { AccountComponent } from './components/account/account.component';
 import { DataComponent } from './components/data/data.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MoreDataComponent } from './components/moreData/moreData.component';
-import { AboutMeComponent } from './components/about-me/about-me.component';
-import { modifyDataComponent } from './components/modifyData/modifyData.component';
+import { FavouritesComponent } from './components/favourites/favourites.component';
 import { TattoosComponent } from './components/tattoos/tattoos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 @NgModule({
@@ -24,8 +27,7 @@ import { TattoosComponent } from './components/tattoos/tattoos.component';
     DataComponent,
     SidebarComponent,
     MoreDataComponent,
-    AboutMeComponent,
-    modifyDataComponent,
+    FavouritesComponent,
     TattoosComponent,
 
 
@@ -35,7 +37,11 @@ import { TattoosComponent } from './components/tattoos/tattoos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    InfiniteScrollModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
