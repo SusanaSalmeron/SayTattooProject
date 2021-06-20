@@ -1,14 +1,21 @@
-<!-- <div>
-    <p>{{formulario.status| json}}</p>
-    <p>formulario.value: {{formulario.value| json}}</p>
-</div> -->
 <div class="container-fluid">
     <h5>Rellena el formulario para registrarte en Say Tattoo!</h5>
-    <form [formGroup]="formulario">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
         <div class="row">
             <div class="col-6">
                 <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre">
+                <p class="error" *ngIf="checkControl('nombre', 'required')">
+                    El campo nombre es obligatorio
+                </p>
+                <p class="error" *ngIf="checkControl('nombre', 'minlength')">El nombre debe contener al menos 5
+                    caracteres
+                </p>
             </div>
+            <!--  <div>
+                <p>{{formulario.status| json}}</p>
+                <p>formulario.value: {{formulario.value| json}}</p>
+            </div> -->
+
             <div class="col-6">
                 <select class="form-control" formControlName="sexo">
                     <option value="" selected>Sexo</option>
@@ -16,6 +23,9 @@
                     <option value="femenino">Femenino</option>
                     <option value="otros">Otros</option>
                 </select>
+                <p class="error" *ngIf="checkControl('sexo', 'required')">
+                    Elije una de las opciones
+                </p>
             </div>
         </div>
         <div class="row">
@@ -24,35 +34,54 @@
             </div>
             <div class="col-4">
                 <input type="text" class="form-control" placeholder="Ciudad" formControlName="ciudad">
+                <p class="error" *ngIf="checkControl('ciudad', 'required')">Este campo no puede estar vacio</p>
             </div>
             <div class="col-2">
                 <input type="text" class="form-control" placeholder="CP" formControlName="cp">
+                <p class="error" *ngIf="checkControl('cp', 'required')">Este campo no puede estar vacio</p>
+                <p class="error" *ngIf="checkControl('cp', 'pattern')">El codigo postal debe contener 5 números
             </div>
         </div>
         <div class="row">
             <div class="col-6">
                 <input type="tel" class="form-control" placeholder="Teléfono" formControlName="telefono">
+                <p class="error" *ngIf="checkControl('telefono', 'required')">Este campo no puede estar vacio</p>
             </div>
             <div class="col-6">
                 <input type="text" class="form-control" placeholder="Fecha Nacimiento"
                     formControlName="fechaNacimiento">
+                <p class="error" *ngIf="checkControl('fechaNacimiento', 'required')">Este campo no puede estar vacio</p>
+                <p class="error" *ngIf="checkControl('fechaNacimiento', 'pattern')">La fecha debe tener el formato
+                    DD/MM/AAAA
             </div>
         </div>
         <div class="row">
             <div class="col-6">
                 <input type="text" class="form-control" placeholder="Nombre Usuario" formControlName="nombreUsuario">
+                <p class="error" *ngIf="checkControl('nombreUsuario', 'required')">Este campo no puede estar vacio</p>
+                <p class="error" *ngIf="checkControl('nombreUsuario', 'minlength')">El nombre debe contener al menos 5
+                    caracteres
+
             </div>
             <div class="col-6">
                 <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                <p class="error" *ngIf="checkControl('email', 'required')">Este campo no puede estar vacio</p>
+                <p class="error" *ngIf="checkControl('email', 'pattern')">El formato del email es incorrecto
             </div>
         </div>
         <div class="row">
             <div class="col-6">
                 <input type="password" class="form-control" placeholder="Password" formControlName="password">
+                <p class="error" *ngIf="checkControl('password', 'required')">Este campo no puede estar vacio</p>
+                <p class="error" *ngIf="checkControl('password', 'pattern')">Debe contener al menos 8 caracteres, un
+                    numero, un caracter especial y una mayúscula
+
             </div>
             <div class="col-6">
                 <input type="password" class="form-control" placeholder="Repite Password"
                     formControlName="repetirPassword">
+                <p class="error" *ngIf="checkControl('repetirPassword', 'required')">Este campo no puede estar vacio</p>
+                <p class="error" *ngIf="formulario.hasError('repeatPasswordValidator')">La contraseña no coincide</p>
             </div>
         </div>
         <div class="row">
@@ -62,15 +91,17 @@
                     <option value="si">Sí</option>
                     <option value="no">No</option>
                 </select>
+                <p class="error" *ngIf="checkControl('tatuador', 'required')">Elije una de las opciones
             </div>
         </div>
-        <div class="privacidad">
+        <div class="privacy">
             <h5>Política de privacidad</h5>
             <input class="form-check-input" type="checkbox" formControlName="proteccionDatos" ngModel required>
             <label class="form-check-label">Sí, acepto la política de privacidad de Say Tattoo! </label>
+            <p class="error" *ngIf="checkControl('proteccionDatos', 'required')">Es imprescindible aceptar la política
+                de privacidad
+                caracteres
         </div>
-        <p class="error" *ngIf="formulario.hasError('required') && formulario.touched">Ningún campo del formulario puede
-            estar vacio</p>
 
         <div class="button">
             <button [disabled]="!formulario.valid">Enviar</button>
