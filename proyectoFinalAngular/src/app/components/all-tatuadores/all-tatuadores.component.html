@@ -38,7 +38,7 @@
 <div class="row">
     <div class="col-4">
         <div class="sidebar-box">
-            <select class="styled-select">
+            <select (change)="onChange($event)" class="styled-select">
                 <option>Selecciona una opción</option>
                 <option>Tradicional</option>
                 <option>Neotradicional</option>
@@ -59,8 +59,9 @@
 
     <div class="col-8">
         <form action="" class="contenedor">
-            <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="buscar">
-            <button class="submit">Buscar 🔍</button>
+            <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="buscar" (focus)="onFocus()"
+                (blur)="onBlur()">
+            <button class="submit" (click)="onClick($event)">Buscar 🔍</button>
         </form>
     </div>
 </div>
