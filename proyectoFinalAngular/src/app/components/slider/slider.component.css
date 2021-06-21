@@ -15,21 +15,24 @@
 
 .home {
   position: relative;
+  padding-top:6em;
+ 
 }
+
 
 .home .content {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 2;
 }
 
 .home .carousel-item {
-min-height: 79vh;
+min-height: 85vh;
 background-position: center;
 background-size: cover;
 position: relative;
-z-index: 1;
+z-index: 1
 }
 
 .home .carousel-item::before {
@@ -151,25 +154,30 @@ z-index: -1;
 *Botones de LOGIN & REGÍSTRATE
 */
 
-.content {
+
+
+/* .content {
   
-  display: inline-block;
-  grid-template-columns: repeat (3, 1fr);
+  display: inline-block; */
+  /* grid-template-columns: repeat (3, 1fr);
   grid-gap: 10px;
-  grid-auto-rows: minmax(200px, auto);
-}
+  grid-auto-rows: minmax(200px, auto); */
+ 
+/* } */
 
 .login{
-z-index:99;
+z-index:2;
 border-radius: 5px;
 background-color: #145A8D;
 color: #F2EFE8;
-grid-column: 1;
-grid-row: 1;
+/* grid-column: 1;
+grid-row: 1; */
 position: relative;
 width: 120px;
-left: 380px;
-top: 60px;
+left:50px;
+top:250px;
+
+
 
 }
 
@@ -180,16 +188,17 @@ top: 60px;
 
 .registrate {
  
-  z-index:99;
+  z-index:2;
   border-radius: 5px;
   background-color: #145A8D;
   color: #F2EFE8;
-  grid-column: 1;
-  grid-row: 3;
+  /* grid-column: 1;
+  grid-row: 3; */
   position: relative;
   width: 120px;
-  top: 60px;
-  right: -780px;
+  left: 120px;
+  top:250px;
+  
 }
 
 .registrate:hover {
@@ -205,7 +214,7 @@ top: 60px;
   /* Esto para bloquear la orientación -  sólo se puede ver en Vertical */
 }
 
-@media(max-width:576px){
+@media(min-width:576px){
 
 .home .carousel-item h2{
   font-size: 20px;
@@ -220,20 +229,15 @@ top: 60px;
   width: 40px;
 }
 
-.login :first-child{
-left:140px;
-top: 10px;
-}
-.registrate {
-left:140px;
-top: 40px;
 
 }
 
+@media(min-width:768px){
+
+  .home .carousel-item {
+min-height: 88vh;
+
 }
-
-@media(max-width:768px){
-
 
 .home .carousel-item h2{
   font-size: 100px;
@@ -248,14 +252,28 @@ top: 40px;
   width: 50px;
 }
 
+.login{
+  left:100px;
+  top:400px;
 
-.registrate:last-child {
+}
+
+.registrate{
+  left:420px;
+  top:400px;
+}
+/* .registrate:last-child {
   left: 380px;
-}
+} */
 
 }
 
-@media(max-width:962px){
+@media(min-width:962px){
+
+  .home .carousel-item {
+height: 91vh;
+
+}
 
 .home .carousel-item h2{
   font-size: 130px;
@@ -271,11 +289,28 @@ top: 40px;
 }
 
 .login{
-left:140px;
+  left:250px;
+  top:500px;
 
 }
-.registrate {
-  right: -580px;
+.registrate{
+  left:550px;
+  top:500px;
+}
+
+
+}
+
+@media(min-width:1200px){
+
+  .login{
+  left:400px;
+  top:600px;
+
+}
+.registrate{
+  left:790px;
+  top:600px;
 }
 
 

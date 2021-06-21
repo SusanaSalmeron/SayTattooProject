@@ -9,75 +9,20 @@
                 (scrolled)="onScroll()">
                 <h4>Favoritos</h4>
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="row" *ngFor="let fav of favourites">
                         <div class="col">
                             <div class="card">
                                 <img src="../../../assets/images/favicon.ico" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Antonio Lopez</h5>
-                                    <p class="card-text"><span>Madrid.</span> Realismo, lettering, japonés.</p>
-                                    <a href="#">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="../../../assets/images/favicon.ico" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Antonio Lopez</h5>
-                                    <p class="card-text"><span>Madrid.</span> Realismo, lettering, japonés.</p>
-                                    <a href="#">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class class="row">
-                        <div class="col">
-                            <div class="card">
-                                <img src="../../../assets/images/favicon.ico" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Antonio Lopez</h5>
-                                    <p class="card-text"><span>Madrid.</span> Realismo, lettering, japonés.</p>
-                                    <a href="#">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src=".../../../assets/images/favicon.ico" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Antonio Lopez</h5>
-                                    <p class class="card-text"><span>Madrid.</span> Realismo, lettering, japonés.
-                                    </p>
-                                    <a href="#">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="card">
-                                <img src=".../../../assets/images/favicon.ico" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Antonio Lopez</h5>
-                                    <p class="card-text"><span>Madrid.</span> Realismo, lettering, japonés.</p>
-                                    <a href="#">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src=".../../../assets/images/favicon.ico" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Antonio Lopez</h5>
-                                    <p class="card-text"><span>Madrid.</span> Realismo, lettering, japonés.</p>
+                                    <h5 class="card-title">{{fav.nombre}}</h5>
+                                    <p class="card-text"><span>{{fav.ciudad}}.</span> Realismo, lettering,
+                                        japonés.</p>
                                     <a href="#">Ver más</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UsuariosService } from 'src/app/services/usuarios.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class FormularioRegistroComponent implements OnInit {
   formulario: FormGroup;
 
 
-  constructor() {
+  constructor(private usuariosService: UsuariosService) {
     this.formulario = new FormGroup({
       nombre: new FormControl('', [
         Validators.required,
@@ -57,7 +58,7 @@ export class FormularioRegistroComponent implements OnInit {
         Validators.required
       ]),
       proteccionDatos: new FormControl('', [
-        Validators.required
+        Validators.requiredTrue
       ])
     }, [this.repeatPasswordValidator]);
 
@@ -81,9 +82,13 @@ export class FormularioRegistroComponent implements OnInit {
     return this.formulario.get(control).hasError(validator) && this.formulario.get(control).touched
   }
 
-  onSubmit() {
-    console.log(this.formulario.value);
-    this.formulario.reset()
+  async onSubmit() {
+    const response = await this.usuariosService.create(this.formulario.value);
+
+    if (response.status === 201) {
+      this.formulario.reset()
+    }
+
   }
 
 

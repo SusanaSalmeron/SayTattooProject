@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'data', component: DataComponent },
   { path: 'moreData', component: MoreDataComponent },
   { path: 'favourites', component: FavouritesComponent },
+  { path: 'favourites/:id', component: FavouritesComponent },
   { path: 'tattoos', component: TattoosComponent }
 
 

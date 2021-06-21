@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h5>Rellena el formulario para registrarte en Say Tattoo!</h5>
+    <h4 class="title">Rellena el formulario para registrarte en Say Tattoo!</h4>
     <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
         <div class="row">
             <div class="col-6">
@@ -96,7 +96,7 @@
         </div>
         <div class="privacy">
             <h5>Política de privacidad</h5>
-            <input class="form-check-input" type="checkbox" formControlName="proteccionDatos" ngModel required>
+            <input class="form-check-input" type="checkbox" formControlName="proteccionDatos">
             <label class="form-check-label">Sí, acepto la política de privacidad de Say Tattoo! </label>
             <p class="error" *ngIf="checkControl('proteccionDatos', 'required')">Es imprescindible aceptar la política
                 de privacidad

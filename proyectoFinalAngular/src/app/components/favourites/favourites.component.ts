@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Favourite } from 'src/app/intefaces/favourite.interface';
+import { Favourite } from 'src/app/interfaces/favourite.interface';
 import { FavouritesService } from 'src/app/services/favourites.service';
 
 @Component({
@@ -10,23 +10,26 @@ import { FavouritesService } from 'src/app/services/favourites.service';
 export class FavouritesComponent implements OnInit {
   throttle = 0;
   distance = 2;
-  page = 1;
   favourites: Favourite[];
 
 
   constructor(private favouriteService: FavouritesService) { }
 
   ngOnInit(): void {
-    this.favouriteService.
-      getFavourites(this.page)
+    this.favouriteService.getFavs()
+      .then(response => this.favourites = response)
+      .catch(error => (error));
+
+    /* this.favouriteService.
+      getFavourites()
       .subscribe((favourites: Favourite[]) => {
         this.favourites = favourites;
 
-      });
+      }); */
   }
 
   onScroll(): void {
-    this.favouriteService.getFavourites(++this.page).subscribe((favourites: Favourite[]) =>
+    this.favouriteService.getFavourites().subscribe((favourites: Favourite[]) =>
       this.favourites.push(...favourites))
   }
 

@@ -39,9 +39,10 @@ Content-Type: application/json
     "email":"cecim@gmail.com",
     "password":"23145",
     "repetirPassword":"23145"
-    
-
 }
+###
+
+GET http://localhost:3000/api/usuarios/3/favs
 
 ###
 GET http://localhost:3000/api/usuariosTatuadores
