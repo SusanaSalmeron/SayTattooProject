@@ -54,8 +54,8 @@ opacity: 70%;
 	  padding: 80px;
   }
  .col-8 p{
-border-radius: 10px;
-width: 80%;
+	border-radius: 10px;
+	width: 80%;
  }
  /*
  *BARRA DE BUSQUEDA
@@ -238,7 +238,7 @@ body {
 	padding:100px 0px 0px 20px;
 	font-size: 24px;
 	font-family: "karla";
-  font-weight:700;
+  	font-weight:700;
 	color: #fff;
 }
 
@@ -271,4 +271,44 @@ body {
 
 .service-white p {
 	color: #000 !important;
+}
+
+
+/*
+*MEDIAQUERIES
+*-------------------------------
+*/
+
+@media (min-width: 576px) {
+  .parallax.image-1{
+	background-image: url("../../../assets/images/parallax_background_mobile.jpg");
+	}
+
+	.ourteams h2{
+		font-size: 60px;
+	}
+    
+	.col-4 {
+		padding: 10px;
+		width: 100%;
+  }
+  	.col-8 {
+		 width: 100%; 
+	  }
+
+	.styled-select { 
+	 width: 80px; 
+ 	}
+
+	 /*
+	 *BARRA DE BUSQUEDA
+ 	*/
+ .contenedor {
+	width: 100%;
+	
+ }
+
+ .barra-busqueda {
+	 width: 120px;
+	}
 }
