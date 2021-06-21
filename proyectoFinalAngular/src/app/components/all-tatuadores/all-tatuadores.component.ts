@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./all-tatuadores.component.css']
 })
 export class AllTatuadoresComponent implements OnInit {
+  mostrarTatuadores: string;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }
