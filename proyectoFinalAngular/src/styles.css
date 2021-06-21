@@ -1,3 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
-   
+@font-face {
+  font-family: 'Iconic-Stencil-Bold-trial';
+  src: url('./assets/Iconic/Iconic-Stencil-Bold-trial.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Neoneon.otf';
+    src: url('../../proyectoFinalAngular/src/assets/Iconic/Iconic-Stencil-Bold-trial.ttf') format('OpenType')
+}

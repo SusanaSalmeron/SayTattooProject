@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { FormularioRegistroComponent } from './components/formulario-registro/formulario-registro.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AllTatuadoresComponent } from './components/all-tatuadores/all-tatuadores.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     SliderComponent,
     FormularioRegistroComponent,
+    AllTatuadoresComponent,
 
 
 
