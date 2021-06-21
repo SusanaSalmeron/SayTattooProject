@@ -20,7 +20,7 @@ export class AllTatuadoresComponent implements OnInit {
   *Evento para recoger el <select>
   */
   onChange($event) {
-    console.log($event.target.velue);
+    console.log($event.target.value);
   }
   /*
   *Para recoger el lo qué escribe del input

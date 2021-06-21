@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: SliderComponent },
   { path: 'register', component: FormularioRegistroComponent },
-  { path: 'tatuadores', component: AllTatuadoresComponent }
+  { path: 'tatuadores', component: AllTatuadoresComponent },
   { path: 'tatuadores/:id', component: CardTatuadoresComponent },
 
 ];
