@@ -11,13 +11,13 @@
     background-repeat:no-repeat;
     background-position:center;
     background-attachment: fixed;
-    height: 92vh;
+    height: 90vh;
 }
 
 h4{
-    padding-top: 5em;
+    padding-top: 4em;
     margin-top: 2em;
-    font-size: 1em;
+    font-size: 1.3em;
     font-family: 'Karla', sans-serif;
 }
 
@@ -64,12 +64,16 @@ select option {
     font-family: 'Karla', sans-serif;
     font-size:small; 
 }
+.privacy h5{
+    margin-top:2em;
+    font-size:1em;;
+}
 
  
 
 
 button{   
-    margin: 2em 0;
+    margin: 1.5em 0;
     border-radius: 20px;
     background-color: #145A8D;
     color: #fff;
@@ -176,8 +180,12 @@ button{
  .container-fluid {
     width: 80%;
     background-size: 70vh;
-    height:107vh;
+    height:95vh;
 
+    }
+
+    .privacy h5{
+        margin-top: 0;
     }
 
     button{ 

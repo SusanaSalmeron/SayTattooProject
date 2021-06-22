@@ -16,9 +16,14 @@ export class FavouritesComponent implements OnInit {
   constructor(private favouriteService: FavouritesService) { }
 
   ngOnInit(): void {
-    this.favouriteService.getFavs()
-      .then(response => this.favourites = response)
-      .catch(error => (error));
+    this.favouriteService.getFavs(3)
+      .then(response => {
+        console.log(response)
+        this.favourites = response
+      })
+      .catch(error => {
+        console.log(error)
+      });
 
     /* this.favouriteService.
       getFavourites()

@@ -7,17 +7,6 @@
 font-family: 'Montserrat', sans-serif; */
 
 
-.wrap{
-    position: relative;
-    flex-direction: column;
-}
-
-.container-fluid{
-    position: relative;
-}
- 
-
-
 header nav ul li{
     margin-left: 1em;
     
@@ -84,8 +73,8 @@ header nav a .logo{
 
 
 footer.top {
-box-shadow: 0 -5px 10px -2px #145A8D;
-display: fixed;
+    box-shadow: 0 -5px 10px -2px #145A8D;
+    display: fixed;
     border-top: 1px solid #145A8D;
     background: linear-gradient(0.25turn, #C1D8F5, #4682b4, #145A8D);
     width: 100%;
@@ -95,7 +84,8 @@ display: fixed;
 footer .warnings div{
     font-size: 0.8em;
     margin:0.5em;
-    float: left;
+    float: left; 
+    
 }
 
 

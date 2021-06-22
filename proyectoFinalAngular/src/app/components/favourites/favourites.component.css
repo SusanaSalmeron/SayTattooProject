@@ -3,8 +3,14 @@ sidebar{
     position: fixed;
     max-width: 28%;
 }
-.col .card img{
+.col-12 .card{
+    width: 100%;
+
+
+}
+.col-12 .card img{
     width: 50%;
+    
     
 }
 
@@ -45,6 +51,20 @@ a{
     sidebar{
         width: 30%;
     }
+    .col-12 .card{
+    width: 80%;
+    flex-direction: row;
+    } 
+
+}
+
+
+@media(min-width: 1200px){
+    .col-12 .card img{
+    width: 30%;
+    
+    
+}
 }
 
 
