@@ -1,0 +1,71 @@
+
+sidebar{
+    position: fixed;
+    max-width: 28%;
+}
+.col-12 .card{
+    width: 100%;
+
+
+}
+.col-12 .card img{
+    width: 50%;
+    
+    
+}
+
+.col .card h5{
+    font-size: 1.3em;
+    font-family: 'Karla', sans-serif;
+}
+
+.col .card p{
+    font-family: 'Karla', sans-serif; 
+     font-style: italic;
+}
+.col .card p span{
+    font-weight: 700;
+    font-size: 1.2em;
+   
+}
+
+h4{
+    padding-top: 6em;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    color: #145A8D;
+    font-weight: 700;
+}
+
+
+.card{
+    margin-bottom: 4em;
+}
+
+a{
+    color: #145A8D;
+}
+
+@media(min-width: 768px){
+    sidebar{
+        width: 30%;
+    }
+    .col-12 .card{
+    width: 80%;
+    flex-direction: row;
+    } 
+
+}
+
+
+@media(min-width: 1200px){
+    .col-12 .card img{
+    width: 30%;
+    
+    
+}
+}
+
+
+

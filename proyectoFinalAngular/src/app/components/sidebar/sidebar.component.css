@@ -1,0 +1,45 @@
+aside{
+    padding-top: 10em;
+    border-right: 0.5px solid #145A8D;
+    margin-left:0;
+    height: 100vh;
+}
+
+aside ul {
+    padding: 0;
+    margin: 0;
+
+}
+
+aside ul li{
+    list-style-type: none;
+    
+    
+
+}
+
+aside ul li a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #145A8D;
+    font-size: 1.4em;
+    
+}
+
+aside ul li a.active-link{
+    color: indigo;
+    height: 70px;
+}
+
+
+aside ul hr{
+    width: 100%;
+    color:#145A8D;
+}
+
+@media(max-width: 768px){
+    .card{
+        padding-top: 3em;
+    }
+    
+}

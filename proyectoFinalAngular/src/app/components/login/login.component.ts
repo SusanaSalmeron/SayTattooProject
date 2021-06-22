@@ -1,3 +1,4 @@
+  styleUrls: ['./login.component.css']
 import { Component, OnInit } from '@angular/core';
 
 import { User } from 'src/app/interface.models/user.interface';

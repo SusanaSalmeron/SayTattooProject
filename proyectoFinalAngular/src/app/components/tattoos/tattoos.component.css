@@ -1,0 +1,59 @@
+.row .col img{
+    width: 90px; 
+} 
+
+.col-8{
+    padding-top: 8em;
+   
+}
+
+.col-8 input{
+    margin-bottom: 2em;
+}
+
+h6{
+    font-family: 'Karla', sans-serif;
+}
+button{
+    margin-top: 1em;
+    font-family: 'Karla', sans-serif;
+    background-color: #145A8D;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+button:hover{
+    background-color: #4682b4;
+}
+
+
+
+
+@media(min-width:768px){
+    .row .col img{
+        width: 170px;
+    }
+
+
+
+}
+
+
+@media(min-width:962px){
+    .row .col img{
+        width: 250px;
+    }
+
+}
+
+@media(min-width:1200px){
+    .row .col img{
+        width: 280px;
+    }
+
+
+
+}
+
+

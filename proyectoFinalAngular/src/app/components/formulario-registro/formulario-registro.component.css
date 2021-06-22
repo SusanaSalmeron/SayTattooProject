@@ -11,15 +11,15 @@
     background-repeat:no-repeat;
     background-position:center;
     background-attachment: fixed;
-    height: 80vh;
+    height: 90vh;
 }
 
-h5{
-    margin-top: 1em;
-    font-size: 1em;
+h4{
+    padding-top: 4em;
+    margin-top: 2em;
+    font-size: 1.3em;
     font-family: 'Karla', sans-serif;
 }
-
 
 form div input::placeholder{
     font-family: 'Karla', sans-serif;
@@ -39,6 +39,9 @@ input{
     
     
 }
+.form-check-input {
+    margin-right: 1em;
+}
 
 input:focus, select:focus {
   opacity: 1;
@@ -56,27 +59,41 @@ select option {
     font-family: 'Karla', sans-serif;
 }
 
-.privacidad, .privacidad h5{
+.privacy{
+    
     font-family: 'Karla', sans-serif;
-    margin-top: 1em;
-    font-size:small;
+    font-size:small; 
 }
+.privacy h5{
+    margin-top:2em;
+    font-size:1em;;
+}
+
+ 
+
 
 button{   
-    margin-bottom: 4em;
+    margin: 1.5em 0;
     border-radius: 20px;
+    background-color: #145A8D;
+    color: #fff;
+    padding: 0.5em 1em;
+    font-family: 'Montserrat', sans-serif;
 }
 
-button:first-child {
- padding: 4px 20px;
- background-color: #4682b4
+button:hover{
+    background-color:#4682b4;
 }
 
 
 button:last-child{
     float: right;
-    padding: 4px 10px;
-    background-color: #f192ad;
+    padding: 0.5em 1em;
+    
+}
+
+.error{
+    color: red;
 }
 
 
@@ -88,31 +105,32 @@ button:last-child{
 @media (min-width: 768px){
 .container-fluid {
     padding-top: 2em;
+    height: 96vh;
  
 }
 input, select, label{
     margin-bottom: 2em;
 }
 
-h5{
+h4{
+    padding-top:3em;
     margin-bottom: 2em;
     font-size: 1.7em;
 }
 
 
-.privacidad{
+.privacy{
    font-size: 1em;
    margin-top: -1em;
 
 }
 
-.privacidad h5{
+.privacy h5{
     font-size: 2em;
     margin-top: 2em;
     margin-bottom: 0;
+    line-height: 2em;
 }
-
-
 
 
 
@@ -124,6 +142,7 @@ h5{
     .container-fluid {
     width: 80%;
     background-size: 60vh;
+    height:97vh;
  
   
 }
@@ -132,20 +151,20 @@ input, select, label{
     margin-bottom: 4em;
 }
 
+.privacy h5{
+
+    font-size: 2em;
+}
+
+.privacy input, .privacy label{
+    margin-top:1em;
+    font-size: 1.3em;
+} 
 
 button{ 
-    margin-top:3em;
-   
 
-}
-
-
-button:last-child:hover{
-    background-color:#4682b4;
-}
-
-button:first-child:hover{
-    background-color:#f192ad ;
+    font-size: 1.3em;
+    margin-top:5em;
 }
 
 
@@ -155,19 +174,31 @@ button:first-child:hover{
 
 @media (min-width: 1200px){
     input, select, label{
-    margin-bottom: 1em;
-}
+    margin-bottom: 2em;
+    }
 
  .container-fluid {
     width: 80%;
     background-size: 70vh;
+    height:95vh;
 
-   
+    }
+
+    .privacy h5{
+        margin-top: 0;
+    }
+
+    button{ 
+
+    font-size: 1.3em;
+    margin-top: 2em;
+}
+
     
 
-}
+} 
 
-}
+
 
 
 

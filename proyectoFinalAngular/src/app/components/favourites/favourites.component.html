@@ -1,0 +1,69 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <sidebar></sidebar>
+        </div>
+
+        <div class="col-8">
+            <div infinite-scroll [infiniteScrollDistance]="distance" [infiniteScrollThrottle]="throttle"
+                (scrolled)="onScroll()">
+                <h4>Favoritos</h4>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12" *ngFor="let fav of favourites">
+                            <div class=" card">
+                                <img src="../../../assets/images/favicon.ico" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{fav.nombre}}</h5>
+                                    <p class="card-text"><span>{{fav.ciudad}}. </span>{{fav.estilos}}</p>
+                                    <a href="#">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class=" card">
+                                <img src="../../../assets/images/favicon.ico" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">hol</h5>
+                                    <p class="card-text"><span>ADJHLK. </span>MIAU</p>
+                                    <a href="#">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class=" card">
+                                <img src="../../../assets/images/favicon.ico" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">hol</h5>
+                                    <p class="card-text"><span>ADJHLK. </span>MIAU</p>
+                                    <a href="#">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class=" card">
+                                <img src="../../../assets/images/favicon.ico" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">hol</h5>
+                                    <p class="card-text"><span>ADJHLK. </span>MIAU</p>
+                                    <a href="#">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class=" card">
+                                <img src="../../../assets/images/favicon.ico" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">hoFSGSFDGDSl</h5>
+                                    <p class="card-text"><span>ADJHLK. </span>XCBCZVBNCGB</p>
+                                    <a href="#">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
