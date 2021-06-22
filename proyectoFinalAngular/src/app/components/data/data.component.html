@@ -5,37 +5,48 @@
         </div>
         <div class="col-8" style="max-width:50rem">
             <h5>Modifica tus datos:</h5>
-            <form>
+            <form [formGroup]="formulario" (ngSubmit)="onSubmit()" *ngIf="formulario">
                 <div>
                     <label class="form-label">Nombre</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" placeholder="" formControlName="nombre">
                 </div>
                 <div>
                     <label class="form-label">Direccion</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" formControlName="direccion">
 
                 </div>
-                <div>
-                    <label class="form-label">Ciudad</label>
-                    <input type="text" class="form-control">
+                <div class="row">
+                    <div class="col-8">
+                        <div>
+                            <label class="form-label">Ciudad</label>
+                            <input type="text" class="form-control" formControlName="ciudad">
 
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div>
+                            <label class="form-label">CP</label>
+                            <input type="text" class="form-control" formControlName="cp">
+
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <label class="form-label">Teléfono</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" formControlName="telefono">
 
                 </div>
                 <div>
                     <label class="form-label">Email</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" formControlName="email">
                 </div>
                 <div>
                     <label class="form-label">Contraseña</label>
-                    <input type="text" class="form-control">
+                    <input type="password" class="form-control" formControlName="password">
                 </div>
                 <div>
                     <label class="form-label">Repite Contraseña</label>
-                    <input type="text" class="form-control">
+                    <input type="password" class="form-control" formControlName="repetirPassword">
 
                 </div>
                 <div class="button">

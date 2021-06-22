@@ -40,7 +40,6 @@ router.post('/register', async (req, res) => {
         res.status(201);
         res.json({ msg: 'El usuario se ha insertado correctamente' });
     } catch (err) {
-        console.log(err);
         res.status(400).json({ error: 'No se ha podido crear el cliente' + err })
     }
 
@@ -61,9 +60,11 @@ router.delete('/:id', async (req, res) => {
 router.put('/:id', async (req, res) => {
     try {
         const result = await modifyById(req.params.id, req.body);
-        res.send('')
-    } catch (error) {
-        res.json({ error: "No se puede modificar el cliente" })
+        res.status(200);
+        res.json({ msg: "El usuario se ha modificado correctamente" })
+    } catch (err) {
+        console.log(err)
+        res.status(400).json({ err: "No se puede modificar el cliente" + err })
     }
 })
 

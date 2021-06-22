@@ -16,6 +16,7 @@ import { TattoosComponent } from './components/tattoos/tattoos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     MoreDataComponent,
     FavouritesComponent,
     TattoosComponent,
+    LoginComponent,
 
 
 

@@ -12,7 +12,6 @@ const getById = (id) => {
 
 const create = ({ nombre, sexo, direccion, ciudad, cp, telefono, fechaNacimiento, nombreUsuario, email, password, tatuador, proteccionDatos }) => {
     const newDate = format("yyyy-MM-dd", format.parse("dd/MM/yyyy", fechaNacimiento))
-    console.log(newDate)
     return new Promise((resolve, reject) => {
         db.query('insert into usuarios(nombre, sexo, direccion, ciudad, cp, telefono, fechaNacimiento, nombreUsuario, email, password, tatuador, proteccionDatos) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [nombre, sexo, direccion, ciudad, cp, telefono, newDate, nombreUsuario, email, password, tatuador, proteccionDatos], (err, result) => {
             if (err) reject(err);
@@ -30,9 +29,10 @@ const deleteById = (id) => {
     })
 }
 
-const modifyById = (id, { nombre, direccion, ciudad, cp, telefono, email, password, repetirPassword }) => {
+const modifyById = (id, { nombre, direccion, ciudad, cp, telefono, email, password }) => {
+
     return new Promise((resolve, reject) => {
-        db.query('update usuarios set nombre = ?, direccion = ?, ciudad = ?, cp = ?, telefono = ?, email =?, password = ?, repetirPassword = ? where id = ?', [nombre, direccion, ciudad, cp, telefono, email, password, repetirPassword, id], (err, result) => {
+        db.query('update usuarios set nombre = ?, direccion = ?, ciudad = ?, cp = ?, telefono = ?, email =?, password = ? where id = ?', [nombre, direccion, ciudad, cp, telefono, email, password, id], (err, result) => {
             if (err) reject(err);
             resolve(result);
         });
