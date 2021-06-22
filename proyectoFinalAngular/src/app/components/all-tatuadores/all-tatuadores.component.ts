@@ -38,6 +38,5 @@ export class AllTatuadoresComponent implements OnInit {
   */
   onClick($event) {
     console.log('Se ha pulsado el botón de "Buscar Buscar 🔍');
-
   }
 }

@@ -1,0 +1,25 @@
+{
+  "name": "proyectofinalnode",
+  "version": "1.0.0",
+  "description": "Proyecto de API REST con NodeJS para el Proyecto Final Say Tattto",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sandra",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parse": "^0.1.0",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "moments": "0.0.2",
+    "mongoose": "^5.12.14",
+    "mongoose-pagination": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
