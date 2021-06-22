@@ -1,16 +1,14 @@
-export interface Tatuador {
+export interface User {
     nombre: string;
     sexo: boolean;
     direccion: string;
-    cuidad: string;
-    cp: number;
-    telefono: number;
-    fechaNacimiento: string;
+    ciudad: string;
+    cp: string;
+    telefono: string;
     nombreUsuario: string;
-    email: string;
     password: string;
     tatuador: boolean;
     proteccionDatos: boolean;
-}
+    imgPerfil: string;
 
-module.exports = (Tatuador);
+}
