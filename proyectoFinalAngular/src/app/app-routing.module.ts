@@ -5,6 +5,7 @@ import { AllTatuadoresComponent } from './components/all-tatuadores/all-tatuador
 
 import { SliderComponent } from './components/slider/slider.component';
 import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatuadores.component'
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'register', component: FormularioRegistroComponent },
   { path: 'tatuadores', component: AllTatuadoresComponent },
   { path: 'tatuadores/:id', component: CardTatuadoresComponent },
+  { path: 'login', component: LoginComponent }
 
 ];
 

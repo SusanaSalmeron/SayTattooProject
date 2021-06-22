@@ -8,6 +8,7 @@ import { FormularioRegistroComponent } from './components/formulario-registro/fo
 import { ReactiveFormsModule } from '@angular/forms';
 import { AllTatuadoresComponent } from './components/all-tatuadores/all-tatuadores.component';
 import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatuadores.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatua
     FormularioRegistroComponent,
     CardTatuadoresComponent,
     AllTatuadoresComponent,
+    LoginComponent,
 
 
 
