@@ -69,37 +69,37 @@ router.put('/:id', async (req, res) => {
 })
 
 //Petición de email y contraseña login
-router.post('/login', async (req, res) => {
+// router.post('/login', async (req, res) => {
 
-    // 1 - Compruebo si existe el email
-    const usuario = await getByEmail(req.body.email);
-    if (!usuario) {
-        return res.json({ error: 'error en email y/o password 1' });
-    }
+// 1 - Compruebo si existe el email
+// const usuario = await getByEmail(req.body.email);
+// if (!usuario) {
+//     return res.json({ error: 'error en email y/o password 1' });
+// }
 
-    // console.log(req.body.password, usuario.password);
-    // 2 - Compruebo si las password coinciden
-    const iguales = bcrypt.compareSync(req.body.password, usuario.password);
-    if (iguales) {
-        res.json({ success: 'Todo a tope!', token: createToken(usuario) });
-    } else {
-        res.json({ error: 'error en email y/o password 2' });
-    }
+// console.log(req.body.password, usuario.password);
+// 2 - Compruebo si las password coinciden
+//     const iguales = bcrypt.compareSync(req.body.password, usuario.password);
+//     if (iguales) {
+//         res.json({ success: 'Todo a tope!', token: createToken(usuario) });
+//     } else {
+//         res.json({ error: 'error en email y/o password 2' });
+//     }
 
-});
+// });
 
 // Devuelve un JSON con los datos del usuario Activo
-router.get('/perfil', checkToken, (req, res) => {
-    res.json(req.user);
-});
+// router.get('/perfil', checkToken, (req, res) => {
+//     res.json(req.user);
+// });
 
-function createToken(pUsuario) {
-    const obj = {
-        usuario_id: pUsuario.id,
-        caducidad: dayjs().add(7, 'days').unix()
-    }
-    return jwt.sign(obj, 'colorin colorado...');
-}
+// function createToken(pUsuario) {
+//     const obj = {
+//         usuario_id: pUsuario.id,
+//         caducidad: dayjs().add(7, 'days').unix()
+//     }
+//     return jwt.sign(obj, 'colorin colorado...');
+// }
 
 
 

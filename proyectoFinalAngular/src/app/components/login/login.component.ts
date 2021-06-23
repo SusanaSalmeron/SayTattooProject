@@ -9,19 +9,19 @@ import { Usuario } from '../../interfaces/usuario.interface';
 })
 export class LoginComponent implements OnInit {
 
-  title = 'Login';
-  user = Usuario;
-  identity;
-  token;
+  // title = 'Login';
+  // user = Usuario;
+  // identity;
+  // token;
 
   constructor() {
-    this.user = new usuario('', '', '', '', '', '', 'ROLE_USER', '', '', '', '');
+    //   this.user = new usuario('', '', '', '', '', '', 'ROLE_USER', '', '', '', '');
   }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
-    console.log(usuario);
+    // console.log(usuario);
   }
 }
