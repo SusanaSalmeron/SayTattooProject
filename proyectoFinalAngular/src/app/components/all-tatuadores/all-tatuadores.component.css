@@ -311,4 +311,44 @@ body {
  .barra-busqueda {
 	 width: 120px;
 	}
+
+	/*
+	* Botones de ANTERIOR y SIGUIENTE para poder páginar ALL - TATUADORES
+	*/
+.btn-anterior{
+z-index:2;
+border-radius: 5px;
+background-color: #145A8D;
+color: #F2EFE8;
+/* grid-column: 1;
+grid-row: 1; */
+position: relative;
+width: 120px;
+left:30px;
+top:250px;
+}
+
+.btn-anterior:hover{
+  background-color: #F192AD;
+  color: #145A8D;
+}
+
+.btn-siguiente{
+z-index:2;
+border-radius: 5px;
+background-color: #145A8D;
+color: #F2EFE8;
+/* grid-column: 1;
+grid-row: 1; */
+position: relative;
+width: 120px;
+left:30px;
+top:250px;
+}
+
+.btn-siguiente:hover{
+  background-color: #F192AD;
+  color: #145A8D;
+}
+
 }
