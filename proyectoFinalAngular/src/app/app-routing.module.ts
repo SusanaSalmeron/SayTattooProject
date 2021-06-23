@@ -11,7 +11,6 @@ import { SliderComponent } from './components/slider/slider.component';
 import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatuadores.component'
 import { LoginComponent } from './components/login/login.component';
 import { TattoosComponent } from './components/tattoos/tattoos.component';
-import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
