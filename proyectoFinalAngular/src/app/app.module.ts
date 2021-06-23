@@ -17,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { LoginComponent } from './components/login/login.component';
+import { ProteccionDatosComponent } from './components/proteccion-datos/proteccion-datos.component';
+import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { LoginComponent } from './components/login/login.component';
     FavouritesComponent,
     TattoosComponent,
     LoginComponent,
+    ProteccionDatosComponent,
+    AvisoLegalComponent,
 
 
 

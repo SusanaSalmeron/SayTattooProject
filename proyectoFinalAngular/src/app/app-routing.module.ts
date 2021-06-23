@@ -8,6 +8,8 @@ import { MoreDataComponent } from './components/moreData/moreData.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { TattoosComponent } from './components/tattoos/tattoos.component';
 import { LoginComponent } from './components/login/login.component';
+import { ProteccionDatosComponent } from './components/proteccion-datos/proteccion-datos.component';
+import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.component';
 
 
 const routes: Routes = [
@@ -20,7 +22,9 @@ const routes: Routes = [
   { path: 'favourites', component: FavouritesComponent },
   { path: 'favourites/:id', component: FavouritesComponent },
   { path: 'tattoos', component: TattoosComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'proteccionDatos', component: ProteccionDatosComponent },
+  { path: 'avisoLegal', component: AvisoLegalComponent }
 
 
 

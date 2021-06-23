@@ -12,6 +12,18 @@ ul li{
     width: 30%;
 }
 
+.col-8 .card-body h5{
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.col-8 ul img{
+    margin-right:1em;
+    width:15%;
+}
+
+
+
 .col-8 span{
 font-style: italic;
 }
@@ -26,8 +38,12 @@ font-style: italic;
 }
 
 @media(min-width: 768px){
+    .col-8 ul img{
+    margin-right:1em;
+    width:10%;
+}
     ul li{
-        font-size: 1.3em;
+        font-size: 1em;
         padding: 1em;
     }
 
@@ -44,8 +60,13 @@ font-style: italic;
 
 
 @media(min-width: 1200px){
-    .card img{
-        width: 20%;
+    .col-8 .card-img-top{
+        width: 18%;
+    }
+    
+    .col-8 .card ul li img{
+    width: 4%; 
+    margin-right:2em;
     }
 
     .card{

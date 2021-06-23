@@ -1,14 +1,14 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-4" style="max-width:50rem">
+        <div class="col-4">
             <sidebar></sidebar>
         </div>
-        <div class="col-8" style="max-width:50rem">
+        <div class="col-8">
             <h5>Modifica tus datos:</h5>
             <form [formGroup]="formulario" (ngSubmit)="onSubmit()" *ngIf="formulario">
                 <div>
                     <label class="form-label">Nombre</label>
-                    <input type="text" class="form-control" placeholder="" formControlName="nombre">
+                    <input type="text" class="form-control" formControlName="nombre">
                 </div>
                 <div>
                     <label class="form-label">Direccion</label>
@@ -51,7 +51,6 @@
                 </div>
                 <div class="button">
                     <button type="submit">Modificar</button>
-                    <button type="submit">Cancelar</button>
                 </div>
             </form>
         </div>

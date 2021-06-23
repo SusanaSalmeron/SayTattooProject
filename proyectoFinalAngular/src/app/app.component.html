@@ -21,9 +21,15 @@
             <li class="nav-item ml-auto" class="account">
               <a class="nav-link active" [routerLink]="('/account')" tabindex="-1">
                 <i class="fas fa-user-circle"></i>
+
               </a>
             </li>
           </ul>
+          <div class="content">
+            <button class="login" [routerLink]="('/login')">Login</button>
+            <button class="registrate" [routerLink]="('/register')">Regístrate</button>
+
+          </div>
         </div>
       </div>
     </nav>
@@ -34,9 +40,8 @@
   <footer class="top">
     <div class="warnings">
       <div>©2021</div>
-      <div>Politica de privacidad</div>
-      <div>Politica de cookie</div>
-      <div>Aviso legal</div>
+      <div><a [routerLink]="('/proteccionDatos')">Politica de privacidad</a></div>
+      <div><a [routerLink]="('/avisoLegal')">Aviso Legal</a></div>
     </div>
   </footer>
 </div>

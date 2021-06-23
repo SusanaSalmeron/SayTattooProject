@@ -1,27 +1,43 @@
+.container-fluid{
+    height: 95vh;
+}
+
 .col-8{
     margin-top: 1em;
     margin-left: 0;
 }
 
 .multiInput{
-    padding-top: 6em;
+    padding-top: 7em;
 }
 hr{
-    margin-top: 0.5em;
-    
+    margin-top: 0.5em;  
 }
 
-label{
+.form-label, h6{
     font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 1.4em;
 }
+
+.form-check-label {
+    font-size: 1.3em;
+}
+
 textarea{
     width: 250px;
+   
+}
+
+.form-floating{
+    font-size: 1.3em;
 }
 
 button{
     margin-top: 1em;
     padding: 5px 15px;
     font-family: 'Karla', sans-serif;
+    font-size: 1.3em;
     color: white;
     background-color: #145A8D;
     border-radius: 20px;
@@ -37,9 +53,17 @@ button:hover{
 
 
 @media(min-width: 768px){
+    .container-fluid{
+    height: 96vh;
+}
+    
     .col-8{
         margin-top: 2em;
     }
+
+    .multiInput{
+    padding-top: 7em;
+}
 
     hr{
         margin-top: 2em;
@@ -59,6 +83,10 @@ button:hover{
 
 
  @media(min-width: 962px){
+
+    .container-fluid{
+    height: 97vh;
+}
     textarea{
         width: 600px;
     

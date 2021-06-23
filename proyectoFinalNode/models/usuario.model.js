@@ -2,13 +2,16 @@ const format = require('date-format');
 
 const getById = (id) => {
     return new Promise((resolve, reject) => {
-        db.query('select * from usuarios where id = ? and tatuador ="No"', [id], (err, rows) => {
+        db.query("select nombre, sexo, direccion, ciudad, cp, telefono, date_format(fechaNacimiento, '%d/%m/%Y') as fechaNacimiento, nombreUsuario, email, password, tatuador, proteccionDatos from usuarios where id =?", [id], (err, rows) => {
             if (err) reject(err);
             if (rows.length !== 1) resolve(null);
             resolve(rows[0]);
         })
     })
 }
+
+
+
 
 const create = ({ nombre, sexo, direccion, ciudad, cp, telefono, fechaNacimiento, nombreUsuario, email, password, tatuador, proteccionDatos }) => {
     const newDate = format("yyyy-MM-dd", format.parse("dd/MM/yyyy", fechaNacimiento))

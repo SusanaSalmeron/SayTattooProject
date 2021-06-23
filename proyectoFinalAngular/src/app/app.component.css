@@ -71,6 +71,34 @@ header nav a .logo{
     margin:0;
 }
 
+.content .login{
+   
+    width: 5em;
+    border-radius: 5px;
+    background-color: #145A8D;
+    color: #F2EFE8;
+} 
+
+.content .login:hover{
+    background-color: #F192AD;
+    color: #145A8D;
+   
+} 
+
+.content .registrate{
+    margin-left: 3em;
+    width: 5em;
+    border-radius: 5px;
+    background-color: #145A8D;
+        color: #F2EFE8;
+} 
+
+.content .registrate:hover{
+    background-color: #F192AD;
+    color: #145A8D;
+
+}
+
 
 footer.top {
     box-shadow: 0 -5px 10px -2px #145A8D;
@@ -78,6 +106,7 @@ footer.top {
     background: linear-gradient(0.25turn, #C1D8F5, #4682b4, #145A8D);
     width: 100%;
     height:5vh;
+    
 }
 
 footer .warnings div{
@@ -85,6 +114,10 @@ footer .warnings div{
     margin:0.5em;
     float: left; 
     
+}
+
+footer .warnings div a{
+    color: darkblue;
 }
 
 
@@ -103,9 +136,24 @@ footer .warnings div{
 
 @media (min-width: 768px) {
 #navbarSupportedContent{
-   width: 25%;
+   width: 40%;
+   
     
 }
+.content .login{
+    width: 8em;
+    border-radius: 5px;;
+} 
+
+
+
+.content .registrate{
+    width: 8em;
+    float: right;
+    
+} 
+
+
 
 footer.top {
     height:4vh;
@@ -131,6 +179,8 @@ footer .warnings div{
     border: none
     
     }
+
+    
 
     header nav ul li{
     margin-left: 2em;
@@ -205,6 +255,23 @@ footer .warnings div{
     header nav ul li:last-child a:hover, header nav ul li:nth-child(5) a:hover{
         color: #f192ad
     }
+
+    .content .login{
+   
+    width: 10em;
+    border-radius: 5px;
+    } 
+
+ 
+
+.content .registrate{
+    margin-left: 6em;
+    margin-right: 2em;
+    width: 10em;
+    
+} 
+
+
 
     footer.top {
     height:5vh;
