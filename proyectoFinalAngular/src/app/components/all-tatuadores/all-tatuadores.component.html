@@ -73,63 +73,65 @@
 
 <div class="row">
     <div class="col-sm-4">
+        <div class="tatuadores" *ngFor="let tatuador of tatuadores">
 
-        <div class="service-details" [routerLink]="['/tatuadores', 1]">
-            <img src="../../../assets/images/tatuadores/Tatto.PNG" alt="realm">
-            <div class="service-hover-text">
-                <h3>Ivan Pelegrin Medina</h3>
-                <h4>Otaku Tattoo Artist Madrid</h4>
-                <p>Nulla rhoncus orci sed odio euismod vestibulum. Praesent porta aliquet nulla, ut mattis velit
-                    rhoncus eu.
-                </p>
-            </div>
-            <div class="service-white service-text">
-                <p>Iván Pelegrín</p>
-                <a href="https://www.instagram.com/ivanpelegrinmedina/?hl=es">@ivanpelegrinmedina
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ---------- -->
-    <div class="col-sm-4">
-
-        <div class="service-details" [routerLink]="['/tatuadores', 1]">
-            <img src="../../../assets/images/tatuadores/Tatto.PNG" alt="realm">
-            <div class="service-hover-text">
-                <h3>Ivan Pelegrin Medina</h3>
-                <h4>Otaku Tattoo Artist Madrid</h4>
-                <p>Nulla rhoncus orci sed odio euismod vestibulum. Praesent porta aliquet nulla, ut mattis velit
-                    rhoncus eu.
-                </p>
-            </div>
-            <div class="service-white service-text">
-                <p>Iván Pelegrín</p>
-                <a href="https://www.instagram.com/ivanpelegrinmedina/?hl=es">@ivanpelegrinmedina
-                </a>
+            <div class="service-details" [routerLink]="['/tatuadores', 1]">
+                <img [src]="tatuador.imagPerfil" alt="realm">
+                <div class="service-hover-text">
+                    <h3>{{tatuador.nombre}}</h3>
+                    <h4>{{tatuador.ciudad}}</h4>
+                    <p>Nulla rhoncus orci sed odio euismod vestibulum. Praesent porta aliquet nulla, ut mattis velit
+                        rhoncus eu.
+                    </p>
+                </div>
+                <div class="service-white service-text">
+                    <p>{{tatuador.nombre}}</p>
+                    <a href="https://www.instagram.com/ivanpelegrinmedina/?hl=es">@ivanpelegrinmedina
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- 
+        <!-- ---------- -->
+        <div class="col-sm-4">
+
+            <div class="service-details" [routerLink]="['/tatuadores', 1]">
+                <img src="../../../assets/images/tatuadores/Tatto.PNG" alt="realm">
+                <div class="service-hover-text">
+                    <h3>Ivan Pelegrin Medina</h3>
+                    <h4>Otaku Tattoo Artist Madrid</h4>
+                    <p>Nulla rhoncus orci sed odio euismod vestibulum. Praesent porta aliquet nulla, ut mattis velit
+                        rhoncus eu.
+                    </p>
+                </div>
+                <div class="service-white service-text">
+                    <p>Iván Pelegrín</p>
+                    <a href="https://www.instagram.com/ivanpelegrinmedina/?hl=es">@ivanpelegrinmedina
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
         ----------------
      -->
 
-    <div class="col-sm-4">
+        <div class="col-sm-4">
 
-        <div class="service-details" [routerLink]="['/tatuadores', 1]">
-            <img src="../../../assets/images/tatuadores/Tatto.PNG" alt="realm">
-            <div class="service-hover-text">
-                <h3>Ivan Pelegrin Medina</h3>
-                <h4>Otaku Tattoo Artist Madrid</h4>
-                <p>Nulla rhoncus orci sed odio euismod vestibulum. Praesent porta aliquet nulla, ut mattis velit
-                    rhoncus eu.
-                </p>
-            </div>
-            <div class="service-white service-text">
-                <p>Iván Pelegrín</p>
-                <a href="https://www.instagram.com/ivanpelegrinmedina/?hl=es">@ivanpelegrinmedina
-                </a>
+            <div class="service-details" [routerLink]="['/tatuadores', 1]">
+                <img src="../../../assets/images/tatuadores/Tatto.PNG" alt="realm">
+                <div class="service-hover-text">
+                    <h3>Ivan Pelegrin Medina</h3>
+                    <h4>Otaku Tattoo Artist Madrid</h4>
+                    <p>Nulla rhoncus orci sed odio euismod vestibulum. Praesent porta aliquet nulla, ut mattis velit
+                        rhoncus eu.
+                    </p>
+                </div>
+                <div class="service-white service-text">
+                    <p>Iván Pelegrín</p>
+                    <a href="https://www.instagram.com/ivanpelegrinmedina/?hl=es">@ivanpelegrinmedina
+                    </a>
+                </div>
             </div>
         </div>
     </div>

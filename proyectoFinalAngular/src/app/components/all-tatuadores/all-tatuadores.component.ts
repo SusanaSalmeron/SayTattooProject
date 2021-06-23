@@ -8,7 +8,7 @@ import { ApiService } from '../../services/api.service';
 })
 export class AllTatuadoresComponent implements OnInit {
 
-  personajes: any[];
+  tatuadores: any[];
   paginaActual: number;
   numPaginas: number;
 
@@ -17,9 +17,9 @@ export class AllTatuadoresComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.apiService.getPersonajes()
+    this.apiService.getTatuadores()
       .then(response => {
-        this.personajes = response.results;
+        this.tatuadores = response.results;
         this.numPaginas = response.info.pages;
       })
       .catch(error => console.log(error));
@@ -32,8 +32,8 @@ export class AllTatuadoresComponent implements OnInit {
       this.paginaActual--;
     }
 
-    const response = await this.apiService.getPersonajes(this.paginaActual)
-    this.personajes = response.results;
+    const response = await this.apiService.getTatuadores(this.paginaActual)
+    this.tatuadores = response.results;
 
   }
 
