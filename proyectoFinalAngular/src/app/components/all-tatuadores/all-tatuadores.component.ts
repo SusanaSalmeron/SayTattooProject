@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'all-tatuadores',
@@ -7,12 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllTatuadoresComponent implements OnInit {
 
+  personajes: any[];
+  paginaActual: number;
+  numPaginas: number;
 
-  constructor() {
-
+  constructor(private apiService: ApiService) {
+    this.paginaActual = 1;
   }
 
   ngOnInit(): void {
+    this.apiService.getPersonajes()
+      .then(response => {
+        this.personajes = response.results;
+        this.numPaginas = response.info.pages;
+      })
+      .catch(error => console.log(error));
+  }
+
+  async onClick2(siguiente: boolean) {
+    if (siguiente) {
+      this.paginaActual++;
+    } else {
+      this.paginaActual--;
+    }
+
+    const response = await this.apiService.getPersonajes(this.paginaActual)
+    this.personajes = response.results;
+
   }
 
 
@@ -40,3 +62,6 @@ export class AllTatuadoresComponent implements OnInit {
     console.log('Se ha pulsado el botón de "Buscar Buscar 🔍');
   }
 }
+
+
+

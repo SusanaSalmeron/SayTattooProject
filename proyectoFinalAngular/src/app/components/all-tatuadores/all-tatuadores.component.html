@@ -134,3 +134,10 @@
         </div>
     </div>
 </div>
+
+<h2>{{paginaActual}} / {{numPaginas}}</h2>
+
+<div class="botones">
+    <button (click)="onClick2(false)" [disabled]="paginaActual === 1">Anterior</button>
+    <button (click)="onClick2(true)" [disabled]="paginaActual === numPaginas">Siguiente</button>
+</div>
