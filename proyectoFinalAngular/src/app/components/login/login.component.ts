@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from '../../interfaces/usuario.interface';
 
 
 @Component({
@@ -8,16 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  // title = 'Login';
-  // user = user;
-  // identity = true;
-  // token;
+  title = 'Login';
+  user = Usuario;
+  identity;
+  token;
 
   constructor() {
-    // this.user = new user('', '', '', '', '', '', 'ROLE_USER', '', '', '', '');
+    this.user = new usuario('', '', '', '', '', '', 'ROLE_USER', '', '', '', '');
   }
 
   ngOnInit(): void {
   }
 
+  onSubmit() {
+    console.log(usuario);
+  }
 }
