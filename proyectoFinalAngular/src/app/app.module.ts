@@ -35,10 +35,6 @@ import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatua
     FavouritesComponent,
     TattoosComponent,
     LoginComponent,
-
-
-
-
   ],
   imports: [
     BrowserModule,
