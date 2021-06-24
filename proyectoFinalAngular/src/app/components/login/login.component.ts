@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from '../../interfaces/usuario.interface';
+
 
 
 @Component({
@@ -9,10 +9,8 @@ import { Usuario } from '../../interfaces/usuario.interface';
 })
 export class LoginComponent implements OnInit {
 
-  // title = 'Login';
-  // user = Usuario;
-  // identity;
-  // token;
+  email: string;
+  password: string;
 
   constructor() {
     //   this.user = new usuario('', '', '', '', '', '', 'ROLE_USER', '', '', '', '');
@@ -21,7 +19,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    // console.log(usuario);
+  login() {
+    console.log(this.email);
+    console.log(this.password);
   }
 }
