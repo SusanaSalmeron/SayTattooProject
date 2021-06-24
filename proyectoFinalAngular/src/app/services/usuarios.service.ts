@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Usuario } from '../interfaces/usuario.interface';
-import { CookieService } from "ngx-cookie-service";
 
 
 @Injectable({
@@ -9,7 +8,7 @@ import { CookieService } from "ngx-cookie-service";
 })
 export class UsuariosService {
 
-  constructor(private httpClient: HttpClient, private cookies: CookieService) { }
+  constructor(private httpClient: HttpClient) { }
 
   create(formData) {
     return this.httpClient.post("http://localhost:3000/api/usuarios/register", formData, { observe: "response" }).toPromise();

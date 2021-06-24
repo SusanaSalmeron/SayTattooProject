@@ -100,7 +100,9 @@ header nav a .logo{
 }
 
 
-footer.top {
+footer.top,
+.push {
+    height: 50px; 
     box-shadow: 0 -5px 10px -2px #145A8D;
     border-top: 1px solid #145A8D;
     background: linear-gradient(0.25turn, #C1D8F5, #4682b4, #145A8D);
