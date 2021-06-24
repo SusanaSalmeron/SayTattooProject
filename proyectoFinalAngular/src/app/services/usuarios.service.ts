@@ -1,12 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Usuario } from '../interfaces/usuario.interface';
+import { Headers } from '@angular/core'
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuariosService {
+
+  headers = new Headers();
 
   constructor(private httpClient: HttpClient) { }
 
