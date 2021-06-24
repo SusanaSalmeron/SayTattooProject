@@ -7,11 +7,13 @@
 .container { 
     background: url('../../../assets/images/Say_Tattoo_Background.jpg');
     justify-content: center;
+    padding: 8em;
 }
 
 .logo{
     margin-top: 50px;
     text-align: center;
+    width: 20%;
 }
 
 h1 {

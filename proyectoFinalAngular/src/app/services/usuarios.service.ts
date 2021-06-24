@@ -32,4 +32,8 @@ export class UsuariosService {
   getUser(id): Promise<Usuario> {
     return this.httpClient.get<Usuario>(`http://localhost:3000/api/usuarios/${id}`).toPromise();
   }
+
+  login(user: any) {
+    return this.httpClient.post("http://localhost:3000/api/usuarios/login", user);
+  }
 }
