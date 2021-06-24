@@ -12,7 +12,6 @@ import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatua
 import { LoginComponent } from './components/login/login.component';
 import { ProteccionDatosComponent } from './components/proteccion-datos/proteccion-datos.component';
 import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.component';
-import { AccountService } from './services/account.service';
 import { TattoosComponent } from './components/tattoos/tattoos.component';
 
 
@@ -23,15 +22,13 @@ const routes: Routes = [
   { path: 'register', component: FormularioRegistroComponent },
   { path: 'tatuadores', component: AllTatuadoresComponent },
   { path: 'tatuadores/:id', component: CardTatuadoresComponent },
-  { path: 'login', component: LoginComponent }
-  { path: 'register', component: FormularioRegistroComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'account/:id', component: AccountComponent },
   { path: 'data/:id', component: DataComponent },
   { path: 'moreData/:id', component: MoreDataComponent },
   { path: 'favourites', component: FavouritesComponent },
   { path: 'favourites/:id', component: FavouritesComponent },
   { path: 'tattoos', component: TattoosComponent },
-  { path: 'login', component: LoginComponent },
   { path: 'proteccionDatos', component: ProteccionDatosComponent },
   { path: 'avisoLegal', component: AvisoLegalComponent }
 
