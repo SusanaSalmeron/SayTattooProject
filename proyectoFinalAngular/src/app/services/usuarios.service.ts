@@ -9,7 +9,7 @@ import { CookieService } from "ngx-cookie-service";
 })
 export class UsuariosService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private cookies: CookieService) { }
 
   create(formData) {
     return this.httpClient.post("http://localhost:3000/api/usuarios/register", formData, { observe: "response" }).toPromise();
@@ -40,10 +40,11 @@ export class UsuariosService {
 
   // Crear los Métodos para Guardar el Token en las cookies y para recuperarlo.
 
-  setToken(token: String) {
-    this.cookies.set("token", token);
+  setToken(token: string) {
+    localStorage.setItem("token", token);
+
   }
   getToken() {
-    return this.cookies.get("token");
+    return localStorage.getItem("token");
   }
 }
