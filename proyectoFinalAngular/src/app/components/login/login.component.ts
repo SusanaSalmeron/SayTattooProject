@@ -28,10 +28,14 @@ export class LoginComponent implements OnInit {
 
 
 
-
+  //Llamar  desde el componente de login al servicio del usuario para almacenar el token que llega desde la BBDD.
   login() {
-    console.log(this.email);
-    console.log(this.password);
+    // console.log(this.email);
+    // console.log(this.password);
+    const user = { email: this.email, password: this.password };
+    this.usuariosService.login(user).subscribe(data => {
+      this.usuariosService.setToken(data.token);
+    });
   }
 
 }
