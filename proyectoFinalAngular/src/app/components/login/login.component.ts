@@ -34,6 +34,8 @@ export class LoginComponent implements OnInit {
     const user = { email: this.email, password: this.password };
     this.usuariosService.login(user).subscribe(data => {
       this.usuariosService.setToken(data["token"]);
+      console.log(data);
+
       this.router.navigateByUrl('/home');
     });
   }
