@@ -5,6 +5,9 @@ const jwt = require('jsonwebtoken');
 const { create, getById, deleteById, modifyById, getByMail, getFavsById } = require('../../models/usuario.model');
 
 
+router.get('/perfil', (req, res) => {
+    res.send('Hola aquí estoy');
+});
 
 //peticion de un usuario por id
 router.get('/:id', async (req, res) => {
@@ -28,6 +31,7 @@ router.get('/:id/favs', async (req, res) => {
         res.json({ err: 'No hay favoritos' })
     }
 });
+
 
 
 //peticion de creacion de un usuario nuevo
