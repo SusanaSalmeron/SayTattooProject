@@ -71,10 +71,13 @@ GET http://localhost:3000/api/usuariosTatuadores/1/pics
 GET http://localhost:3000/api/usuariosTatuadores/4/pics?style=Japonés
 
 ###
-//Enviar gracias al token al perfil del id del usuario
 
+
+//Enviar gracias al token al perfil del id del usuario
 GET http://localhost:3000/api/usuarios/perfil
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoyMiwiY2FkdWNpZGFkIjoxNjI1MTQ5OTUwLCJpYXQiOjE2MjQ1NDUxNTB9.jRPgo60HFJRY6ReBmEAXTXebZBdEkI1ul-XVMTjim7Y
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoyMywiY2FkdWNpZGFkIjoxNjI1MTUxMDUyLCJpYXQiOjE2MjQ1NDYyNTJ9.QQi8WFRCa9Z8WFQ35RZFOWTC28PaDXg0eKNKzIcKR1E
+
+# token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoyMywiY2FkdWNpZGFkIjoxNjI1MTUxMDUyLCJpYXQiOjE2MjQ1NDYyNTJ9.QQi8WFRCa9Z8WFQ35RZFOWTC28PaDXg0eKNKzIcKR1E"
 ###
 
 POST http://localhost:3000/api/usuariosTatuadores/4/pics

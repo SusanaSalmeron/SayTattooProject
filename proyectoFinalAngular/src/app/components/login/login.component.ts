@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       this.usuariosService.setToken(data["token"]);
       console.log(data);
 
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/account/:id');
     });
   }
 
