@@ -19,6 +19,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { LoginComponent } from './components/login/login.component';
 import { ProteccionDatosComponent } from './components/proteccion-datos/proteccion-datos.component';
 import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.component';
+import { AllTatuadoresComponent } from './components/all-tatuadores/all-tatuadores.component';
+import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatuadores.component';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.compon
     AppComponent,
     SliderComponent,
     FormularioRegistroComponent,
+    CardTatuadoresComponent,
+    AllTatuadoresComponent,
     AccountComponent,
     DataComponent,
     SidebarComponent,
@@ -35,10 +39,6 @@ import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.compon
     LoginComponent,
     ProteccionDatosComponent,
     AvisoLegalComponent,
-
-
-
-
   ],
   imports: [
     BrowserModule,

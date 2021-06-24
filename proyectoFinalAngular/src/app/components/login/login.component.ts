@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from '../../interfaces/usuario.interface';
+
 
 @Component({
   selector: 'login',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  // title = 'Login';
+  // user = Usuario;
+  // identity;
+  // token;
+
+  constructor() {
+    //   this.user = new usuario('', '', '', '', '', '', 'ROLE_USER', '', '', '', '');
+  }
 
   ngOnInit(): void {
   }
 
+  onSubmit() {
+    // console.log(usuario);
+  }
 }
