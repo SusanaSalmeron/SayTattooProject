@@ -10,17 +10,17 @@ POST http://localhost:3000/api/usuarios/register
 Content-Type: application/json
 
 {
-    "nombre": "Cecilia Martin",
+    "nombre": "Khris Sanchez",
     "sexo":"femenino",
     "direccion": "Calle del olvido",
     "ciudad": "Madrid",
     "cp": "28025",
     "telefono": "654882318",
-    "fechaNacimiento":"1998-06-09",
-    "nombreUsuario":"CeciM",
-    "email":"cecim@gmail.com",
+    "fechaNacimiento":"1998/06/09",
+    "nombreUsuario":"Khris",
+    "email":"khris@gmail.com",
     "password":"987655",
-    "repetirPassword":"987655",
+    "repetirPassword":"987656",
     "tatuador":"No",
     "proteccionDatos":"Acepto"
 
@@ -77,9 +77,11 @@ DELETE http://localhost:3000/api/usuariosTatuadores/4/pics/26
 
 ###
 
+POST http://localhost:3000/api/usuarios/login
+Content-Type: application/json
 
-
-
-
-
+{
+"email" : "khris@gmail.com",
+"password": "987655"
+}
 

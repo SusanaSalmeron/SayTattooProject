@@ -40,12 +40,11 @@ const modifyById = (id, { nombre, direccion, ciudad, cp, telefono, email, passwo
 }
 
 const getByMail = (email) => {
-    console.log(email);
+
     return new Promise((resolve, reject) => {
         db.query(
             'select * from usuarios where email = ?', [email], (err, rows) => {
-                console.log(err);
-                console.log(rows);
+
                 if (err) reject(err);
                 if (rows.length !== 1) resolve(null);
                 resolve(rows[0]);
