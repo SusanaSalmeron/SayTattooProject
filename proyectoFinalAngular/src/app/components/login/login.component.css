@@ -5,9 +5,14 @@
 }
 
 .container { 
-       background: url('../../../assets/images/Say_Tattoo_Background.jpg');
+    background: url('../../../assets/images/Say_Tattoo_Background.jpg');
+    justify-content: center;
+}
 
-    }
+.logo{
+    margin-top: 50px;
+    text-align: center;
+}
 
 h1 {
   margin: 0;
@@ -61,4 +66,16 @@ h1 {
 .custom-form button:hover {
 background-color: #f192ad;
 color: #145A8D;
+}
+
+@media (max-width: 576px){
+    .container{
+        margin-top: 20px;
+    }
+    .logo{
+    margin-top: 100px;
+    width: 20%;
+    width: 100%;
+    }
+
 }

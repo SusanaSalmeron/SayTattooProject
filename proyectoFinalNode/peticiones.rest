@@ -21,16 +21,16 @@ POST http://localhost:3000/api/usuarios/register
 Content-Type: application/json
 
 {
-    "nombre": "Khris Sanchez",
+    "nombre": "Khris Sanchez Romero",
     "sexo":"femenino",
     "direccion": "Calle del olvido",
     "ciudad": "Madrid",
     "cp": "28025",
     "telefono": "654882318",
-    "fechaNacimiento":"1998/06/09",
+    "fechaNacimiento":"1989/07/31",
     "nombreUsuario":"Khris",
-    "email":"khris@gmail.com",
-    "password":"987655",
+    "email":"khris1@gmail.com",
+    "password":"987656",
     "repetirPassword":"987656",
     "tatuador":"No",
     "proteccionDatos":"Acepto"
