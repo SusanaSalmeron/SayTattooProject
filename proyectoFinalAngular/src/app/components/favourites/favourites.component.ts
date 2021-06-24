@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Favourite } from 'src/app/interfaces/favourite.interface';
 import { FavouritesService } from 'src/app/services/favourites.service';
 
@@ -11,12 +12,17 @@ export class FavouritesComponent implements OnInit {
   throttle = 0;
   distance = 2;
   favourites: Favourite[];
+  id: number;
 
 
-  constructor(private favouriteService: FavouritesService) { }
+  constructor(private favouriteService: FavouritesService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.favouriteService.getFavs(3)
+    this.activatedRoute.params.subscribe(params => {
+      this.id = params.id;
+    })
+
+    this.favouriteService.getFavs(this.id)
       .then(response => {
         console.log(response)
         this.favourites = response

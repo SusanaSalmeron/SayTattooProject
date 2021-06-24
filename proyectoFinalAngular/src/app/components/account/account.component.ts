@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Usuario } from 'src/app/interfaces/usuario.interface';
 import { AccountService } from 'src/app/services/account.service';
 
@@ -9,12 +10,16 @@ import { AccountService } from 'src/app/services/account.service';
 })
 export class AccountComponent implements OnInit {
   user: Usuario;
+  id: number;
 
 
-  constructor(private accountService: AccountService) { }
+  constructor(private accountService: AccountService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.accountService.getUserById(3)
+    this.activatedRoute.params.subscribe(params => {
+      this.id = params.id;
+    })
+    this.accountService.getUserById(this.id)
       .then(response => {
         this.user = response
       })

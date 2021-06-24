@@ -51,6 +51,21 @@ const deleteImageById = (tUserId, imgId) => {
     })
 }
 
+const moreDataByID = (tUserId, imgPerfil, sobreMi, estilos) => {
+    console.log("imgPerfil: " + imgPerfil);
+    console.log("sobreMi: " + sobreMi);
+    console.log("estilos: " + estilos);
+    return new Promise((resolve, reject) => {
+        db.query('update usuarios set imgPerfil = ? where id =?', [imgPerfil, tUserId])
+        db.query('delete from tbi_tatuadoresEstilos where fk_tatuador = ?', [tUserId])
+        for (let estilo of estilos) {
+            db.query('insert into tbi_tatuadoresEstilos(fk_estilo,      fk_tatuador) value(?, ?)', [estilo, tUserId], (err, result) => {
+                if (err) reject(err);
+                resolve(result);
+            })
+        }
+    })
+}
 
 
 
@@ -58,4 +73,5 @@ const deleteImageById = (tUserId, imgId) => {
 
 
 
-module.exports = { getAll, getById, getPicsByParams, addPic, deleteImageById };
+
+module.exports = { getAll, getById, getPicsByParams, addPic, deleteImageById, moreDataByID };

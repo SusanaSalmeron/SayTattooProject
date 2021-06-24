@@ -1,6 +1,6 @@
 <aside>
         <ul>
-                <li><a [routerLink]="('/account')" routerLinkActive="active-link">General</a>
+                <li><a [routerLink]="('/account/:id')" routerLinkActive="active-link">General</a>
                 </li>
                 <hr>
                 <li><a [routerLink]="('/data/:id')" routerLinkActive="active-link">Mis
@@ -9,10 +9,10 @@
                 <hr>
                 <li><a [routerLink]="('/tattoos')" routerLinkActive="active-link">Mis Tattoos</a></li>
                 <hr>
-                <li><a [routerLink]="('/favourites')" routerLinkActive="active-link">Favoritos</a>
+                <li><a [routerLink]="('/favourites/:id')" routerLinkActive="active-link">Favoritos</a>
                 </li>
                 <hr>
-                <li><a [routerLink]="('/moreData')" routerLinkActive="active-link">Añadir más Datos</a></li>
+                <li><a [routerLink]="('/moreData/:id')" routerLinkActive="active-link">Añadir más Datos</a></li>
                 <hr>
         </ul>
 </aside>

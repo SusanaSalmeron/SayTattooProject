@@ -7,7 +7,8 @@ h5{
 }
 
 button{
-    margin: 2em 0;
+  
+    margin-top: 2em;
     padding: 0.5em 1em;
     font-family: 'Karla', sans-serif;
     background-color: #145A8D;
@@ -16,9 +17,7 @@ button{
     font-family: 'Montserrat', sans-serif;
 }
 
-button:last-child{
-    float: right;
-}
+
 
 .col-8 form label{
     font-family: 'Karla', sans-serif;
@@ -32,6 +31,9 @@ button:last-child{
 
 
 @media(min-width: 768px){
+    .container-fluid{
+        height: 96vh;
+    }
     h5{
         margin-bottom: 1em;
         font-size: 1.7em;
@@ -55,15 +57,23 @@ button:last-child{
 }
 
 @media(min-width: 962px){
+    .container-fluid{
+        height: 97vh;
+    }
+
     button{
         font-size: 1.3em;
         margin-top:5em;
+    }
+    .col-8 form input{
+        height:3em;
+        font-size: 1.5em;
     }
 
 
 }
 
-@media(min-width: 962px){
+@media(min-width: 1200px){
 
     h5{
         padding-top:5em;
@@ -71,7 +81,14 @@ button:last-child{
 
     form .button button{
         margin-top:2em;
+        
     }
+    .col-8 form input{
+        height:1.7em;
+        font-size: 1.3em;
+    }
+
+    
 
 }
 

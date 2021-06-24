@@ -6,6 +6,17 @@ GET http://localhost:3000/api/usuarios/2
 DELETE http://localhost:3000/api/usuarios/6
 ###
 
+###
+POST http://localhost:3000/api/usuariosTatuadores/1/moreData
+Content-Type: application/json
+
+{
+    "imgPerfil": "kk",
+    "estilos":[1, 2],
+    "sobreMi": ""
+}
+
+###
 POST http://localhost:3000/api/usuarios/register
 Content-Type: application/json
 
@@ -85,3 +96,7 @@ Content-Type: application/json
 "password": "987655"
 }
 
+{
+    "email": "cecig@gmail.com",
+    "password":"987655",
+}

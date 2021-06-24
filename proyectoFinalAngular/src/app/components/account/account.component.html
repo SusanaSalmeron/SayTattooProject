@@ -1,25 +1,41 @@
 <div class="container-fluid ">
     <div class="row">
-        <div class="col-4" tyle="max-width: 50rem;">
+        <div class="col-4" style="max-width: 50rem;">
             <sidebar></sidebar>
         </div>
         <div class="col-8">
-            <span>{{user.nombre}}</span><img class="sayTattoo" src="../../../assets/images/Logos_Horizontal-02.png">
+            <span>{{user.nombre}}</span><img src="../../../assets/images/Logos_Horizontal-02.png">
             <div class="card" style="max-width: 50rem;">
-                <img src="../../../assets/images/Say_Tatoo!-03.png" class="card-img-top" alt="...">
+                <img class="sayTattoo" src={{user.imgPerfil}} class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sobre Mi</h5>
-                    <p class="card-text">5 años de experiencia en estudio e independiente</p>
+                    <p class="card-text">{{user.sobreMi}}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{{user.nombre}}</li>
-                    <li class="list-group-item">{{user.sexo}}</li>
-                    <li class="list-group-item">{{user.direccion}}</li>
-                    <li class="list-group-item">{{user.ciudad}}</li>
-                    <li class="list-group-item">{{user.cp}}</li>
-                    <li class="list-group-item">{{user.telefono}}</li>
-                    <li class="list-group-item">{{user.fechaNacimiento}}</li>
-                    <li class="list-group-item">{{user.email}}</li>
+                    <li class="list-group-item"><img src="../../../assets/images/name.png">
+                        <span>{{user.nombre}}</span>
+                    </li>
+                    <li class="list-group-item"><img src="../../../assets/images/gender.png">
+                        <span>{{user.sexo}}</span>
+                    </li>
+                    <li class="list-group-item"><img src="../../../assets/images/address.png">
+                        <span>{{user.direccion}}</span>
+                    </li>
+                    <li class="list-group-item"><img src="../../../assets/images/city.png">
+                        <span>{{user.ciudad}}</span>
+                    </li>
+                    <li class="list-group-item"><img src="../../../assets/images/cp.png">
+                        <span>{{user.cp}}</span>
+                    </li>
+                    <li class="list-group-item"><img src="../../../assets/images/phone.png">
+                        <span>{{user.telefono}}</span>
+                    </li>
+                    <li class="list-group-item"><img src="../../../assets/images/calendar.png">
+                        <span>{{user.fechaNacimiento}}</span>
+                    </li>
+                    <li class="list-group-item"><img src="../../../assets/images/email.png">
+                        <span>{{user.email}}</span>
+                    </li>
                 </ul>
 
             </div>
