@@ -10,15 +10,16 @@ import { TattoosComponent } from './components/tattoos/tattoos.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProteccionDatosComponent } from './components/proteccion-datos/proteccion-datos.component';
 import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.component';
+import { AccountService } from './services/account.service';
 
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: SliderComponent },
   { path: 'register', component: FormularioRegistroComponent },
-  { path: 'account', component: AccountComponent },
+  { path: 'account/:id', component: AccountComponent },
   { path: 'data/:id', component: DataComponent },
-  { path: 'moreData', component: MoreDataComponent },
+  { path: 'moreData/:id', component: MoreDataComponent },
   { path: 'favourites', component: FavouritesComponent },
   { path: 'favourites/:id', component: FavouritesComponent },
   { path: 'tattoos', component: TattoosComponent },

@@ -2,7 +2,7 @@ const format = require('date-format');
 
 const getById = (id) => {
     return new Promise((resolve, reject) => {
-        db.query("select nombre, sexo, direccion, ciudad, cp, telefono, date_format(fechaNacimiento, '%d/%m/%Y') as fechaNacimiento, nombreUsuario, email, password, tatuador, proteccionDatos from usuarios where id =?", [id], (err, rows) => {
+        db.query("select nombre, sexo, direccion, ciudad, cp, telefono, date_format(fechaNacimiento, '%d/%m/%Y') as fechaNacimiento, nombreUsuario, email, password, imgPerfil, sobreMi from usuarios where id =?", [id], (err, rows) => {
             if (err) reject(err);
             if (rows.length !== 1) resolve(null);
             resolve(rows[0]);
@@ -58,7 +58,6 @@ const getByMail = (email) => {
 const getFavsById = (id) => {
     return new Promise((resolve, reject) => {
         db.query('SELECT tf.fk_usuario_tatuador_id as id, u.nombre, u.imgPerfil, u.ciudad, group_concat(e.estilo) as estilos FROM tatuadores_favoritos tf inner join tbi_tatuadoresEstilos te on tf.fk_usuario_tatuador_id = te.fk_tatuador inner join  estilos e on e.id = te.fk_estilo inner join usuarios u on u.id = tf.fk_usuario_tatuador_id where tf.fk_usuario_id = ? GROUP by tf.fk_usuario_tatuador_id', [id], (err, rows) => {
-            console.log(2)
             if (err) reject(err);
             resolve(rows)
         })

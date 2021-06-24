@@ -6,6 +6,17 @@ GET http://localhost:3000/api/usuarios/2
 DELETE http://localhost:3000/api/usuarios/6
 ###
 
+###
+POST http://localhost:3000/api/usuariosTatuadores/1/moreData
+Content-Type: application/json
+
+{
+    "imgPerfil": "kk",
+    "estilos":[1, 2],
+    "sobreMi": ""
+}
+
+###
 POST http://localhost:3000/api/usuarios/register
 Content-Type: application/json
 
@@ -16,9 +27,9 @@ Content-Type: application/json
     "ciudad": "Madrid",
     "cp": "28025",
     "telefono": "654882318",
-    "fechaNacimiento":"1998-06-09",
+    "fechaNacimiento":"1998/06/09",
     "nombreUsuario":"CeciM",
-    "email":"cecim@gmail.com",
+    "email":"cecig@gmail.com",
     "password":"987655",
     "repetirPassword":"987655",
     "tatuador":"No",
@@ -76,6 +87,15 @@ DELETE http://localhost:3000/api/usuariosTatuadores/4/pics/26
 
 
 ###
+
+
+POST http://localhost:3000/api/usuarios/login
+Content-Type: application/json
+
+{
+    "email": "cecig@gmail.com",
+    "password":"987655",
+}
 
 
 

@@ -10,6 +10,8 @@ export interface Usuario {
     email?: string;
     password?: string;
     tatuador?: string;
-    proteccionDatos?: string
+    proteccionDatos?: string;
+    imgPerfil?: string;
+    sobreMi?: string
 
 }

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,22 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
+
+
+
+
+
+  setMoreData(formData, id) {
+    return this.httpClient.post(`http://localhost:3000/api/usuariosTatuadores/${id}/moreData`, formData, { observe: "response" }).toPromise();
+
+  }
+
+
+
 }
+
+
+
+
+

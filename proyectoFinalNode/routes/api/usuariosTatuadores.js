@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { getAll, getById, getPicsByParams, addPic, deleteImageById } = require('../../models/usuarioTatuador.model')
+const { getAll, getById, getPicsByParams, addPic, deleteImageById, moreDataByID } = require('../../models/usuarioTatuador.model')
 const { validate, validateDelete } = require('../../routes/middlewares')
 
 
@@ -53,6 +53,23 @@ router.post('/:id/pics/', async (req, res) => {
         }
     } catch (error) {
         res.status(500).json({ error: "No se puede insertar la imagen" })
+    }
+})
+
+//Petición para insertar mas datos de un tatuador por id
+
+router.post('/:id/moreData', async (req, res) => {
+    try {
+        console.log("trusku => " + req.body);
+        const moreData = await moreDataByID(req.params.id,
+            req.body.imgPerfil, req.body.sobreMi, req.body.estilos);
+        res.status(200);
+        res.json({ msg: "" })
+    } catch (error) {
+        console.log("Error cuando inserto mas datos: " +
+            error)
+        res.status(400);
+        res.json({ error })
     }
 })
 
