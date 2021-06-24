@@ -75,7 +75,7 @@ GET http://localhost:3000/api/usuariosTatuadores/4/pics?style=Japonés
 
 //Enviar gracias al token al perfil del id del usuario
 GET http://localhost:3000/api/usuarios/perfil
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoyMywiY2FkdWNpZGFkIjoxNjI1MTUxMDUyLCJpYXQiOjE2MjQ1NDYyNTJ9.QQi8WFRCa9Z8WFQ35RZFOWTC28PaDXg0eKNKzIcKR1E
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoyMiwiY2FkdWNpZGFkIjoxNjI1MTU0NjAyLCJpYXQiOjE2MjQ1NDk4MDJ9.fn3ocwMRV0nO4axaSdPaeisDEChvB5ZJvhlgzxyidjg
 
 # token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoyMywiY2FkdWNpZGFkIjoxNjI1MTUxMDUyLCJpYXQiOjE2MjQ1NDYyNTJ9.QQi8WFRCa9Z8WFQ35RZFOWTC28PaDXg0eKNKzIcKR1E"
 ###
@@ -104,7 +104,3 @@ Content-Type: application/json
 "password": "987655"
 }
 
-{
-    "email": "cecig@gmail.com",
-    "password":"987655",
-}

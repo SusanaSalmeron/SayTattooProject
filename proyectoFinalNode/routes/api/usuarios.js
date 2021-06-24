@@ -3,11 +3,14 @@ const bcrypt = require('bcryptjs');
 const dayjs = require('dayjs');
 const jwt = require('jsonwebtoken');
 const { create, getById, deleteById, modifyById, getByMail, getFavsById } = require('../../models/usuario.model');
+const { checkToken } = require('../middlewares');
 
 
-router.get('/perfil', (req, res) => {
-    res.send('Hola aquí estoy');
+// Devuelve un JSON con los datos del usuario Activo
+router.get('/perfil', checkToken, (req, res) => {
+    res.json(req.user);
 });
+
 
 //peticion de un usuario por id
 router.get('/:id', async (req, res) => {
@@ -97,10 +100,6 @@ router.post('/login', async (req, res) => {
 
 });
 
-// Devuelve un JSON con los datos del usuario Activo
-// router.get('/perfil', checkToken, (req, res) => {
-//     res.json(req.user);
-// });
 
 function createToken(pUsuario) {
     const obj = {
