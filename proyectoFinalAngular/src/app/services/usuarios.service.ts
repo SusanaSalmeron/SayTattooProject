@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Usuario } from '../interfaces/usuario.interface';
+import { CookieService } from "ngx-cookie-service";
 
 
 @Injectable({
@@ -35,5 +36,14 @@ export class UsuariosService {
 
   login(user: any) {
     return this.httpClient.post("http://localhost:3000/api/usuarios/login", user);
+  }
+
+  // Crear los Métodos para Guardar el Token en las cookies y para recuperarlo.
+
+  setToken(token: String) {
+    this.cookies.set("token", token);
+  }
+  getToken() {
+    return this.cookies.get("token");
   }
 }
