@@ -1,11 +1,20 @@
-const getAll = () => {
+const getAllBy = (style) => {
     return new Promise((resolve, reject) => {
-        db.query('SELECT * FROM usuarios where tatuador = "Sí"', (err, rows) => {
+        db.query(`
+            select u.id, u.nombre, u.email, u.imgPerfil, u.sobreMi, u.telefono, GROUP_CONCAT(e.estilo) as estilos
+            from usuarios u
+            left outer join tbi_tatuadoresEstilos te on u.id = te.fk_tatuador
+            left outer join estilos e on e.id = te.fk_estilo
+            where u.tatuador = 'SI'
+            and(e.estilo LIKE ? OR e.estilo IS NULL)
+            GROUP BY u.id`, [style], (err, rows) => {
             if (err) reject(err);
             resolve(rows);
-        });
+        })
     });
 };
+
+
 
 const getById = (id) => {
     return new Promise((resolve, reject) => {
@@ -74,4 +83,4 @@ const moreDataByID = (tUserId, imgPerfil, sobreMi, estilos) => {
 
 
 
-module.exports = { getAll, getById, getPicsByParams, addPic, deleteImageById, moreDataByID };
+module.exports = { getById, getPicsByParams, addPic, deleteImageById, moreDataByID, getAllBy };

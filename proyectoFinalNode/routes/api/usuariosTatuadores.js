@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { getAll, getById, getPicsByParams, addPic, deleteImageById, moreDataByID } = require('../../models/usuarioTatuador.model')
+const { getById, getPicsByParams, addPic, deleteImageById, moreDataByID, getAllBy } = require('../../models/usuarioTatuador.model')
 const { validate, validateDelete } = require('../../routes/middlewares')
 
 
@@ -30,8 +30,10 @@ router.get('/:id/pics', async (req, res) => {
 //Peticion de todos los usuarios tatuadores
 router.get('/', async (req, res) => {
     try {
-        const user = await getAll();
-        res.json(user)
+        const style = req.params.estilo ? req.params.estilo : "%"
+        const users = await getAllBy(style);
+        console.log(users)
+        res.json(users)
     } catch {
         res.json({ error: 'no hay clientes para mostrar' })
     }
@@ -60,7 +62,6 @@ router.post('/:id/pics/', async (req, res) => {
 
 router.post('/:id/moreData', async (req, res) => {
     try {
-        console.log("trusku => " + req.body);
         const moreData = await moreDataByID(req.params.id,
             req.body.imgPerfil, req.body.sobreMi, req.body.estilos);
         res.status(200);

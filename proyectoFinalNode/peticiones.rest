@@ -60,7 +60,7 @@ GET http://localhost:3000/api/usuariosTatuadores
 
 ###
 
-GET GET http://localhost:3000/api/usuariosTatuadores/3
+GET http://localhost:3000/api/usuariosTatuadores/3
 
 ###
 

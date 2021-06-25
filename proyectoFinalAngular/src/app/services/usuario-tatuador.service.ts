@@ -7,15 +7,26 @@ import { UsuarioTatuador } from '../interfaces/usuarioTatuador.interface';
 })
 export class UsuarioTatuadorService {
 
+
   constructor(private httpClient: HttpClient) { }
 
 
-
-  getTatuadores(): Promise<UsuarioTatuador[]> {
-    return this.httpClient.get<UsuarioTatuador[]>('http://localhost:3000/api/usuariosTatuadores').toPromise()
+  //Query params es un mapa que construyes donde llamaras a esta funcion
+  //si esta vacia, no tendra ningun query param. Una misma funcion te vale para todos los casos
+  async getTatuadores(queryParams): Promise<UsuarioTatuador[]> {
+    return this.httpClient.get<UsuarioTatuador[]>(
+      'http://localhost:3000/api/usuariosTatuadores',
+      {
+        params: queryParams
+      }
+    ).toPromise()
   }
 
 
 
-
 }
+
+
+
+
+
