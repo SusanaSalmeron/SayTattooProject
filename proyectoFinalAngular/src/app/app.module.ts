@@ -20,6 +20,7 @@ import { AllTatuadoresComponent } from './components/all-tatuadores/all-tatuador
 import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatuadores.component';
 import { ProteccionDatosComponent } from './components/proteccion-datos/proteccion-datos.component';
 import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.component';
+import { NotFound404Component } from './components/not-found404/not-found404.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.compon
     LoginComponent,
     ProteccionDatosComponent,
     AvisoLegalComponent,
+    NotFound404Component,
 
   ],
   imports: [
