@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ProteccionDatosComponent } from './components/proteccion-datos/proteccion-datos.component';
 import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.component';
 import { TattoosComponent } from './components/tattoos/tattoos.component';
+import { NotFound404Component } from './components/not-found404/not-found404.component';
 
 
 const routes: Routes = [
@@ -30,7 +31,9 @@ const routes: Routes = [
   { path: 'favourites/:id', component: FavouritesComponent },
   { path: 'tattoos', component: TattoosComponent },
   { path: 'proteccionDatos', component: ProteccionDatosComponent },
-  { path: 'avisoLegal', component: AvisoLegalComponent }
+  { path: 'avisoLegal', component: AvisoLegalComponent },
+  { path: '**', component: NotFound404Component }
+
 
 
 
