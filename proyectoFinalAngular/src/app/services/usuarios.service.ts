@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Usuario } from '../interfaces/usuario.interface';
-import { Headers } from '@angular/core'
+
 
 
 @Injectable({
@@ -9,9 +9,24 @@ import { Headers } from '@angular/core'
 })
 export class UsuariosService {
 
-  headers = new Headers();
+  private baseUrl: string;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+    this.baseUrl = "http://localhost:3000/api/"
+  }
+
+
+  // Recuperar perfil usuario/perfil
+  getPerfil(): Promise<Usuario[]> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        authorization: localStorage.getItem('token')
+      })
+    };
+
+    return this.httpClient.get<Usuario[]>(this.baseUrl + "usuarios/perfil", httpOptions).toPromise();
+  }
+
 
   create(formData) {
     return this.httpClient.post("http://localhost:3000/api/usuarios/register", formData, { observe: "response" }).toPromise();
