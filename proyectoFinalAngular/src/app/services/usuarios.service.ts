@@ -17,14 +17,14 @@ export class UsuariosService {
 
 
   // Recuperar perfil usuario/perfil
-  getPerfil(): Promise<Usuario[]> {
+  getPerfil(): Promise<Usuario> {
     const httpOptions = {
       headers: new HttpHeaders({
         authorization: localStorage.getItem('token')
       })
     };
 
-    return this.httpClient.get<Usuario[]>(this.baseUrl + "usuarios/perfil", httpOptions).toPromise();
+    return this.httpClient.get<Usuario>(this.baseUrl + "usuarios/perfil", httpOptions).toPromise();
   }
 
 
