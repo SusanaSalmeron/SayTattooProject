@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioTatuador } from 'src/app/interfaces/usuarioTatuador.interface';
+import { UsuarioTatuadorService } from 'src/app/services/usuario-tatuador.service';
 import { ApiService } from '../../services/api.service';
 
 @Component({
@@ -8,60 +10,69 @@ import { ApiService } from '../../services/api.service';
 })
 export class AllTatuadoresComponent implements OnInit {
 
-  usuarioTatuadores: any[];
-  paginaActual: number;
-  numPaginas: number;
+  usuarioTatuador: UsuarioTatuador[];
+  /* paginaActual: number;
+  numPaginas: number */;
 
-  constructor(private apiService: ApiService) {
-    this.paginaActual = 1;
+  constructor(private usuarioTatuadorService: UsuarioTatuadorService) {
+    /* this.paginaActual = 1; */
   }
 
   ngOnInit(): void {
-    this.apiService.getTatuadores()
+    this.usuarioTatuadorService.getTatuadores()
       .then(response => {
-        this.usuarioTatuadores = response.results;
-        this.numPaginas = response.info.pages;
+        this.usuarioTatuador = response;
+        /* this.numPaginas = response.info.pages; */
       })
-      .catch(error => console.log(error));
+      .catch(error =>
+        console.log(error)
+      );
+
+
+
+
   }
 
-  async onClick2(siguiente: boolean) {
+
+
+
+
+  /* async onClick2(siguiente: boolean) {
     if (siguiente) {
       this.paginaActual++;
     } else {
       this.paginaActual--;
-    }
-
-    const response = await this.apiService.getTatuadores(this.paginaActual)
-    this.usuarioTatuadores = response.results;
-
-  }
+    } */
 
 
-  /*
-  *Evento para recoger el <select>
-  */
-  onChange($event) {
-    console.log($event.target.value);
-  }
-  /*
-  *Para recoger el lo qué escribe del input
-  */
-  onFocus() {
-    console.log("El cliente escribe");
-  }
 
-  onBlur() {
-    console.log("Dejó de escribir");
-  }
-
-  /*
-  *Para recoger el click del botón de "Buscar🔍"
-  */
-  onClick($event) {
-    console.log('Se ha pulsado el botón de "Buscar Buscar 🔍');
-  }
 }
+
+
+/*
+*Evento para recoger el <select>
+*/
+/* onChange($event) {
+  console.log($event.target.value); */
+/* } */
+/*
+*Para recoger el lo qué escribe del input
+*/
+/* onFocus() {
+  console.log("El cliente escribe"); */
+/* } */
+
+/* onBlur() {
+  console.log("Dejó de escribir");
+} */
+
+/*
+*Para recoger el click del botón de "Buscar🔍"
+*/
+/* onClick($event) {
+  console.log('Se ha pulsado el botón de "Buscar Buscar 🔍');
+} */
+/* } */
 
 
 

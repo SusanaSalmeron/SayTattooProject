@@ -24,7 +24,6 @@ export class FavouritesComponent implements OnInit {
 
     this.favouriteService.getFavs(this.id)
       .then(response => {
-        console.log(response)
         this.favourites = response
       })
       .catch(error => {

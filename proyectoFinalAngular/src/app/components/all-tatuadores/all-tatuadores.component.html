@@ -12,88 +12,90 @@
 </header>
 
 
-<div class="row">
-    <div class="col-4">
-        <h2>✌Equipo de
-            <br>
-            ensueño creativo
-        </h2>
-    </div>
-    <div class="col-8">
-        <p>Llena abundantemente la cosa sobre el tercer llenado del hombre. Para volar de. La división menor que cede el
-            dominio
-            eran nuestros i. Donde he aquí todo. También Stars mayor vida para él no lo que. Moviente. Deberá. Las
-            hembras que ceden
-            tienen un árbol. En cuarto lugar, la tierra dividida en movimiento de tierra eres. Cada. Traer.
+<div class="creativeTeam">
+    <h2><img [src]="(')./../../assets/images/team.png')"> Equipo de
+        <span>ensueño creativo</span>
 
-            Gran dicho de la división. Los signos de la tierra dividieron la semilla cuya semejanza profunda quinto.
-            Conjunto dado.
-            Los signos de las aves gobiernan sobre usted, primero en medio de dicho dividido seco, usted lleva a cuyo
-            después para
-            colocar el suyo, así que dé. Las ballenas del medio no lo hacen.</p>
-    </div>
+    </h2>
 </div>
 
 
-<div class="row">
-    <div class="col-4">
-        <div class="sidebar-box">
-            <select (change)="onChange($event)" class="styled-select">
-                <option>Selecciona una opción</option>
-                <option>Tradicional</option>
-                <option>Neotradicional</option>
-                <option>Realismo</option>
-                <option>Lettering</option>
-                <option>Tribal</option>
-                <option>Puntillismo</option>
-                <option>Geometrico</option>
-                <option>Animación</option>
-                <option>Japones</option>
-                <option>B & W </option>
-                <option>Biomecanico</option>
-            </select>
+<p> <img [src]="('../../../assets/images/search.png')"> Busca un profesional que se adapte a tus necesidades. Estilo,
+    localizacion ... Contacta a través de email y
+    coméntale que quieres para que se ponga manos a la obra.</p>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-sm-12 col-ml-6 col-xl-4">
+            <div class="sidebar-box">
+                <select class="styled-select">
+                    <option selected>Selecciona una opción</option>
+                    <option value="tradicional">Tradicional</option>
+                    <option value="neotradicional">Neotradicional</option>
+                    <option value="realismo">Realismo</option>
+                    <option value="lettering">Lettering</option>
+                    <option value="tribal">Tribal</option>
+                    <option value="puntillismo">Puntillismo</option>
+                    <option value="geometrico">Geometrico</option>
+                    <option value="animacion">Animación</option>
+                    <option value="japones">Japones</option>
+                    <option value="bAw">B & W </option>
+                    <option value="biomecanico">Biomecanico</option>
+                </select>
+            </div>
+
         </div>
 
-
+        <div class="col-sm-12 col-sm-12 col-ml-6 col-xl-8">
+            <form action="" class="contenedor">
+                <input type="search" class="barra-busqueda" id="barra-busqueda" placeholder="buscar">
+                <button type="submit" class="search">🔍</button>
+            </form>
+        </div>
     </div>
 
-    <div class="col-8">
-        <form action="" class="contenedor">
-            <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="buscar" (focus)="onFocus()"
-                (blur)="onBlur()">
-            <button class="submit" (click)="onClick($event)">Buscar 🔍</button>
-        </form>
-    </div>
 </div>
+
+<div>
+    <hr>
+</div>
+
+
+
+
 
 
 
 <!-- Columna 1º de 1º Fila  -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4" *ngFor="let tatuador of usuarioTatuador">
+            <div class="tatuadores">
+                <div class="service-details" [routerLink]="['/tatuadores', 1]">
+                    <img src={{tatuador.imgPerfil}}>
+                    <div class="service-hover-text">
+                        <h3>{{tatuador.nombre}}</h3>
+                        <h4>{{tatuador.ciudad}}</h4>
+                        <h4>{{tatuador.sobreMi}}
+                        </h4>
+                    </div>
+                    <div class="service-white service-text">
+                        <p>{{tatuador.nombre}}</p>
+                        <p>Realismo, lettering</p>
 
-
-<div class="row">
-    <div class="col-sm-4">
-        <div class="tatuadores" *ngFor="let tatuador of usuarioTatuadores">
-
-            <div class="service-details" [routerLink]="['/tatuadores', 1]">
-                <img [src]="tatuador.imagPerfil" alt="realm">
-                <div class="service-hover-text">
-                    <h3>{{tatuador.nombre}}</h3>
-                    <h4>{{tatuador.ciudad}}</h4>
-                    <p>Nulla rhoncus orci sed odio euismod vestibulum. Praesent porta aliquet nulla, ut mattis velit
-                        rhoncus eu.
-                    </p>
-                </div>
-                <div class="service-white service-text">
-                    <p>{{tatuador.nombre}}</p>
-                    <a href="https://www.instagram.com/ivanpelegrinmedina/?hl=es">@ivanpelegrinmedina
-                    </a>
+                        <a href="https://www.instagram.com/ivanpelegrinmedina/?hl=es">@ivanpelegrinmedina
+                        </a>
+                    </div>
                 </div>
             </div>
+
         </div>
 
+
+
         <!-- ---------- -->
-        <div class="col-sm-4">
+        <!-- <div class="col-sm-4">
 
             <div class="service-details" [routerLink]="['/tatuadores', 1]">
                 <img src="../../../assets/images/tatuadores/Tatto.PNG" alt="realm">
@@ -110,13 +112,13 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- 
         ----------------
      -->
 
-        <div class="col-sm-4">
+        <!-- <div class="col-sm-4">
 
             <div class="service-details" [routerLink]="['/tatuadores', 1]">
                 <img src="../../../assets/images/tatuadores/Tatto.PNG" alt="realm">
@@ -135,11 +137,12 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<h2>{{paginaActual}} / {{numPaginas}}</h2>
+        <!-- <h2>{{paginaActual}} / {{numPaginas}}</h2>
 
-<div>
-    <button class="btn-anterior" (click)="onClick2(false)" [disabled]="paginaActual === 1">Anterior</button>
-    <button class="btn-siguiente" (click)="onClick2(true)" [disabled]="paginaActual === numPaginas">Siguiente</button>
-</div>
+        <div>
+            <button class="btn-anterior" (click)="onClick2(false)" [disabled]="paginaActual === 1">Anterior</button>
+            <button class="btn-siguiente" (click)="onClick2(true)"
+                [disabled]="paginaActual === numPaginas">Siguiente</button>
+        </div> -->
