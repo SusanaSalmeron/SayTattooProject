@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { MoreData } from 'src/app/interfaces/moredata.interface';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -10,53 +9,95 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./moreData.component.css']
 })
 export class MoreDataComponent implements OnInit {
-  formulario: FormGroup;
+  formulario = new FormGroup({
+    imgPerfil: new FormControl(''),
+    estilos: new FormArray([
+      new FormControl(false),
+      new FormControl(false),
+      new FormControl(false),
+      new FormControl(false),
+      new FormControl(false),
+      new FormControl(false),
+      new FormControl(false),
+      new FormControl(false),
+      new FormControl(false),
+      new FormControl(false),
+      new FormControl(false),
+    ]),
+    sobreMi: new FormControl(''),
+  });
   id: number;
-  /* myStyles = {
-    realismo: 3,
-    otro: 5
-  } */
-
-  constructor(private dataService: DataService, private activatedRoute: ActivatedRoute) {
-
-    this.formulario = new FormGroup({
-      imgPerfil: new FormControl(''),
-      tradicional: new FormControl(''),
-      neoTradicional: new FormControl(''),
-      realismo: new FormControl(''),
-      lettering: new FormControl(''),
-      tribal: new FormControl(''),
-      puntillismo: new FormControl(''),
-      geometrico: new FormControl(''),
-      animacion: new FormControl(''),
-      japones: new FormControl(''),
-      bAw: new FormControl(''),
-      biomecanico: new FormControl(''),
-      sobreMi: new FormControl(''),
+  myStyles = [
+    { id: 1, name: 'Tradicional' },
+    { id: 2, name: 'NeoTradicional' },
+    { id: 3, name: 'Realismo' },
+    { id: 4, name: 'Lettering' },
+    { id: 5, name: 'Tribal' },
+    { id: 6, name: 'Puntillismo' },
+    { id: 7, name: 'Geometrico' },
+    { id: 8, name: 'Animación' },
+    { id: 10, name: 'Japonés' },
+    { id: 11, name: 'Black and White' },
+    { id: 12, name: 'Biomecánico' },
 
 
-    })
+  ]
+
+  constructor(private dataService: DataService, private activatedRoute: ActivatedRoute, private formBuilder: FormBuilder) {
+    // this.formulario = this.formBuilder.group({
+    //   estilos: new FormArray([], minSelectedCheckboxes(1))
+    // });
+
+    // function minSelectedCheckboxes(min = 1) {
+    //   const validator: ValidatorFn = (formArray: FormArray) => {
+    //     const totalSelected = formArray.controls
+    //       // get a list of checkbox values (boolean)
+    //       .map(control => control.value)
+    //       // total up the number of checked checkboxes
+    //       .reduce((prev, next) => next ? prev + next : prev, 0);
+
+    //     // if the total is not greater than the minimum, return the error message
+    //     return totalSelected >= min ? null : { required: true };
+    //   };
+
+    //   return validator;
+    // };
+
+
+
+
+
+
+  }
+
+
+  get estilosArray() {
+    return this.formulario.get("estilos") as FormArray;
   }
 
   async ngOnInit() {
     await this.activatedRoute.params.subscribe(params => {
       this.id = params.id
     })
-
-
-
   }
 
   async onSubmit() {
-    /* let estilos = []
-    console.log(this.formulario.value.realismo)
-    if (this.formulario.value.realismo) {
-      estilos.push(this.myStyles.realismo)
-    } */
-    const response = await this.dataService.setMoreData(this.formulario.value, this.id);
+    let body = {}
+    body["imgPerfil"] = this.formulario.value.imgPerfil;
+    body["sobreMi"] = this.formulario.value.sobreMi;
+
+    let estilos = [];
+    for (let i = 0; i < this.formulario.value.estilos.length; i++) {
+      if (this.formulario.value.estilos[i]) {
+        estilos.push(this.myStyles[i].id);
+      }
+    }
+    body["estilos"] = estilos;
+    console.log(body);
+
+    const response = await this.dataService.setMoreData(body, this.id);
     if (response.status === 200) {
       this.formulario.reset()
     }
   }
-
 }

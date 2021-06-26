@@ -30,17 +30,6 @@ export class FavouritesComponent implements OnInit {
         console.log(error)
       });
 
-    /* this.favouriteService.
-      getFavourites()
-      .subscribe((favourites: Favourite[]) => {
-        this.favourites = favourites;
-
-      }); */
-  }
-
-  onScroll(): void {
-    this.favouriteService.getFavourites().subscribe((favourites: Favourite[]) =>
-      this.favourites.push(...favourites))
   }
 
 

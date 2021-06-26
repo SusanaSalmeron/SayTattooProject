@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { getById, getPicsByParams, addPic, deleteImageById, moreDataByID, getAllBy } = require('../../models/usuarioTatuador.model')
+const { getById, getPicsByParams, addPic, deleteImageById, updateProfilePic, deleteOldStyles, addStyleToUser, getAllBy } = require('../../models/usuarioTatuador.model')
 const { validate, validateDelete } = require('../../routes/middlewares')
 
 
@@ -29,7 +29,6 @@ router.get('/:id/pics', async (req, res) => {
 
 
 //Peticion de todos los usuarios tatuadores
-//TODO - integrar la funcion getByWilcard para la barra de busqueda
 router.get('/', async (req, res) => {
     console.log(`PARAMS -> ${JSON.stringify(req.query)}`)
     let users = null;
@@ -69,9 +68,16 @@ router.post('/:id/pics/', async (req, res) => {
 
 router.post('/:id/moreData', async (req, res) => {
     try {
-        const moreData = await moreDataByID(req.params.id,
+        console.log(req.body);
+        const userId = req.params.id
+        await updateProfilePic(req.body.imgPerfil, req.body.sobreMi, userId)
+        await deleteOldStyles(userId)
+        for (let styleId of req.body.estilos) {
+            await addStyleToUser(styleId, userId)
+        }
+/*         const moreData = await moreDataByID(req.params.id,
             req.body.imgPerfil, req.body.sobreMi, req.body.estilos);
-        res.status(200);
+ */     res.status(200);
         res.json({ msg: "" })
     } catch (error) {
         console.log("Error cuando inserto mas datos: " +

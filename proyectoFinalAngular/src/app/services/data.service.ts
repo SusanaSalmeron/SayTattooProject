@@ -8,17 +8,9 @@ export class DataService {
 
   constructor(private httpClient: HttpClient) { }
 
-
-
-
-
-  setMoreData(formData, id) {
-    return this.httpClient.post(`http://localhost:3000/api/usuariosTatuadores/${id}/moreData`, formData, { observe: "response" }).toPromise();
-
+  setMoreData(body, id) {
+    return this.httpClient.post(`http://localhost:3000/api/usuariosTatuadores/${id}/moreData`, body, { observe: "response" }).toPromise();
   }
-
-
-
 }
 
 

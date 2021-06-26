@@ -76,21 +76,70 @@ const deleteImageById = (tUserId, imgId) => {
     })
 }
 
-const moreDataByID = (tUserId, imgPerfil, sobreMi, estilos) => {
+const updateProfilePic = (imgPerfil, userId, sobreMi) => {
+    return new Promise((resolve, reject) => {
+        console.log("Updating user")
+        db.query('update usuarios set imgPerfil = ?, sobreMi = ? where id = ?', [imgPerfil, userId, sobreMi], (err, result) => {
+            if (err) reject(err);
+            resolve(result);
+        });
+    })
+}
+
+const deleteOldStyles = (userId) => {
+    return new Promise((resolve, reject) => {
+        console.log("Deleting all styles");
+        db.query('delete from tbi_tatuadoresEstilos where fk_tatuador = ?', [userId], (err, result) => {
+            if (err) reject(err);
+            resolve(result);
+        })
+    })
+}
+
+const addStyleToUser = (styleId, userId) => {
+    return new Promise((resolve, reject) => {
+        console.log("Deleting all styles");
+        db.query('insert into tbi_tatuadoresEstilos(fk_estilo, fk_tatuador) value(?, ?)', [styleId, userId], (err, result) => {
+            if (err) reject(err);
+            resolve(result);
+        })
+    })
+}
+
+/* const moreDataByID = (tUserId, imgPerfil, sobreMi, estilos) => {
     console.log("imgPerfil: " + imgPerfil);
     console.log("sobreMi: " + sobreMi);
     console.log("estilos: " + estilos);
     return new Promise((resolve, reject) => {
-        db.query('update usuarios set imgPerfil = ? where id =?', [imgPerfil, tUserId])
+        console.log("Updating user")
+        db.query('update usuarios set imgPerfil = ? where id =?', [imgPerfil, tUserId], (err, result) => {
+            if (err) reject(err);
+            resolve(result);
+        });
+    }).then(() => {
+        console.log("Deleting all styles");
         db.query('delete from tbi_tatuadoresEstilos where fk_tatuador = ?', [tUserId])
+    }).then(() => {
+        let promises = [];
         for (let estilo of estilos) {
-            db.query('insert into tbi_tatuadoresEstilos(fk_estilo,      fk_tatuador) value(?, ?)', [estilo, tUserId], (err, result) => {
-                if (err) reject(err);
-                resolve(result);
-            })
+            console.log("Adding style " + estilo)
+            const p = new Promise((res, rej) => db.query('insert into tbi_tatuadoresEstilos(fk_estilo, fk_tatuador) value(?, ?)', [estilo, tUserId]));
+            promises.push(p);
         }
+        console.log("Running all style promises");
+        return Promise.all(promises);
     })
+
+    /*     return new Promise((resolve, reject) => {
+            await db.query('update usuarios set imgPerfil = ? where id =?', [imgPerfil, tUserId])
+            await db.query('delete from tbi_tatuadoresEstilos where fk_tatuador = ?', [tUserId])
+            for (let estilo of estilos) {
+                await db.query('insert into tbi_tatuadoresEstilos(fk_estilo, fk_tatuador) value(?, ?)', [estilo, tUserId])
+            }
+            resolve(result);
+        })
 }
+ */
 
 
 
@@ -98,5 +147,4 @@ const moreDataByID = (tUserId, imgPerfil, sobreMi, estilos) => {
 
 
 
-
-module.exports = { getById, getPicsByParams, addPic, deleteImageById, moreDataByID, getAllBy };
+module.exports = { getById, getPicsByParams, addPic, deleteImageById, updateProfilePic, deleteOldStyles, addStyleToUser, getAllBy };
