@@ -11,12 +11,16 @@ import { UsuarioTatuadorService } from 'src/app/services/usuario-tatuador.servic
 export class AllTatuadoresComponent implements OnInit {
 
   usuarioTatuador: UsuarioTatuador[];
+  searchState: string;
+  styleState: string;
 
 
   /* paginaActual: number;
   numPaginas: number */;
 
   constructor(private usuarioTatuadorService: UsuarioTatuadorService, private activatedRoute: ActivatedRoute) {
+    this.searchState = "";
+    this.styleState = "";
     /* this.paginaActual = 1; */
   }
 
@@ -35,12 +39,24 @@ export class AllTatuadoresComponent implements OnInit {
   }
 
   async onChange($event) {
-    const estilo = $event.target.value
-    let params = {};
-    if (estilo != "mostrarTodos") {
-      params["estilo"] = estilo;
-    }
+    const style = $event.target.value
+    this.styleState = style === "mostrarTodos" ? "" : style;
+    await this.commonSearchEvent();
+  }
 
+  async onKeyUp($event) {
+    this.searchState = $event.target.value;
+    await this.commonSearchEvent();
+  }
+
+  async commonSearchEvent() {
+    let params = {};
+    if (this.styleState) {
+      params["estilo"] = this.styleState;
+    }
+    if (this.searchState) {
+      params["wildcard"] = this.searchState;
+    }
     try {
       this.usuarioTatuador = await this.usuarioTatuadorService.getTatuadores(params)
       console.log(this.usuarioTatuador)
@@ -50,42 +66,14 @@ export class AllTatuadoresComponent implements OnInit {
       console.log(error)
     }
 
-
-
-
-
-
-    /* async onClick2(siguiente: boolean) {
-      if (siguiente) {
-        this.paginaActual++;
-      } else {
-        this.paginaActual--;
-      } */
-
-
-
   }
 
-
-  /*
-  
-  *Para recoger el lo qué escribe del input
-  */
-  /* onFocus() {
-    console.log("El cliente escribe"); */
-  /* } */
-
-  /* onBlur() {
-    console.log("Dejó de escribir");
-  } */
-
-  /*
-  *Para recoger el click del botón de "Buscar🔍"
-  */
-  /* onClick($event) {
-    console.log('Se ha pulsado el botón de "Buscar Buscar 🔍');
-  } */
-  /* } */
+  /* async onClick2(siguiente: boolean) {
+        if (siguiente) {
+          this.paginaActual++;
+        } else {
+          this.paginaActual--;
+        } */
 
 
 

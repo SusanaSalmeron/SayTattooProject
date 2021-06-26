@@ -22,16 +22,23 @@ router.get('/:id/pics', async (req, res) => {
         const pics = await getPicsByParams(req.params.id, req.query.style);
         res.json(pics)
     } catch (error) {
+        console.log(error);
         res.json({ error: 'no existe esa id de cliente' })
     }
 })
 
 
 //Peticion de todos los usuarios tatuadores
+//TODO - integrar la funcion getByWilcard para la barra de busqueda
 router.get('/', async (req, res) => {
+    console.log(`PARAMS -> ${JSON.stringify(req.query)}`)
+    let users = null;
     try {
-        const style = req.params.estilo ? req.params.estilo : "%"
-        const users = await getAllBy(style);
+        const params = {
+            wildcard: req.query.wildcard,
+            style: req.query.estilo
+        }
+        users = await getAllBy(params);
         console.log(users)
         res.json(users)
     } catch {

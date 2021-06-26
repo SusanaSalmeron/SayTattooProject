@@ -59,6 +59,9 @@ GET http://localhost:3000/api/usuarios/3/favs
 GET http://localhost:3000/api/usuariosTatuadores
 
 ###
+GET http://localhost:3000/api/usuariosTatuadores?wildcard=exp&estilo=Animacion
+
+###
 
 GET http://localhost:3000/api/usuariosTatuadores/3
 
