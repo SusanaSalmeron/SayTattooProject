@@ -12,4 +12,6 @@ export class SobreNosotrosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
 }
