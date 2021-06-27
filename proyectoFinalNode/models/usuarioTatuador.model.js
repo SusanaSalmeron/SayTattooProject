@@ -106,40 +106,15 @@ const addStyleToUser = (styleId, userId) => {
     })
 }
 
-/* const moreDataByID = (tUserId, imgPerfil, sobreMi, estilos) => {
-    console.log("imgPerfil: " + imgPerfil);
-    console.log("sobreMi: " + sobreMi);
-    console.log("estilos: " + estilos);
+
+const addPics = (userId, url) => {
     return new Promise((resolve, reject) => {
-        console.log("Updating user")
-        db.query('update usuarios set imgPerfil = ? where id =?', [imgPerfil, tUserId], (err, result) => {
+        db.query('insert into tatuajes (imagen, fk_usuario_tatuador_id) values(?, ?)', [url, userId], (err, result) => {
             if (err) reject(err);
             resolve(result);
-        });
-    }).then(() => {
-        console.log("Deleting all styles");
-        db.query('delete from tbi_tatuadoresEstilos where fk_tatuador = ?', [tUserId])
-    }).then(() => {
-        let promises = [];
-        for (let estilo of estilos) {
-            console.log("Adding style " + estilo)
-            const p = new Promise((res, rej) => db.query('insert into tbi_tatuadoresEstilos(fk_estilo, fk_tatuador) value(?, ?)', [estilo, tUserId]));
-            promises.push(p);
-        }
-        console.log("Running all style promises");
-        return Promise.all(promises);
-    })
-
-    /*     return new Promise((resolve, reject) => {
-            await db.query('update usuarios set imgPerfil = ? where id =?', [imgPerfil, tUserId])
-            await db.query('delete from tbi_tatuadoresEstilos where fk_tatuador = ?', [tUserId])
-            for (let estilo of estilos) {
-                await db.query('insert into tbi_tatuadoresEstilos(fk_estilo, fk_tatuador) value(?, ?)', [estilo, tUserId])
-            }
-            resolve(result);
         })
+    })
 }
- */
 
 
 
@@ -147,4 +122,4 @@ const addStyleToUser = (styleId, userId) => {
 
 
 
-module.exports = { getById, getPicsByParams, addPic, deleteImageById, updateProfilePic, deleteOldStyles, addStyleToUser, getAllBy };
+module.exports = { getById, getPicsByParams, addPic, deleteImageById, updateProfilePic, deleteOldStyles, addStyleToUser, getAllBy, addPics };

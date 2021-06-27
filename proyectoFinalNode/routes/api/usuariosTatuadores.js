@@ -1,6 +1,30 @@
 const router = require('express').Router();
 const { getById, getPicsByParams, addPic, deleteImageById, updateProfilePic, deleteOldStyles, addStyleToUser, getAllBy } = require('../../models/usuarioTatuador.model')
 const { validate, validateDelete } = require('../../routes/middlewares')
+const multer = require('multer');
+const upload = multer({ dest: 'public/images' });
+const fs = require('fs');
+const Tatuaje = require('../../models/usuarioTatuador.model');
+
+
+router.post('/:id/tatuajes/upload', upload.single('imagen'), async (req, res) => {
+    const extension = '.' + req.file.mimetype.split('/')[1];
+    const newName = req.file.filename + extension;
+    const newPath = req.file.path + extension;
+    fs.renameSync(req.file.path, newPath);
+    req.body.imagen = newName;
+    try {
+        console.log(newName)
+        const newPicture = await Tatuaje.addPics(req.params.id, newName);
+
+        res.json(newPicture);
+    } catch (err) {
+        res.json(err);
+    }
+
+});
+
+module.exports = router;
 
 
 
@@ -75,9 +99,7 @@ router.post('/:id/moreData', async (req, res) => {
         for (let styleId of req.body.estilos) {
             await addStyleToUser(styleId, userId)
         }
-/*         const moreData = await moreDataByID(req.params.id,
-            req.body.imgPerfil, req.body.sobreMi, req.body.estilos);
- */     res.status(200);
+        res.status(200);
         res.json({ msg: "" })
     } catch (error) {
         console.log("Error cuando inserto mas datos: " +

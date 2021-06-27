@@ -104,6 +104,16 @@ Content-Type: application/json
     "password":"987655",
 }
 
+###
+
+POST http://localhost:3000/api/usuariosTatuadores/1/tatuajes/upload
+Content-Type: application/json
+
+{
+    "fk_usuario_tatuador_id": 2,
+    "imagen": "miau"
+}
+
 
 
 
