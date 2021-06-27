@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ProteccionDatosComponent } from './components/proteccion-datos/proteccion-datos.component';
 import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.component';
 import { TattoosComponent } from './components/tattoos/tattoos.component';
+import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotros.component';
 import { NotFound404Component } from './components/not-found404/not-found404.component';
 
 
@@ -35,14 +36,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'proteccionDatos', component: ProteccionDatosComponent },
   { path: 'avisoLegal', component: AvisoLegalComponent },
-  { path: '**', component: NotFound404Component },
-
-
-
-
-
-
-
+  { path: 'sobreNosotros', component: SobreNosotrosComponent },
+  { path: '**', component: NotFound404Component }
 ];
 
 @NgModule({

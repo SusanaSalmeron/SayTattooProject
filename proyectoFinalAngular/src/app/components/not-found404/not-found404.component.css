@@ -1,11 +1,35 @@
+/* Background */
+.container { 
+    background: url('../../../assets/images/Say_Tattoo_Background.jpg');
+    justify-content: center;
+    padding: 8em;
+}
+
+.tipografia {
+	text-align: center;
+	padding-top: 100px;
+}
+
+.tipografia p.uhoh {
+	font-family: 'Neoneon.otf';
+	font-size: 70px;
+}
+
+.tipografia p.vuelve {
+	font-family: 'Iconic-Stencil-Bold-trial';
+	font-size: 52px;
+	
+}
+
 /* Por un lado las animaciones del 404 */
 
 .error-container {
 	text-align: center;
-	font-size: 180px;
-	font-family: 'Catamaran', sans-serif;
+	font-size: 250px;
+	font-family: 'Neoneon.otf';
 	font-weight: 800;
 	margin: 20px 15px;
+	top: 300px;
 }
 .error-container > span {
 	display: inline-block;
@@ -93,4 +117,32 @@
 	100% {
 		transform: rotateX(0);
 	}
+}
+
+
+/* Boton de Home */
+
+.botonAll{
+text-align: center;
+margin: 0 100px;
+top: 15em;
+font-family: 'Neoneon.otf';
+}
+
+.button {
+z-index:2;
+border-radius: 5px;
+background-color: #145A8D;
+color: #F2EFE8;
+position: relative;
+width: 30%;
+height: 2em;
+font-size: 3em;
+letter-spacing: 0.15em;
+
+}
+
+.button:hover {
+  background-color: #F192AD;
+  color: #145A8D;
 }
