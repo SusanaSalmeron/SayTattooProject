@@ -114,14 +114,27 @@ footer.top {
 }
 
 footer .warnings div{
+    font-family: "Iconic-Stencil-Bold-trial";
     font-size: 0.8em;
     margin:0.5em;
     float: left; 
     
 }
 
+.copyright {
+    font-family: "Neoneon.otf" !important;
+    color: #145A8D;
+    font-weight: 100px !important;
+
+}
+
 footer .warnings div a{
-    color: darkblue;
+    color: #145A8D;
+    text-decoration:none;
+}
+
+footer .warnings div a:hover{
+    color: #F192AD;
 }
 
 

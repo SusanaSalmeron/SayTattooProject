@@ -21,7 +21,7 @@ POST http://localhost:3000/api/usuarios/register
 Content-Type: application/json
 
 {
-    "nombre": "Khris Sanchez",
+    "nombre": "Khris Sanchez Romero",
     "sexo":"femenino",
     "direccion": "Calle del olvido",
     "ciudad": "Madrid",
@@ -75,6 +75,13 @@ GET http://localhost:3000/api/usuariosTatuadores/6/pics
 
 ###
 
+
+//Enviar gracias al token al perfil del id del usuario
+GET http://localhost:3000/api/usuarios/perfil
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoyMiwiY2FkdWNpZGFkIjoxNjI1MTU0NjAyLCJpYXQiOjE2MjQ1NDk4MDJ9.fn3ocwMRV0nO4axaSdPaeisDEChvB5ZJvhlgzxyidjg
+
+###
+
 POST http://localhost:3000/api/usuariosTatuadores/4/pics
 Content-Type: application/json
 
@@ -99,10 +106,6 @@ Content-Type: application/json
 "password": "987655"
 }
 
-{
-    "email": "cecig@gmail.com",
-    "password":"987655",
-}
 
 ###
 

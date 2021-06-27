@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from '../../interfaces/usuario.interface';
+import { UsuariosService } from "../../services/usuarios.service";
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -7,21 +9,35 @@ import { Usuario } from '../../interfaces/usuario.interface';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
-  // title = 'Login';
-  // user = Usuario;
-  // identity;
-  // token;
+  email: string;
+  password: string;
 
-  constructor() {
-    //   this.user = new usuario('', '', '', '', '', '', 'ROLE_USER', '', '', '', '');
+  constructor(private usuariosService: UsuariosService, private router: Router) {
+    const user = { email: this.email, password: this.password };
+    this.usuariosService.login(user).subscribe(data => {
+      console.log(data);
+    });
   }
+
+
 
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    // console.log(usuario);
+  //Llamar desde el componente de login al servicio del usuario para almacenar el token que llega desde la BBDD.
+  login() {
+    // console.log(this.email);
+    // console.log(this.password);
+    const user = { email: this.email, password: this.password };
+    this.usuariosService.login(user).subscribe(data => {
+      this.usuariosService.setToken(data["token"]);
+      console.log(data);
+
+      this.router.navigateByUrl('/account/:id');
+    });
   }
+
 }

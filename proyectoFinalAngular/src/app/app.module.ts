@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SliderComponent } from './components/slider/slider.component';
@@ -17,11 +16,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { LoginComponent } from './components/login/login.component';
-import { ProteccionDatosComponent } from './components/proteccion-datos/proteccion-datos.component';
-import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.component';
 import { AllTatuadoresComponent } from './components/all-tatuadores/all-tatuadores.component';
 import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatuadores.component';
-
+import { ProteccionDatosComponent } from './components/proteccion-datos/proteccion-datos.component';
+import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.component';
+import { NotFound404Component } from './components/not-found404/not-found404.component';
+import { AllTatuadoresComponent } from './components/all-tatuadores/all-tatuadores.component';
+import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatuadores.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,8 @@ import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatua
     LoginComponent,
     ProteccionDatosComponent,
     AvisoLegalComponent,
+    NotFound404Component,
+
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatua
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    FormsModule
 
   ],
   providers: [],

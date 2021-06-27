@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Usuario } from 'src/app/interfaces/usuario.interface';
 import { AccountService } from 'src/app/services/account.service';
+import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Component({
   selector: 'account',
@@ -13,13 +14,13 @@ export class AccountComponent implements OnInit {
   id: number;
 
 
-  constructor(private accountService: AccountService, private activatedRoute: ActivatedRoute) { }
+  constructor(private accountService: AccountService, private usuariosService: UsuariosService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       this.id = params.id;
     })
-    this.accountService.getUserById(this.id)
+    this.usuariosService.getPerfil()
       .then(response => {
         this.user = response
       })

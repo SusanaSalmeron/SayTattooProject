@@ -1,6 +1,7 @@
 const format = require('date-format');
 
 const getById = (id) => {
+
     return new Promise((resolve, reject) => {
         db.query("select nombre, sexo, direccion, ciudad, cp, telefono, date_format(fechaNacimiento, '%d/%m/%Y') as fechaNacimiento, nombreUsuario, email, password, imgPerfil, sobreMi from usuarios where id =?", [id], (err, rows) => {
             if (err) reject(err);

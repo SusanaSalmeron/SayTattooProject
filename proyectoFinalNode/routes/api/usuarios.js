@@ -3,7 +3,13 @@ const bcrypt = require('bcryptjs');
 const dayjs = require('dayjs');
 const jwt = require('jsonwebtoken');
 const { create, getById, deleteById, modifyById, getByMail, getFavsById } = require('../../models/usuario.model');
+const { checkToken } = require('../middlewares');
 
+
+// Devuelve un JSON con los datos del usuario Activo
+router.get('/perfil', checkToken, (req, res) => {
+    res.json(req.user);
+});
 
 
 //peticion de un usuario por id
@@ -28,6 +34,7 @@ router.get('/:id/favs', async (req, res) => {
         res.json({ err: 'No hay favoritos' })
     }
 });
+
 
 
 //peticion de creacion de un usuario nuevo
@@ -93,10 +100,6 @@ router.post('/login', async (req, res) => {
 
 });
 
-// Devuelve un JSON con los datos del usuario Activo
-// router.get('/perfil', checkToken, (req, res) => {
-//     res.json(req.user);
-// });
 
 function createToken(pUsuario) {
     const obj = {

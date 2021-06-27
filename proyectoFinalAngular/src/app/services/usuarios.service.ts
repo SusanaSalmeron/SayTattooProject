@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Usuario } from '../interfaces/usuario.interface';
+
 
 
 @Injectable({
@@ -8,7 +9,24 @@ import { Usuario } from '../interfaces/usuario.interface';
 })
 export class UsuariosService {
 
-  constructor(private httpClient: HttpClient) { }
+  private baseUrl: string;
+
+  constructor(private httpClient: HttpClient) {
+    this.baseUrl = "http://localhost:3000/api/"
+  }
+
+
+  // Recuperar perfil usuario/perfil
+  getPerfil(): Promise<Usuario> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        authorization: localStorage.getItem('token')
+      })
+    };
+
+    return this.httpClient.get<Usuario>(this.baseUrl + "usuarios/perfil", httpOptions).toPromise();
+  }
+
 
   create(formData) {
     return this.httpClient.post("http://localhost:3000/api/usuarios/register", formData, { observe: "response" }).toPromise();
@@ -31,5 +49,19 @@ export class UsuariosService {
 
   getUser(id): Promise<Usuario> {
     return this.httpClient.get<Usuario>(`http://localhost:3000/api/usuarios/${id}`).toPromise();
+  }
+
+  login(user: any) {
+    return this.httpClient.post("http://localhost:3000/api/usuarios/login", user);
+  }
+
+  // Crear los Métodos para Guardar el Token en las cookies y para recuperarlo.
+
+  setToken(token: string) {
+    localStorage.setItem("token", token);
+
+  }
+  getToken() {
+    return localStorage.getItem("token");
   }
 }
