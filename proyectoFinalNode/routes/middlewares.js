@@ -25,7 +25,18 @@ function validateDelete(req) {
     return ''
 }
 
+function validateUpload(req) {
+    if (!req.file) {
+        return 'No hay archivo'
+    }
+    const extension = req.file.mimetype.split('/')[1];
+    if (extension !== "jpg" && extension !== "jpeg" && extension !== "png") {
+        return 'La imagen tiene una extension incorrencta'
+    }
+    return ''
+}
 
 
 
-module.exports = { validate, validateDelete };
+
+module.exports = { validate, validateDelete, validateUpload };

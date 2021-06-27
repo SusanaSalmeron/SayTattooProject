@@ -46,10 +46,9 @@ const getById = (id) => {
 
 }
 
-const getPicsByParams = (id, style) => {
-    const dbStyle = style ? style : "%";
+const getPicsByUserId = (id) => {
     return new Promise((resolve, reject) => {
-        db.query('select imagen from tatuajes inner join estilos ON tatuajes.fk_estilos = estilos.id where tatuajes.fk_usuario_tatuador_id = ? and estilos.estilo like ?', [id, dbStyle], (err, rows) => {
+        db.query('select imagen from tatuajes where tatuajes.fk_usuario_tatuador_id = ?', [id], (err, rows) => {
             if (err) reject(err);
             resolve(rows)
         })
@@ -122,4 +121,4 @@ const addPics = (userId, url) => {
 
 
 
-module.exports = { getById, getPicsByParams, addPic, deleteImageById, updateProfilePic, deleteOldStyles, addStyleToUser, getAllBy, addPics };
+module.exports = { getById, getPicsByUserId, addPic, deleteImageById, updateProfilePic, deleteOldStyles, addStyleToUser, getAllBy, addPics };

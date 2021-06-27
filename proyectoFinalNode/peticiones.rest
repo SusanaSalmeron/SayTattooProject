@@ -71,7 +71,7 @@ GET http://localhost:3000/api/usuariosTatuadores/1/pics
 
 ###
 
-GET http://localhost:3000/api/usuariosTatuadores/4/pics?style=Japonés
+GET http://localhost:3000/api/usuariosTatuadores/6/pics
 
 ###
 
@@ -111,7 +111,7 @@ Content-Type: application/json
 
 {
     "fk_usuario_tatuador_id": 2,
-    "imagen": "miau"
+    "file": "miau.svg"
 }
 
 

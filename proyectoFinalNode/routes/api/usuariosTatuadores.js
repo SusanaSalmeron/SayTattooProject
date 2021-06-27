@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { getById, getPicsByParams, addPic, deleteImageById, updateProfilePic, deleteOldStyles, addStyleToUser, getAllBy } = require('../../models/usuarioTatuador.model')
-const { validate, validateDelete } = require('../../routes/middlewares')
+const { getById, getPicsByUserId, addPic, deleteImageById, updateProfilePic, deleteOldStyles, addStyleToUser, getAllBy } = require('../../models/usuarioTatuador.model')
+const { validate, validateDelete, validateUpload } = require('../../routes/middlewares')
 const multer = require('multer');
 const upload = multer({ dest: 'public/images' });
 const fs = require('fs');
@@ -8,18 +8,47 @@ const Tatuaje = require('../../models/usuarioTatuador.model');
 
 
 router.post('/:id/tatuajes/upload', upload.single('imagen'), async (req, res) => {
-    const extension = '.' + req.file.mimetype.split('/')[1];
-    const newName = req.file.filename + extension;
-    const newPath = req.file.path + extension;
-    fs.renameSync(req.file.path, newPath);
-    req.body.imagen = newName;
-    try {
-        console.log(newName)
-        const newPicture = await Tatuaje.addPics(req.params.id, newName);
+    //TODO - añadir validacion - que exista req.file y la extension y que exista un id(params.id y que sea un numero)
 
-        res.json(newPicture);
-    } catch (err) {
-        res.json(err);
+    /*     const extension = '.' + req.file.mimetype.split('/')[1];
+        const newName = req.file.filename + extension;
+        const newPath = req.file.path + extension;
+        fs.renameSync(req.file.path, newPath);
+        req.body.imagen = newName;
+        //TODO refactorizar guardar imagen para ser reusada
+        try {
+            console.log(newName)
+            const newPicture = await Tatuaje.addPics(req.params.id, newName);
+    
+            res.json(newPicture);
+        } catch (err) {
+            res.json(err);
+        } */
+
+    //----------------------
+
+    try {
+        const validationMessage = validateUpload(req);
+        if (validationMessage) {
+            console.log("validation Error:" + validationMessage);
+            res.status(400);
+            res.json({ error: validationMessage });
+        } else {
+            console.log("saving pic");
+            console.log(req.file);
+            const extension = '.' + req.file.mimetype.split('/')[1];
+            const newName = `http://localhost:3000/images/${req.file.filename}${extension}`;
+            const newPath = req.file.path + extension;
+            fs.renameSync(req.file.path, newPath);
+            req.body.imagen = newName;
+
+            const newPicture = await Tatuaje.addPics(req.params.id, newName);
+            res.status(201);
+            res.send('');
+        }
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: "No se puede insertar la imagen" });
     }
 
 });
@@ -43,7 +72,7 @@ router.get('/:id', async (req, res) => {
 router.get('/:id/pics', async (req, res) => {
 
     try {
-        const pics = await getPicsByParams(req.params.id, req.query.style);
+        const pics = await getPicsByUserId(req.params.id);
         res.json(pics)
     } catch (error) {
         console.log(error);

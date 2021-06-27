@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'moreData/:id', component: MoreDataComponent },
   { path: 'favourites', component: FavouritesComponent },
   { path: 'favourites/:id', component: FavouritesComponent },
-  { path: 'tattoos', component: TattoosComponent },
+  { path: 'tattoos/:id', component: TattoosComponent },
   { path: 'login', component: LoginComponent },
   { path: 'proteccionDatos', component: ProteccionDatosComponent },
   { path: 'avisoLegal', component: AvisoLegalComponent },

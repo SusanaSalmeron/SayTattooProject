@@ -8,13 +8,17 @@
 }
 
 .col-8 input{
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
 }
 
 h6{
     font-family: 'Karla', sans-serif;
 }
-button{
+
+.col:last-child{
+    margin-bottom: 7em;
+}
+button.delete{
     margin-top: 1em;
     font-family: 'Karla', sans-serif;
     background-color: #145A8D;
@@ -23,9 +27,18 @@ button{
     padding: 5px 10px;
 }
 
-button:hover{
+button:hover.delete, button:hover.upload{
     background-color: #4682b4;
 }
+button.upload{
+    font-family: 'Karla', sans-serif;
+    background-color: #145A8D;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-bottom: 1em;
+}
+
 
 
 
@@ -34,16 +47,22 @@ button:hover{
     .row .col img{
         width: 170px;
     }
-
-
-
+    .col:last-child{
+    margin-bottom: 10em;
+    }
 }
+
+
+
+
 
 
 @media(min-width:962px){
     .row .col img{
         width: 250px;
     }
+
+   
 
 }
 
