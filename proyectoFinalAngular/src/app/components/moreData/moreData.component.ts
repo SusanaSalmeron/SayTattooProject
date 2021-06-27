@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
 
@@ -43,30 +43,7 @@ export class MoreDataComponent implements OnInit {
 
   ]
 
-  constructor(private dataService: DataService, private activatedRoute: ActivatedRoute, private formBuilder: FormBuilder) {
-    // this.formulario = this.formBuilder.group({
-    //   estilos: new FormArray([], minSelectedCheckboxes(1))
-    // });
-
-    // function minSelectedCheckboxes(min = 1) {
-    //   const validator: ValidatorFn = (formArray: FormArray) => {
-    //     const totalSelected = formArray.controls
-    //       // get a list of checkbox values (boolean)
-    //       .map(control => control.value)
-    //       // total up the number of checked checkboxes
-    //       .reduce((prev, next) => next ? prev + next : prev, 0);
-
-    //     // if the total is not greater than the minimum, return the error message
-    //     return totalSelected >= min ? null : { required: true };
-    //   };
-
-    //   return validator;
-    // };
-
-
-
-
-
+  constructor(private dataService: DataService, private activatedRoute: ActivatedRoute) {
 
   }
 
@@ -96,6 +73,7 @@ export class MoreDataComponent implements OnInit {
     console.log(body);
 
     const response = await this.dataService.setMoreData(body, this.id);
+    console.log(JSON.stringify(response));
     if (response.status === 200) {
       this.formulario.reset()
     }

@@ -66,7 +66,7 @@ router.delete('/:id', async (req, res) => {
 });
 
 //Peticion de modificacion de un usuario por id
-router.put('/:id', async (req, res) => {
+router.put('/:id', checkToken, async (req, res) => {
     try {
         const result = await modifyById(req.params.id, req.body);
         res.status(200);
@@ -88,7 +88,6 @@ router.post('/login', async (req, res) => {
     }
     console.log(usuario);
 
-    console.log(req.body.password, usuario.password);
     // 2 - Compruebo si las password coinciden
     const iguales = bcrypt.compareSync(req.body.password, usuario.password);
     console.log(iguales);
@@ -106,7 +105,7 @@ function createToken(pUsuario) {
         usuario_id: pUsuario.id,
         caducidad: dayjs().add(7, 'days').unix()
     }
-    return jwt.sign(obj, 'colorin colorado...');
+    return jwt.sign(obj, '1234567890');
 }
 
 

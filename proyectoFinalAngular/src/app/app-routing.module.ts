@@ -13,15 +13,17 @@ import { ProteccionDatosComponent } from './components/proteccion-datos/protecci
 import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.component';
 import { TattoosComponent } from './components/tattoos/tattoos.component';
 import { NotFound404Component } from './components/not-found404/not-found404.component';
-import { TattoosComponent } from './components/tattoos/tattoos.component';
+
 
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: SliderComponent },
-  { path: 'account', component: AccountComponent },
+  {
+    path: 'account/:id', component: AccountComponent
+  },
   { path: 'register', component: FormularioRegistroComponent },
-  { path: 'tatuadores', component: AllTatuadoresComponent },
+  { path: 'tatuadores/search', component: AllTatuadoresComponent },
   { path: 'tatuadores/:id', component: CardTatuadoresComponent },
   { path: 'login', component: LoginComponent },
   { path: 'account/:id', component: AccountComponent },
@@ -29,17 +31,12 @@ const routes: Routes = [
   { path: 'moreData/:id', component: MoreDataComponent },
   { path: 'favourites', component: FavouritesComponent },
   { path: 'favourites/:id', component: FavouritesComponent },
-  { path: 'tattoos', component: TattoosComponent },
   { path: 'tattoos/:id', component: TattoosComponent },
   { path: 'login', component: LoginComponent },
   { path: 'proteccionDatos', component: ProteccionDatosComponent },
   { path: 'avisoLegal', component: AvisoLegalComponent },
-  { path: '**', component: NotFound404Component }
-  { path: 'avisoLegal', component: AvisoLegalComponent },
-  { path: 'account', component: AccountComponent },
-  { path: 'tatuadores', component: AllTatuadoresComponent },
-  { path: 'tatuadores/:id', component: CardTatuadoresComponent },
-  { path: 'search', component: AllTatuadoresComponent }
+  { path: '**', component: NotFound404Component },
+
 
 
 

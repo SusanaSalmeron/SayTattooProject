@@ -38,8 +38,9 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3000/api/usuarios/18
+PUT http://localhost:3000/api/usuarios/21
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoyMywiY2FkdWNpZGFkIjoxNjI1NDEyOTUxLCJpYXQiOjE2MjQ4MDgxNTF9.AB3GNCrELWRpi5eLsUPNfYikkmPSrLdOPMyCvxWP_Q8
 
 {
     "nombre": "Ana Martin",
@@ -47,10 +48,10 @@ Content-Type: application/json
     "ciudad": "Madrid",
     "cp": "28025",
     "telefono": "654882318",
-    "email":"cecim@gmail.com",
-    "password":"23145",
-    
+    "email":"cecimierdas@gmail.com",
+    "password":"23145"
 }
+
 ###
 
 GET http://localhost:3000/api/usuarios/3/favs

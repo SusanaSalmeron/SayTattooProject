@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from "../../services/usuarios.service";
 import { Router } from '@angular/router';
+import { JwtService } from 'src/app/services/jwt.service';
 
 
 
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
 
-  constructor(private usuariosService: UsuariosService, private router: Router) {
+  constructor(private usuariosService: UsuariosService, private router: Router, private jwtService: JwtService) {
     const user = { email: this.email, password: this.password };
     this.usuariosService.login(user).subscribe(data => {
       console.log(data);
@@ -29,14 +30,12 @@ export class LoginComponent implements OnInit {
 
   //Llamar desde el componente de login al servicio del usuario para almacenar el token que llega desde la BBDD.
   login() {
-    // console.log(this.email);
-    // console.log(this.password);
     const user = { email: this.email, password: this.password };
     this.usuariosService.login(user).subscribe(data => {
       this.usuariosService.setToken(data["token"]);
-      console.log(data);
 
-      this.router.navigateByUrl('/account/:id');
+      const claims: any = this.jwtService.decodeToken(data["token"]);
+      this.router.navigateByUrl(`/account/${claims.usuario_id}`);
     });
   }
 

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { getById, getPicsByUserId, addPic, deleteImageById, updateProfilePic, deleteOldStyles, addStyleToUser, getAllBy } = require('../../models/usuarioTatuador.model')
-const { validate, validateDelete, validateUpload } = require('../../routes/middlewares')
+const { validate, validateDelete, validateUpload, checkToken } = require('../../routes/middlewares')
 const multer = require('multer');
 const upload = multer({ dest: 'public/images' });
 const fs = require('fs');
@@ -8,24 +8,6 @@ const Tatuaje = require('../../models/usuarioTatuador.model');
 
 
 router.post('/:id/tatuajes/upload', upload.single('imagen'), async (req, res) => {
-    //TODO - añadir validacion - que exista req.file y la extension y que exista un id(params.id y que sea un numero)
-
-    /*     const extension = '.' + req.file.mimetype.split('/')[1];
-        const newName = req.file.filename + extension;
-        const newPath = req.file.path + extension;
-        fs.renameSync(req.file.path, newPath);
-        req.body.imagen = newName;
-        //TODO refactorizar guardar imagen para ser reusada
-        try {
-            console.log(newName)
-            const newPicture = await Tatuaje.addPics(req.params.id, newName);
-    
-            res.json(newPicture);
-        } catch (err) {
-            res.json(err);
-        } */
-
-    //----------------------
 
     try {
         const validationMessage = validateUpload(req);
@@ -119,7 +101,7 @@ router.post('/:id/pics/', async (req, res) => {
 
 //Petición para insertar mas datos de un tatuador por id
 
-router.post('/:id/moreData', async (req, res) => {
+router.post('/:id/moreData', checkToken, async (req, res) => {
     try {
         console.log(req.body);
         const userId = req.params.id

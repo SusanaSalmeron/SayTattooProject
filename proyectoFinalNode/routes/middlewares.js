@@ -43,24 +43,26 @@ const checkToken = async (req, res, next) => {
 
     // 1 - Si el token viene incluido en la cabecera Authentication
     if (!req.headers['authorization']) {
-        return res.json({ error: 'Necesitas la cabecera Authorization' });
+        res.status(401);
+        return res.json({ error: 'Missing Authorization token' });
     }
 
     const token = req.headers['authorization'];
 
-
     // 2 - Comprobar si el token es correcto
     let obj;
     try {
-        obj = jwt.verify(token, 'colorin colorado...');
+        obj = jwt.verify(token, '1234567890');
     } catch (error) {
-        return res.json({ error: 'El token es incorrecto' })
+        res.status(401);
+        return res.json({ error: 'Invalid token' })
     }
 
     // 3 - Comprobar si el token está caducado
     const currentDate = dayjs().unix();
     if (currentDate > obj.caducidad) {
-        return res.json({ error: 'El token está caducado. Por favor solicita otro😉' });
+        res.status(401);
+        return res.json({ error: 'Token is due.' });
     }
 
     // 4 - Recuperar el usuario
@@ -76,4 +78,4 @@ const checkToken = async (req, res, next) => {
 
 
 
-module.exports = { validate, validateDelete, checkToken };
+module.exports = { validate, validateDelete, checkToken, validateUpload };

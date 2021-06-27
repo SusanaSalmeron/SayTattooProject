@@ -15,15 +15,18 @@ export class UsuariosService {
     this.baseUrl = "http://localhost:3000/api/"
   }
 
-
-  // Recuperar perfil usuario/perfil
-  getPerfil(): Promise<Usuario> {
-    const httpOptions = {
+  securityHeaders() {
+    return {
       headers: new HttpHeaders({
         authorization: localStorage.getItem('token')
       })
     };
 
+  }
+
+  // Recuperar perfil usuario/perfil
+  getPerfil(): Promise<Usuario> {
+    const httpOptions = this.securityHeaders();
     return this.httpClient.get<Usuario>(this.baseUrl + "usuarios/perfil", httpOptions).toPromise();
   }
 
@@ -33,7 +36,7 @@ export class UsuariosService {
   }
 
   update(formData, id): Promise<Usuario> {
-    console.log(formData)
+    const httpOptions = this.securityHeaders();
     const updateUser = {
       "nombre": formData.nombre,
       "direccion": formData.direccion,
@@ -44,7 +47,7 @@ export class UsuariosService {
       "password": formData.password,
 
     }
-    return this.httpClient.put<Usuario>(`http://localhost:3000/api/usuarios/${id}`, updateUser).toPromise();
+    return this.httpClient.put<Usuario>(`http://localhost:3000/api/usuarios/${id}`, updateUser, httpOptions).toPromise();
   }
 
   getUser(id): Promise<Usuario> {

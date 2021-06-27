@@ -21,8 +21,7 @@ import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatua
 import { ProteccionDatosComponent } from './components/proteccion-datos/proteccion-datos.component';
 import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.component';
 import { NotFound404Component } from './components/not-found404/not-found404.component';
-import { AllTatuadoresComponent } from './components/all-tatuadores/all-tatuadores.component';
-import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatuadores.component';
+
 
 @NgModule({
   declarations: [

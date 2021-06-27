@@ -110,7 +110,7 @@ body {
 }
 
 .container-fluid .tatuadores {
-  width: 90%;
+  width: 97%;
   margin-right:1em;
   margin-top:10%;
  
@@ -118,9 +118,7 @@ body {
 }
 
 .service-details {
-	/*width: 460px;*/
 	height: 250px;	
-	/*height: 230px;*/
 	overflow: hidden;
 	position: relative;
     border-radius: 5%;
@@ -248,10 +246,22 @@ body {
 
 .container-fluid .tatuadores .service-white {
 	   background: rgb(242,239,232);
-background: linear-gradient(90deg, rgba(242,239,232,1) 0%, rgba(246,215,235,1) 35%, rgba(241,146,173,1) 100%);    
+background: linear-gradient(90deg, rgba(242,239,232,1) 0%, rgb(209, 201, 206) 35%, rgb(89, 83, 85) 100%);    
 	font-size: 1em;
 	width: 50% ;
 	
+}
+
+
+
+
+button.favs{
+	position:absolute;
+	background-color: transparent;
+	font-size: 2em;
+	border: none;
+	bottom:0;
+	right:0;
 }
 
 
