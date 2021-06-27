@@ -12,14 +12,6 @@
 </head>
 
 <body>
-    <div class="preloader">
-        <div class="loading">
-            <h2>
-                Loading...
-            </h2>
-            <span class="progress"></span>
-        </div>
-    </div>
 
     <div class="wrapper">
         <ul class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15"
@@ -33,18 +25,19 @@
                 </div>
             </li>
 
+            <div class="wrapper2">
+                <li class="layer" data-depth="0.30">
+                    <div class="hero">
+                        <h1 id="countdown">
+                            Seguimos trabajando para preparar algo espectácular... Nos vemos pronto 😉!
+                        </h1>
 
-            <li class="layer" data-depth="0.30">
-                <div class="hero">
-                    <h1 id="countdown">
-                        Seguimos trabajando para preparar algo espectácular... Nos vemos pronto 😉!
-                    </h1>
-
-                    <p class="sub-title">
-                        Seguimos trabajando para preparar algo espectácular... Nos vemos pronto 😉!
-                    </p>
-                </div>
-            </li>
+                        <a class="sub-title" [routerLink]="('/home')">
+                            Vuelve a casa 🏠!
+                        </a>
+                    </div>
+                </li>
+            </div>
 
             <!-- Flakes -->
 
