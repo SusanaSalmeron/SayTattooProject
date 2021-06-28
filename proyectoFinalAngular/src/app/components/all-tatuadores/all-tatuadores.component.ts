@@ -75,6 +75,4 @@ export class AllTatuadoresComponent implements OnInit {
           this.paginaActual--;
         } */
 
-
-
 }
