@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-card-tatuadores',
+  selector: 'card-tatuadores',
   templateUrl: './card-tatuadores.component.html',
   styleUrls: ['./card-tatuadores.component.css']
 })

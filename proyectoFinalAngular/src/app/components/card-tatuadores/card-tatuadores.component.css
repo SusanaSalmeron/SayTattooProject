@@ -43,6 +43,39 @@ a:hover {
   color: #4e4e4e;
 }
 
+.parallax.image-1{
+	background-image: url("../../../assets/images/Parallax_say_tattoo!.jpg");
+	opacity: 0.8;
+	height: 300px;
+	width: 100%;
+	background-position-y: -15vh;
+	background-position-x: -50vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+ .ourteams {
+	position:absolute;
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	margin-top:10%;
+	opacity: 70%;
+  font-family:'Iconic-Stencil-Bold-trial';
+ }
+
+ .ourteams h2 {
+	position: relative;
+  	color:#0a3350;
+  	font-size: 4em;
+  	text-align:center;
+  	font-weight:700;
+  	margin-bottom:50px;
+ 	  bottom: 2.3em;
+	  line-height: 0.7em;
+ }
+
 .box-shadow,
 .paralax-mf,
 .service-box,
@@ -67,6 +100,7 @@ a:hover {
 .overlay-mf {
   background-color: #0078ff;
 }
+
 
 
 /*--/ Sections /--*/
