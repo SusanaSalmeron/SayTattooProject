@@ -1,16 +1,28 @@
 <!-- Números 404 Not Found -->
-<section class="error-container">
-    <span><span>4</span></span>
-    <span>0</span>
-    <span><span>4</span></span>
-</section>
 
-<section>
-    <div class="text">
-        <article>
-            <p>¡UH oh! Parece que te perdiste. <br> Vuelve a la página de Inicio para inspirándote.</p>
-            <button>Home</button>
-        </article>
+<div class="container-fluid">
+
+    <section>
+        <div>
+            <article class="tipografia">
+                <p class="uhoh">¡UH oh! Parece que te perdiste.</p>
+                <br>
+                <br>
+                <br>
+                <p class="vuelve">Vuelve a la página de Inicio para seguir inspirándote.</p>
+            </article>
+        </div>
+
+    </section>
+
+    <section class="error-container">
+        <span><span>4</span></span>
+        <span>0</span>
+        <span><span>4</span></span>
+    </section>
+
+    <div class="botonAll">
+        <button class="button" [routerLink]="('/home')">Home</button>
     </div>
 
-</section>
+</div>

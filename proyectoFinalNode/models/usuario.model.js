@@ -68,10 +68,4 @@ const getFavsById = (id) => {
 }
 
 
-
-
-
-
-
-
 module.exports = { create, getById, deleteById, modifyById, getByMail, getFavsById };
