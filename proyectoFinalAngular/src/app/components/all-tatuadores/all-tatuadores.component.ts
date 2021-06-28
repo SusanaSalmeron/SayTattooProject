@@ -15,22 +15,21 @@ export class AllTatuadoresComponent implements OnInit {
   styleState: string;
 
 
-  /* paginaActual: number;
-  numPaginas: number */;
+
+
 
   constructor(private usuarioTatuadorService: UsuarioTatuadorService, private activatedRoute: ActivatedRoute) {
     this.searchState = "";
     this.styleState = "";
-    /* this.paginaActual = 1; */
+
   }
 
-  //Vamos a probar que funcion el nuevo metodo vale?
+
   ngOnInit(): void {
 
     this.usuarioTatuadorService.getTatuadores({})
       .then(response => {
         this.usuarioTatuador = response;
-        /* this.numPaginas = response.info.pages; */
       })
       .catch(error =>
         console.log(error)
@@ -68,12 +67,6 @@ export class AllTatuadoresComponent implements OnInit {
 
   }
 
-  /* async onClick2(siguiente: boolean) {
-        if (siguiente) {
-          this.paginaActual++;
-        } else {
-          this.paginaActual--;
-        } */
 
 
 

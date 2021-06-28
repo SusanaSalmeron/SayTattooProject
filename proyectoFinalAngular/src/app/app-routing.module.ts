@@ -19,9 +19,7 @@ import { NotFound404Component } from './components/not-found404/not-found404.com
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: SliderComponent },
-  {
-    path: 'account/:id', component: AccountComponent
-  },
+  { path: 'account/:id', component: AccountComponent },
   { path: 'register', component: FormularioRegistroComponent },
   { path: 'tatuadores/search', component: AllTatuadoresComponent },
   { path: 'tatuadores/:id', component: CardTatuadoresComponent },
