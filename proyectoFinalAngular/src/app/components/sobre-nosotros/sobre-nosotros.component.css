@@ -44,29 +44,46 @@ h1 {
 }
 
 
-#countdown div span {
+.countdown  {
 	display:block;
 	/* line-height: 50px; */
 	letter-spacing: initial;
-	font-weight: 70;
 	text-transform: uppercase;
     top: 8em;
+
 }
 
 #countdown div {
 	display:inline-block;
     margin: 0 34px;
+	height: 3vh;
 }
 
-.sub-title {
+.hero  {
 	font-size: 30px;
     font-weight: 30;
 	margin-top: 5px;
 	margin-bottom: 0px;
-    font-family: 'Iconic-Stencil-Bold-trial';
-    color: #145A8D;
-
+    
 }
+
+.sub-title {
+	font-family: 'Iconic-Stencil-Bold-trial';
+    color: #145A8D;
+	width: 5em;
+    border-radius: 5px;
+    background-color: #145A8D;
+    color: #F2EFE8;
+	z-index: 999999;
+}
+
+.hero .sub-title:hover {
+	background-color: #F192AD;
+    color: #145A8D;
+   
+}
+
+
 
 
 /* =Content Styles
@@ -81,6 +98,7 @@ h1 {
   width: 100%;
   left: 0;
   top: 0;
+  z-index: 1;
 }
 .wrapper2 {
   text-align: center;		
@@ -91,6 +109,7 @@ h1 {
   width: 100%;
   left: 0;
   top: 8em;
+  position: absolute;
 }
 
 .hero {

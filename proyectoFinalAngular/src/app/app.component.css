@@ -115,7 +115,7 @@ footer.top {
     width: 100%;
     height:5vh;
     /* position: relative; */
-    position: sticky;
+    position: fixed;
 }
 
 footer .warnings div{

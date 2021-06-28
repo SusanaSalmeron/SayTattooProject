@@ -1,8 +1,12 @@
 /* Background */
-.container { 
+.container-fluid { 
     background: url('../../../assets/images/Say_Tattoo_Background.jpg');
     justify-content: center;
     padding: 8em;
+	position: relative;
+	background-repeat: repeat;
+	height: 130vh;
+
 }
 
 .tipografia {
@@ -23,13 +27,15 @@
 
 /* Por un lado las animaciones del 404 */
 
-.error-container {
+.container-fluid .error-container {
 	text-align: center;
 	font-size: 250px;
 	font-family: 'Neoneon.otf';
 	font-weight: 800;
 	margin: 20px 15px;
-	top: 300px;
+	position: absolute;
+	top: 2em;
+	left: 1.8em;
 }
 .error-container > span {
 	display: inline-block;

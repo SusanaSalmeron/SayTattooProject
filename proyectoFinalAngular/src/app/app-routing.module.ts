@@ -14,6 +14,7 @@ import { AvisoLegalComponent } from './components/aviso-legal/aviso-legal.compon
 import { TattoosComponent } from './components/tattoos/tattoos.component';
 import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotros.component';
 import { NotFound404Component } from './components/not-found404/not-found404.component';
+import { AppComponent } from './app.component';
 
 
 
