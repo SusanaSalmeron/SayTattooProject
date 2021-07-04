@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
+declare var Swal;
+
 
 @Component({
   selector: 'formulario-registro',
@@ -86,7 +88,22 @@ export class FormularioRegistroComponent implements OnInit {
     const response = await this.usuariosService.create(this.formulario.value);
 
     if (response.status === 201) {
-      this.formulario.reset()
+      this.formulario.reset();
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'El usuario se ha creado correctamente',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Ha sido imposible crear el usuario...',
+        text: 'Revisa si los datos introducidos son correctos',
+        footer: '<a href="">Why do I have this issue?</a>'
+      })
+
     }
 
   }

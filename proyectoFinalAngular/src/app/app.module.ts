@@ -14,7 +14,6 @@ import { FavouritesComponent } from './components/favourites/favourites.componen
 import { TattoosComponent } from './components/tattoos/tattoos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { LoginComponent } from './components/login/login.component';
 import { AllTatuadoresComponent } from './components/all-tatuadores/all-tatuadores.component';
 import { CardTatuadoresComponent } from './components/card-tatuadores/card-tatuadores.component';
@@ -50,7 +49,6 @@ import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotr
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    InfiniteScrollModule,
     FormsModule
 
   ],
